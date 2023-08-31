@@ -1,0 +1,1 @@
+draw_sprite_tiled(spr_battletransition, image_index,cw,ch);
