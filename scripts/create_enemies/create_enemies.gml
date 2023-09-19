@@ -1,0 +1,13 @@
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function create_enemies(_enemies){
+	var _enemy_amount = round(random_range(1, 3))
+	var _enemy_list = [];
+	repeat(_enemy_amount)
+	{
+			randomize();
+			var _random_enemy_idx = random_range(0, array_length(_enemies)-1);
+			array_push(_enemy_list, _enemies[_random_enemy_idx]);
+	}
+	return [_enemy_list, _enemy_amount]
+}

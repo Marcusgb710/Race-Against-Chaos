@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Machine",
-    "path": "folders/Battle System/Enemies/Machine.yy",
+    "path": "folders/Sprites/Enemies/Machine.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

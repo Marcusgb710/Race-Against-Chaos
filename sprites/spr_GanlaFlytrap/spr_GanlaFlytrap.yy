@@ -27,7 +27,7 @@
   "origin": 0,
   "parent": {
     "name": "Secret Bosses",
-    "path": "folders/Battle System/Secret Bosses.yy",
+    "path": "folders/Sprites/Enemies/Secret Bosses.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "spr_roomba",
   "bbox_bottom": 63,
-  "bbox_left": 15,
-  "bbox_right": 50,
+  "bbox_left": 14,
+  "bbox_right": 49,
   "bbox_top": 3,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Machine",
-    "path": "folders/Battle System/Enemies/Machine.yy",
+    "path": "folders/Sprites/Enemies/Machine.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Bosses",
-    "path": "folders/Battle System/Enemies/Bosses.yy",
+    "path": "folders/Sprites/Enemies/Bosses.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

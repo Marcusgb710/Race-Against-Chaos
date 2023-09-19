@@ -23,10 +23,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3563f267-6002-4060-a0a0-5cf98e519049","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 0,
   "parent": {
     "name": "Weak",
-    "path": "folders/Battle System/Enemies/Weak.yy",
+    "path": "folders/Sprites/Enemies/Weak.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -59,8 +59,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 32,
-    "yorigin": 32,
+    "xorigin": 0,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

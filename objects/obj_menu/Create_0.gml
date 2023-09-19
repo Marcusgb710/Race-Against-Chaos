@@ -9,9 +9,27 @@ global.key_right = vk_right;
 global.key_up = vk_up;
 global.key_down = vk_down;
 
+global.debug_level_loader = WeakEnemy
+global.debug = false
+
 display_set_gui_size(global.view_width, global.view_height);
 
+enum LEVELS{
+	PLAYER_ROOM,
+	WEAK_ENEMY}
+	
+level_select = {
+	"Player Room":{
+		CONST : LEVELS.PLAYER_ROOM,
+		_room: MistHouse},
+	"Weak Enemy Room":{
+		CONST: LEVELS.WEAK_ENEMY,
+		_room: WeakEnemy
+	}
+}
+
 enum menu_page {
+	debug,
 	main,
 	settings,
 	audio,
@@ -21,6 +39,7 @@ enum menu_page {
 }
 
 enum menu_element_type {
+	debug,
 	script_runner,
 	page_transfer,
 	slider,
@@ -31,8 +50,13 @@ enum menu_element_type {
 
 //CREATE MENU PAGES
 ds_menu_main = create_menu_page(
+	//["DEBUG", menu_element_type.page_transfer, menu_page.debug],
 	["SETTINGS",	menu_element_type.page_transfer, menu_page.settings],
 	["EXIT",		menu_element_type.script_runner, exit_game],
+);
+
+ds_debug_level_select = create_menu_page(
+["WEAK ENEMIES", menu_element_type.debug, menu_page.main],
 );
 
 ds_settings = create_menu_page(
@@ -64,8 +88,7 @@ ds_menu_controls = create_menu_page(
 );
 
 page = 0;
-menu_pages = [ds_menu_main, ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls];
-
+menu_pages = [ds_menu_main,  ds_settings, ds_menu_audio, ds_menu_graphics, ds_menu_controls];
 var i = 0, array_len = array_length(menu_pages);
 repeat(array_len){
 	menu_option[i] = 0;

@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Weak",
-    "path": "folders/Battle System/Enemies/Weak.yy",
+    "path": "folders/Sprites/Enemies/Weak.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

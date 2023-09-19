@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Psyche",
-    "path": "folders/Battle System/Enemies/Psyche.yy",
+    "path": "folders/Sprites/Enemies/Psyche.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

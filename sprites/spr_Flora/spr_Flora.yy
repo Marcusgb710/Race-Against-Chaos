@@ -23,10 +23,10 @@
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"eea28493-1f99-4451-832e-f7bedd9e9b26","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
-  "origin": 4,
+  "origin": 0,
   "parent": {
     "name": "Strong",
-    "path": "folders/Battle System/Enemies/Strong.yy",
+    "path": "folders/Sprites/Enemies/Strong.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -59,8 +59,8 @@
     ],
     "visibleRange": null,
     "volume": 1.0,
-    "xorigin": 32,
-    "yorigin": 32,
+    "xorigin": 0,
+    "yorigin": 0,
   },
   "swatchColours": null,
   "swfPrecision": 2.525,

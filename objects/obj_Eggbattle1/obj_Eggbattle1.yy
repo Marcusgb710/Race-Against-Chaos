@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Bosses",
-    "path": "folders/Battle System/Enemies/Bosses.yy",
+    "path": "folders/Sprites/Enemies/Bosses.yy",
   },
   "parentObjectId": null,
   "persistent": false,
