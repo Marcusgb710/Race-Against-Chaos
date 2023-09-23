@@ -20,7 +20,7 @@ function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shi
 			var _line_length = 64;
 			var _line_x1 = (global.view_width /2) + 16;
 			
-			draw_circle(_element.pos.x_, _element.pos.y_, 5, false);
+			draw_circle(_element.pos.x_+64, _element.pos.y_, 5, false);
 			draw_line(_line_x1, _element.pos.y_, _line_x1 + _line_length, _element.pos.y_);
 			
 			break;

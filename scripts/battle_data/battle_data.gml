@@ -1,75 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
-function battle_data(){
-	enum ITEM{
-		FOOD,
-		DAMAGE,
-		DEFEND
-	}
-	var ____test_item = {name: "TEST", type: ITEM.DAMAGE, amount: 5}
-	var __actions = 
-	{
-		attack:
-		{
-			name:"ATTACK",
-			action: function(_target){}
-		},
-		defend:
-		{
-			name:"DEFEND",
-			action: function(_target){}
-		},
-		flee:
-		{
-			name:"FLEE",
-			action: function(){}
-		}
-	}
-	var _effects = {}
-	
-	_effects.lightning = new Effect("LIGTNING", BATTLE_MENU_STATE.ACTION);
-	_effects.lightning.action();
-	
-	_effects.fire = new Effect("FIRE", BATTLE_MENU_STATE.ACTION);
-	
-	_effects.ice = new Effect("ICE", BATTLE_MENU_STATE.ACTION);
-	
-	
-	
-
-	var _items = {}
-	_items.tea = new Item("TEA", ITEM.FOOD, 5)
-	_items.tea.action = function(_target){_target.current_hp += 5}
-	
-	_items.cookie = new Item("COOKIE", ITEM.FOOD, 7)
-	_items.cookie.action = function(_target){_target.current_hp += 7}
-	
-	_items.chocobar = new Item("CHOCOBAR", ITEM.FOOD, 6)
-	_items.chocobar.action = function(_target){_target.current_hp += 6}
-	
-	_items.coffee = new Item("TEA", ITEM.FOOD, 7)
-	_items.coffee.action = function(_target){_target.current_hp += 7}
-	
-	var _spells = {}
-	_spells.hurt = new Action("HURT", BATTLE_MENU_STATE.ACTION)
-	_spells.hurt.action = function(_target){_target.current_hp -= 4}
-	
-	_spells.heal = new Action("HEAL", BATTLE_MENU_STATE.ACTION)
-	_spells.heal.action = function(_target){_target.current_hp += 4}
-	
-	_spells.stun = new Action("STUN", BATTLE_MENU_STATE.ACTION)
-	_spells.stun.action = function(_target){show_debug_message("STUNNED")}
-	
-	_spells.sleep = new Action("SLEEP", BATTLE_MENU_STATE.ACTION)
-	_spells.sleep.action = function(_target){show_debug_message("SLEPT")}
-	
-	_spells.drain = new Action("DRAIN", BATTLE_MENU_STATE.ACTION)
-	_spells.drain.action = function(_target){show_debug_message("DRAINED")}
-	
+function battle_data(_spells){
     var _battle_enemy_data = 
 	{
-		_weak:[
+		_weak:{
+			music: mus_Battle_Against_A_Weak_Enemy,
+			enemies: [
 					{
 				name: "Meeks",
 				max_hp: 20,
@@ -120,9 +57,11 @@ function battle_data(){
 					effects: [],
 					sprite: spr_DolphInaShell
 					}
-				
-		],
-		_strong:[
+					]
+		}
+		,_strong:{
+			music: mus_Battle_Against_A_Strong_Enemy,
+			enemies:[
 					{
 					name: "Flora",
 					max_hp: 140,
@@ -172,8 +111,11 @@ function battle_data(){
 					sprite: spr_moonplant
 					},
 					
-		],
-		_psyche:[
+		],		
+		}
+		,_psyche:{
+			music: mus_Battle_Against_A_Psyche_Enemy,
+			enemies: [
 					{
 					name: "Haunted Pants",
 					max_hp: 250,
@@ -210,8 +152,11 @@ function battle_data(){
 					effects: [],
 					sprite: spr_crookedwizard
 					},
-		],
-		_machine:[
+		],	
+		}
+		,_machine:{
+			music: mus_Battle_Against_A_Machine,
+			enemies: [
 					{
 					name: "Moppy",
 					max_hp: 300,
@@ -249,7 +194,10 @@ function battle_data(){
 					sprite: spr_washy
 					},
 		],
-		_bosses:[
+		}
+		,_bosses:{
+			music: mus_Battle_Against_A_Machine,
+			enemies:[
 					{
 					name: "Edgar",
 					max_hp: 100,
@@ -275,68 +223,10 @@ function battle_data(){
 					sprite: spr_EdgarNEONPC
 					},
 		],
-		_secret_bosses:{},
+		}
+		,_secret_bosses:{},
 	}
-	var _party_data = 
-	[
-		{
-			name: "Misty",
-			max_hp: 104,
-			current_hp: 140,
-			max_pp: 25,
-			current_pp: 25,
-			current_defense: 0,
-			max_melee_damage: 10,
-			in_party: true,
-			known_spells: [_spells.heal, _spells.sleep],
-			inventory: [_items.tea,],
-			effects: [],
-			sprite: spr_Misty_btl_UI
-		},
-		{
-			name: "Jon",
-			max_hp: 124,
-			current_hp: 124,
-			max_pp: 38,
-			current_pp: 38,
-			current_defense: 0,
-			max_melee_damage: 15,
-			in_party: true,
-			known_spells: [_spells.hurt, _spells.stun],
-			inventory: [_items.cookie],
-			effects:[],
-			sprite: spr_John_btl_UI
-		},
-		{
-			name: "Kelsi",
-			max_hp: 116,
-			current_hp: 116,
-			max_pp: 28,
-			current_pp: 28,
-			current_defense: 0,
-			max_melee_damage: 22,
-			in_party: false,
-			known_spells: [_spells.hurt, _spells.stun, _spells.sleep],
-			inventory: [_items.chocobar],
-			effects:[],
-			sprite: spr_Kelsi_btl_UI
-		},
-		{
-			name: "Cory",
-			max_hp: 100,
-			current_hp: 100,
-			max_pp: 20,
-			current_pp: 20,
-			current_defense: 0,
-			max_melee_damage: 24,
-			in_party: false,
-			known_spells: [_spells.hurt, _spells.stun],
-			inventory: [_items.coffee],
-			effects:[],
-			sprite: spr_Cory_btl_UI
-		},
-				
-	]
+	
 
-	return [_battle_enemy_data, _party_data];
+	return _battle_enemy_data;
 }

@@ -36,7 +36,7 @@ if(_right)
 if(_select)
 {
 	var _current_option = current_menu[selected_option]
-	current_menu = change_battle_menu(_current_option, current_menu, battle_menu, selected_hero, party);
+	current_menu = change_battle_menu(_current_option, current_menu, battle_menu, selected_hero, hero_party);
 	
 	if(_current_option.type == BATTLE_MENU_STATE.ACTION){selecting = !selecting}
 	if(selecting)

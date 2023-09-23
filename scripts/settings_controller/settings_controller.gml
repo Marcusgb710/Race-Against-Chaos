@@ -5,7 +5,7 @@ function settings_controller(_option, _left_key, _right_key, _shift_index){
 	switch(_option.func){
 		case(menu_element_type.slider):
 			var _starting_x = (global.view_width /2) +16
-			var _ending_x = _starting_x + 64
+			var _ending_x = _starting_x
 			
 			
 

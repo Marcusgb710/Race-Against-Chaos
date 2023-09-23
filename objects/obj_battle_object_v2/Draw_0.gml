@@ -52,11 +52,14 @@ for(var _i = 0; _i < array_length(party); _i++)
 	if(_hero.in_party)
 	{
 		//draw damage numbers
-		var _damage_text = 0;
-		var _hero_damage_text_x = _hero_ui_x
+		if(hurt_hero && _i == picked_hero)
+		{
+		show_debug_message(picked_hero)
+		var _damage_text = 0;  
+		var _hero_damage_text_x = (_hero_ui_x + (sprite_get_width(spr_UIs)*(picked_hero+1))) / 2
 		var _hero_damage_text_y = _hero_ui_y + font_get_size(FontNumbers)
 		hero_hurt_percent += 1/60;
-		if(hero_hurt_percent > 1){hero_hurt_percent -=1};
+		if(hero_hurt_percent > 1.2){hurt_hero = false; hero_hurt_percent = 0};
 		var _position = animcurve_channel_evaluate(hero_hurt_curve, hero_hurt_percent);
 		var _start_y = _hero_damage_text_y;
 		var _end_y = _hero_damage_text_y - 5;
@@ -66,8 +69,9 @@ for(var _i = 0; _i < array_length(party); _i++)
 		var _distance = _end_y - _start_y;
 		_hero_damage_text_y = _start_y + (_distance * _position);
 		_hero_damage_text_x = _start_x + (_distance_x * _position);
-		draw_text(_hero_damage_text_x, _hero_damage_text_y, _damage_text);
-		
+		var _text_color = c_red;
+		draw_text_color(_hero_damage_text_x, _hero_damage_text_y, $"-{hero_damage_text}", _text_color, _text_color, _text_color, _text_color, 0.8);
+		}
 		draw_set_font(FontNumbers);
 		draw_text(_hero_ui_x, _hero_ui_y, $"HP:{_hero.current_hp}")
 		draw_text(_hero_ui_x, _hero_ui_y + font_get_size(FontNumbers), $"PP:{_hero.current_pp}")

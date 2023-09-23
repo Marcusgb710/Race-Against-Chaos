@@ -1,11 +1,11 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "battle_actions",
+  "name": "spells",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Battle Controls",
-    "path": "folders/Scripts/Battle Scripts/Battle Controls.yy",
+    "name": "Battle Data",
+    "path": "folders/Scripts/Battle Scripts/Battle Data.yy",
   },
 }
