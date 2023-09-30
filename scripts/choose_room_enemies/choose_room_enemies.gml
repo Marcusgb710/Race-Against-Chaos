@@ -7,6 +7,7 @@ function choose_room_enemies(_enemy_battle_data){
 	{
 		case WeakEnemy:
 			_data = _enemy_battle_data._weak;
+			
 			break;
 		case StrongEnemy:
 			_data = _enemy_battle_data._strong;

@@ -211,7 +211,8 @@ pages = {
 }
 
 _selected_level = MistHouse;
-
+selecting_input = false
+selected_key = undefined
 
 page = pages.main
 
@@ -232,5 +233,6 @@ _show_overlay = false;
 
 
 _slider_pos = [];
+
 
 menu_init(pages, option_buffer, _page_array_length)

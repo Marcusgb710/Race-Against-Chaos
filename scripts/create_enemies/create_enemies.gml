@@ -7,7 +7,9 @@ function create_enemies(_enemies){
 	{
 			randomize();
 			var _random_enemy_idx = random_range(0, array_length(_enemies)-1);
-			array_push(_enemy_list, _enemies[_random_enemy_idx]);
+			var _enemy = new Enemy(_enemies[_random_enemy_idx])
+			array_push(_enemy_list, _enemy);
+			
 	}
 	return [_enemy_list, _enemy_amount]
 }

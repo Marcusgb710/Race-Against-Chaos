@@ -20,7 +20,7 @@ function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shi
 			var _line_length = 64;
 			var _line_x1 = (global.view_width /2) + 16;
 			
-			draw_circle(_element.pos.x_+64, _element.pos.y_, 5, false);
+			draw_circle(_element.pos.x_, _element.pos.y_, 5, false);
 			draw_line(_line_x1, _element.pos.y_, _line_x1 + _line_length, _element.pos.y_);
 			
 			break;
@@ -37,14 +37,14 @@ function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shi
 		case (menu_element_type.input):
 		
 			if (_element._show_overlay){
-				var _overlay_width = 32;
-				var _overlay_height = 32;
-				var _overlay_x = _x_pos - _overlay_width;
-				var _overlay_y = _y_pos - _overlay_height;
+				var _overlay_width = 64;
+				var _overlay_height = 64;
+				var _overlay_x = global.view_width /2;
+				var _overlay_y = global.view_height /2;
 				var _color = c_white;
-				draw_rectangle_color(_overlay_x, _overlay_y, _overlay_width * 2, _overlay_height * 2, _color, _color, _color, _color, false);
+				draw_rectangle_color(_overlay_x, _overlay_y, _overlay_width , _overlay_height, _color, _color, _color, _color, false);
 				draw_set_color(c_black);
-				draw_text(_overlay_x/2, _overlay_y/2, $"{global._fhinputKeys[_element.key]}");
+				draw_text((_overlay_x + _overlay_width)/2, (_overlay_y+_overlay_height)/2, $"{global._fhinputKeys[_element.key]}");
 			}
 		
 		

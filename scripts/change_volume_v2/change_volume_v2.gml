@@ -5,7 +5,7 @@ function change_volume_v2(_option, _value){
 	
 	switch(_name){
 		case("MASTER"):
-			audio_master_gain(_value);
+			audio_master_gain(_value*0.01);
 			break;
 			
 		case("SFX"):

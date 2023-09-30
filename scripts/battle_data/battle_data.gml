@@ -5,6 +5,7 @@ function battle_data(_spells){
     var _battle_enemy_data = 
 	{
 		_weak:{
+			chances : {a:0.5 , d:0.2, p:0.3},
 			music: mus_Battle_Against_A_Weak_Enemy,
 			enemies: [
 					{
@@ -15,6 +16,7 @@ function battle_data(_spells){
 				current_pp: 5,
 				current_defense: 0,
 				max_melee_damage: 5,
+				turn: true,
 				known_spells: [_spells.stun, _spells.sleep],
 				effects: [],
 				sprite: spr_Meeks,
@@ -29,6 +31,7 @@ function battle_data(_spells){
 				current_pp: 8,
 				current_defense: 0,
 				max_melee_damage: 12,
+				turn: true,
 				known_spells: [_spells.hurt, _spells.stun],
 				effects: [],
 				sprite: spr_Tinizorpo
@@ -41,6 +44,7 @@ function battle_data(_spells){
 					current_pp: 0,
 					current_defense: 0,
 					max_melee_damage: 15,
+					turn: true,
 					known_spells:[],
 					effects: [],
 					sprite: spr_Bfishimp
@@ -53,6 +57,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 5,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_DolphInaShell
@@ -60,6 +65,7 @@ function battle_data(_spells){
 					]
 		}
 		,_strong:{
+			chances : {a:0.7 , d:0.2, p:0.1},
 			music: mus_Battle_Against_A_Strong_Enemy,
 			enemies:[
 					{
@@ -70,6 +76,7 @@ function battle_data(_spells){
 					current_pp: 50,
 					current_defense: 0,
 					max_melee_damage: 18,
+					turn: true,
 					known_spells:[_spells.stun, _spells.sleep],
 					effects: [],
 					sprite: spr_Flora
@@ -82,6 +89,7 @@ function battle_data(_spells){
 					current_pp: 75,
 					current_defense: 0,
 					max_melee_damage: 75,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_Gun
@@ -94,6 +102,7 @@ function battle_data(_spells){
 					current_pp: 50,
 					current_defense: 0,
 					max_melee_damage: 50,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_sharky
@@ -106,6 +115,7 @@ function battle_data(_spells){
 					current_pp: 50,
 					current_defense: 0,
 					max_melee_damage: 25,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_moonplant
@@ -114,6 +124,7 @@ function battle_data(_spells){
 		],		
 		}
 		,_psyche:{
+			chances : {a:0.3 , d:0.2, p:0.5},
 			music: mus_Battle_Against_A_Psyche_Enemy,
 			enemies: [
 					{
@@ -124,6 +135,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 20,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_hauntedpants
@@ -136,6 +148,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 20,
+					turn: true,
 					known_spells:[_spells.stun, _spells.sleep, _spells.drain],
 					effects: [],
 					sprite: spr_HauntedSuit
@@ -148,6 +161,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 16,
+					turn: true,
 					known_spells:[_spells.stun, _spells.sleep, _spells.drain],
 					effects: [],
 					sprite: spr_crookedwizard
@@ -155,6 +169,7 @@ function battle_data(_spells){
 		],	
 		}
 		,_machine:{
+			chances : {a:0.7 , d:0.2, p:0.1},
 			music: mus_Battle_Against_A_Machine,
 			enemies: [
 					{
@@ -165,6 +180,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 40,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_moppy
@@ -177,6 +193,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 40,
+					turn: true,
 					known_spells:[_spells.stun, _spells.drain],
 					effects: [],
 					sprite: spr_roomba
@@ -189,6 +206,7 @@ function battle_data(_spells){
 					current_pp: 2000,
 					current_defense: 0,
 					max_melee_damage: 60,
+					turn: true,
 					known_spells:[_spells.stun, _spells.drain],
 					effects: [],
 					sprite: spr_washy
@@ -206,6 +224,7 @@ function battle_data(_spells){
 					current_pp: 0,
 					current_defense: 0,
 					max_melee_damage: 10,
+					turn: true,
 					known_spells:[],
 					effects: [],
 					sprite: spr_EdgarMAD
@@ -218,6 +237,7 @@ function battle_data(_spells){
 					current_pp: 0,
 					current_defense: 0,
 					max_melee_damage: 50,
+					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
 					sprite: spr_EdgarNEONPC

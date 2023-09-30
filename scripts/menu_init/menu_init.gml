@@ -3,7 +3,7 @@ function menu_init(_pages, _option_buffer, _page_array_length){
 	for( var _i = 0; _i <array_length(_pages.audio)-1; _i +=1)
 	{
 	
-		_pages.audio[_i].pos = {x_: (global.view_width/2)+16, y_: __y}
+		_pages.audio[_i].pos = {x_: (global.view_width/2)+16 +63, y_: __y}
 		__y += _option_buffer * 2
 	}
 	for( var _i = 0; _i <array_length(_pages.graphics)-1; _i +=1)

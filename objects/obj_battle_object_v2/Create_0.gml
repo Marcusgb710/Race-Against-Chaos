@@ -22,6 +22,8 @@ enum TURN_STATE{
 	ENEMY,
 	END,
 }
+enemy_damage_text = ""
+enemy_defense_text = ""
 
 battle_menu = {
 	main:[
@@ -50,12 +52,13 @@ battle_menu.main[0].action = function(_target){
 	if(_target.current_defense > 0)
 	{
 		_target.current_defense -= 4;
-		if(_target.current_defense <= 0){_target.current_hp -= abs(_target.current_defense) _target.current_defense = 0};
-		show_debug_message(_target);
+		enemy_damage_text = $"s-4"
+		if(_target.current_defense <= 0){enemy_damage_text = $"-{abs(_target.current_defense)} s-{4-abs(_target.current_defense)}" _target.current_hp -= abs(_target.current_defense) _target.current_defense = 0};
+		
 		return;
 	}
 	_target.current_hp -= 4 
-	show_debug_message(_target)
+	enemy_damage_text = $"-4"
 	}
 battle_menu.main[3].action = function(_target){_target.current_defense += 2}
 battle_menu.main[4].action = function(_target){can_move = false
@@ -66,14 +69,19 @@ enemy_arrow_curve = animcurve_get_channel(ac_arrow_animation, "curve1");
 hero_arrow_curve = animcurve_get_channel(ac_arrow_animation, "curve2");
 enemy_hurt_curve = animcurve_get_channel(ac_hurt_animation, "curve1");
 hero_hurt_curve = animcurve_get_channel(ac_hero_hurt_animation, "curve1");
+defense_animation = animcurve_get_channel(ac_defense_animaiton, "curve1");
+enemy_hurt_text_curve = animcurve_get_channel(ac_hurt_animation, "curve2");
+defense_curve_percent = 0;
 enemy_curve_percent = 0;
 hero_curve_percent = 0;
 enemy_hurt_percent = 0;
 hero_hurt_percent = 0;
 
-_spells = spells();
+
 _effects = game_effects();
+_spells = spells(_effects);
 _items = items();
+
 current_menu = battle_menu.main;
 _battle_data = battle_data(_spells);
 chosen_enemies = choose_room_enemies(_battle_data);
@@ -88,11 +96,22 @@ party_count = get_party_count(party);
 
 hero_damage_text = 0;
 hurt_hero = false;
+heal_hero = false;
+defend_hero = false;
 picked_hero = 0;
 
+after_animation = 0;
+do_after_animation = false;
+
+
+enemies_turn = 0;
 selected_hero = 0;
 selected_enemy = 0;
 selected_option = 0;
+current_enemy_animation = selected_hero;
+
+heal_hero = false;
+defend_hero = false;
 selecting_hero = undefined;
 friendly = false;
 selecting = false;
@@ -103,5 +122,7 @@ show_hero_selection_curve = false;
 draw_flee_screen = false;
 can_move = true;
 enemy_hurt_animation_activation = false; //lol the varable name rhymes
+enemy_heal_animaiton_activation = false;
+enemy_defense_animation_activation = false;
 
 current_state = TURN_STATE.PLAYER;
