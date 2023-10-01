@@ -27,6 +27,8 @@ if (room == Jamesoak_West) && !audio_is_playing(mus_West_Jamesoak)
 	audio_stop_all();
 	audio_play_sound(mus_West_Jamesoak, 1, true)	
 }
+
+
 /*
 if room == JamsieBeach && !audio_is_playing(mus_Beach)
 {

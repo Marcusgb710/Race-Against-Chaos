@@ -24,6 +24,7 @@
     {"name":"Menu System","order":5,"path":"folders/Menu System.yy",},
     {"name":"Fonts","order":20,"path":"folders/Menu System/Fonts.yy",},
     {"name":"Music","order":6,"path":"folders/Music.yy",},
+    {"name":"Character Themes","order":1,"path":"folders/Music/Character Themes.yy",},
     {"name":"Objects","order":7,"path":"folders/Objects.yy",},
     {"name":"Paths","order":8,"path":"folders/Paths.yy",},
     {"name":"Quest System","order":21,"path":"folders/Quest System.yy",},
@@ -50,7 +51,6 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
-    {"name":"Character Themes","order":1,"path":"folders/Music/Character Themes.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_KelsiandJonHouse","order":55,"path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},
@@ -102,6 +102,7 @@
     {"name":"mus_Jonathans_Theme","order":1,"path":"sounds/mus_Jonathans_Theme/mus_Jonathans_Theme.yy",},
     {"name":"spr_trigger","order":41,"path":"sprites/spr_trigger/spr_trigger.yy",},
     {"name":"spr_txtbox","order":3,"path":"sprites/spr_txtbox/spr_txtbox.yy",},
+    {"name":"snd_Rain","order":1,"path":"sounds/snd_Rain/snd_Rain.yy",},
     {"name":"hero_party","order":4,"path":"scripts/hero_party/hero_party.yy",},
     {"name":"spr_PoolTiles","order":39,"path":"sprites/spr_PoolTiles/spr_PoolTiles.yy",},
     {"name":"spr_MistySittingU","order":3,"path":"sprites/spr_MistySittingU/spr_MistySittingU.yy",},

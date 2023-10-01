@@ -128,32 +128,20 @@ switch(_text_id){
 		scr_text("* (I should see if Cory's awake first before I leave.)", "Misty");
 	break;
 	
+	
 	case "Barista":
-		if global.coffeeget = true
-		{
-		scr_text("* What'll it be, M?", "Barista")
-			scr_option("Mocha", "BariBari");
-			scr_option("Cappucino", "BariBari");
-		}
-		else
-		{
 		scr_text("* Oh hey Misty. Fancy seein' you here.", "Barista");
-		scr_text("* Yeah, well it's spring break so I've had a lot more free time recently.", "Misty"); //misty
-		scr_text("* I see. Hey, Where's Cory? Is he passed out at the counter again?", "Barista");
-		scr_text("* Fourth time this week.", "Misty"); //misty
-		scr_text("* Heh, that guy. Anyways, what would you like?", "Barista");
-			scr_option("Mocha", "Bari - Mocha");
-			scr_option("Cappucino", "Bari - Mocha");
-		}
+		scr_text("* Yeah, well the campus is closed for the rest of the year so I've had a lot more free time recently.", "Misty")
+		scr_text("* Nice. Well, do you need anything?", "Barista");
+		scr_text("* Yes, actually. Do you know if Cory's working today?", "Misty");
+		scr_text("* He's at the gas station, but I wouldn't really say he's working.", "Barista");
+		scr_text("* Let me guess. You stopped by earlier and-", "Misty");
+		scr_text("* Yep, he was asleep.", "Barista");
+		scr_text("* Of course. Well, thanks.", "Misty");
+		scr_text("* Anytime.", "Barista");
+		scr_text("* (Okay so Cory is at the gas station. Thats in East Jamesoak. I should head there now.", "Misty");
+			scr_text_color(48, 62, c_yellow, c_yellow, c_yellow, c_yellow);
 	break;
-	case "Bari - Mocha":
-		global.coffeeget = true;
-		scr_text("* Alrighty, here ya go.", "Barista");
-		break;
-	case "BariBari":
-		scr_text("* Here ya go, and have nice day.", "Barista");
-		obj_player.hp += 10;
-		break;
 		
 		
 		case "Edgar0.5":

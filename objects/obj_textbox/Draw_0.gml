@@ -119,33 +119,33 @@ if draw_char < text_length[page]
  } else {
 	text_pause_timer--;
 }
+
+
 //flip through pagess
 if accept_key
-    {
-	//if typing is done	
+	{
+	//if typing is done
 	if draw_char == text_length[page]
-	    {
-		//next page
-		if page < page_number-1
-		    {
-			page++; 
-			draw_char = 0;
-			}
-		//destroy textbox
-		else
-		    {
-			//link text for options
-			if option_number > 0 {
-				create_textbox(option_link_id[option_pos]);
-			           }
-			instance_destroy();
-			}
+		{
+			//Next page
+			if page < page_number-1
+				{
+				page++;
+				draw_char = 0;
+				}
+			else
+				{
+				//Link text for options
+				if option_number > 0
+				{
+					create_textbox(option_link_id[option_pos]);
+				}
+				instance_destroy();	
+				}
+		}else if draw_char != text_length[page] && draw_char > 1{
+			draw_char = text_length[page]
 		}
-	//if not done typing
-	else
-	    {
-		draw_char = text_length[page];	
-		}
+	
 	}
 
 //draw the textbox

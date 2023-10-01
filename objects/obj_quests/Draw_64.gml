@@ -13,4 +13,4 @@ var i = 0; repeat(ds_quests_num){
 
 draw_set_font(Gonzobo);
 draw_set_color(c_white);
-draw_text(0,0,str);
+draw_text_transformed(0,0,str,-0.2,-0.2,image_angle);
