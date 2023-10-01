@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_JamesoakWesttiles",
-  "bbox_bottom": 143,
+  "bbox_bottom": 175,
   "bbox_left": 48,
   "bbox_right": 191,
   "bbox_top": 0,
@@ -20,8 +20,7 @@
   "height": 192,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"01e69c5f-7272-4172-8a42-fcee2990c4b8","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"debc14d6-8c88-4c18-a610-5b2a2e80c89a","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bb774f61-4f59-45d0-b778-ec0f56aa427c","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,

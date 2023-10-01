@@ -3,6 +3,24 @@ var grid = ds_quests;
 
 var i = 0; repeat(ds_quests_num){
 	switch(i){
+		#region Get Dressed
+		case quest.get_dressed:
+		
+			switch(grid[# 0, i]){
+				case -1: break;
+				
+				case 0:
+				
+				grid[# 1, i] += 1;
+				
+				break;
+				
+			}
+		
+		break;
+		
+		#endregion
+		
 		#region Find Cory
 		case quest.find_cory:
 		

@@ -86,18 +86,7 @@ if place_meeting(x, y + yspd, obj_gate)
 	yspd = 0;	
 }
 
-if global.passconfirmed == false
-{
-	if place_meeting (x+xspd, y, obj_BeachSign)
-	{
-		xspd = 0
-	}
-	if place_meeting (x, y+yspd, obj_BeachSign)
-	{
-		yspd = 0;
-	}
-	
-}
+
 
 x += xspd;
 y += yspd;

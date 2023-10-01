@@ -1,4 +1,5 @@
 enum quest {
+	get_dressed,
 	find_cory,
 	get_coffee,
 	find_jon,
@@ -6,8 +7,13 @@ enum quest {
 
 var quest_array = [
 
+	["Get dressed",
+	0,
+	 ["Find hair tie.", "Find your jacket."]
+	],
+
 	["Find Cory", 
-	 0,
+	 -1,
 	 ["Ask around town.", "Head to East Jamesoak.", "Head to the convience store."] 
 	],
 	

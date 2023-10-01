@@ -27,6 +27,7 @@
     {"name":"inst_724C5851","path":"rooms/MistHouse/MistHouse.yy",},
     {"name":"inst_38762E2","path":"rooms/MistHouse/MistHouse.yy",},
     {"name":"inst_414C3876","path":"rooms/MistHouse/MistHouse.yy",},
+    {"name":"inst_2E0D73DD","path":"rooms/MistHouse/MistHouse.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -53,7 +54,8 @@
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":200,"effectEnabled":true,"effectType":null,"gridX":4,"gridY":4,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_FDB9E97","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":56.0,"y":236.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6CED7AAA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":136.0,"y":124.0,},
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_95196B0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_quests","path":"objects/obj_quests/obj_quests.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":136.0,"y":11.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_95196B0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_quests","path":"objects/obj_quests/obj_quests.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":136.0,"y":11.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2E0D73DD","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[],"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":48.0,"y":240.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_6985B0E9","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":-0.75,"scaleY":0.625,"spriteId":{"name":"spr_mistysbed","path":"sprites/spr_mistysbed/spr_mistysbed.yy",},"x":40.0,"y":212.0,},

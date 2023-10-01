@@ -14,21 +14,20 @@ y = clamp(y,0+(camh/2),room_height - (camh/2));
 camera_set_view_pos(view_camera[0],x-(camw*0.5),y-(camh*0.5));
 
 
-/*
 #region MUSIC
 
-if room == Lobby && !audio_is_playing(mus_Corys_Theme)
+if (room == MistHouse) && !audio_is_playing(mus_Mistys_Theme) && !instance_exists(obj_cutscene)
 {
 	audio_stop_all();
-	audio_play_sound(mus_Corys_Theme, 1, true)
+	audio_play_sound(mus_Mistys_Theme, 1, true)	
 }
 
-if (room == West_Jamesoak || room == Cafe || room == Forest) && !audio_is_playing(mus_West_Jamesoak)
+if (room == Jamesoak_West) && !audio_is_playing(mus_West_Jamesoak)
 {
 	audio_stop_all();
 	audio_play_sound(mus_West_Jamesoak, 1, true)	
 }
-
+/*
 if room == JamsieBeach && !audio_is_playing(mus_Beach)
 {
 	audio_stop_all();	
@@ -52,7 +51,7 @@ if (room == PortVinai || room == PortVinai2 || room == Parkinglot) && !audio_is_
 	audio_play_sound(mus_Port_Vinai, 1, true)
 }
 
-
+*/
 
 #endregion
 

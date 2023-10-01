@@ -3,6 +3,13 @@ function scr_game_text(_text_id){
 
 switch(_text_id){
 	
+	case "MiFirstLine":
+		scr_text("* Man.", "Misty");
+		scr_text("* I love hearing the sound of rain against the windows.", "Misty");
+		scr_text("* It sounds like its raining cats and dogs, though.", "Misty");
+		scr_text("* Better tie my hair up and get my jacket before I leave.", "Misty");
+		break;
+		
 	case "First Save":
 		scr_text("* There's a boombox here.", "Misty");
 		scr_text("* It has a green button labeled ''SAVE'' and a red one labeled ''LOAD''.", "Misty");
@@ -124,7 +131,7 @@ switch(_text_id){
 	case "Barista":
 		if global.coffeeget = true
 		{
-		scr_text("* What'll it be, Misty-erious?", "Barista")
+		scr_text("* What'll it be, M?", "Barista")
 			scr_option("Mocha", "BariBari");
 			scr_option("Cappucino", "BariBari");
 		}
@@ -136,82 +143,18 @@ switch(_text_id){
 		scr_text("* Fourth time this week.", "Misty"); //misty
 		scr_text("* Heh, that guy. Anyways, what would you like?", "Barista");
 			scr_option("Mocha", "Bari - Mocha");
-			scr_option("Cappucino", "Bari - Cappucino");
+			scr_option("Cappucino", "Bari - Mocha");
 		}
 	break;
 	case "Bari - Mocha":
 		global.coffeeget = true;
 		scr_text("* Alrighty, here ya go.", "Barista");
 		break;
-	case "Bari - Cappucino":
-		global.coffeeget = true;
-		scr_text("* Not sure he'll be happy about this one, but here ya go.", "Barista");
-		break;
 	case "BariBari":
 		scr_text("* Here ya go, and have nice day.", "Barista");
 		obj_player.hp += 10;
 		break;
 		
-	case "Security1":
-		if global.passconfirmed 
-		{
-			scr_text("* Proceed.", "SG");
-			scr_text("* Will do.", "Misty");
-			break;
-		}
-		
-		
-		if global.passobtained
-		{
-			scr_text("* Here.", "Misty");
-			scr_text("* Thank you. I'll remove the sign.", "SG");
-			global.passconfirmed = true;
-			break;
-		}
-		
-		
-		if global.sec && global.egg
-		{
-			scr_text("* Can you please just let me pass?", "Misty");
-			scr_text("* Look, I apologize for my tone earlier, However, My job isn't to let teens in just because they want to.", "SG");
-			scr_text("* So for the last time, if you do not have a pass, Please leave.", "SG");
-			scr_text("* (Maybe I can find a leftover pass in the Hotel to my left.)", "Misty");
-			break;
-		}
-		
-		
-		if global.egg && !global.sec
-		{
-			scr_text("* Hi, I like your suit.", "Misty");
-			scr_text("* Do you have a pass, young lady?", "SG");
-			scr_text("* Oh, well, no. I just thought I'd..", "Misty");
-			scr_text("* Move along.", "SG");
-			scr_text("* Oh. Okay then. Have a nice day.", "Misty");
-			global.sec = true;	
-			break;
-		}
-		
-		
-		if global.sec == true
-		{
-			scr_text("* Aren't you getting wet without an umbrella?", "Misty");
-			scr_text("* Didn't I say move along?", "SG");
-			scr_text("* didn't you have hair at one point...", "Misty");
-				scr_text_font(GonzoboWh);
-			scr_text("* Excuse me?", "SG");
-				scr_text_font(Gonzobo);
-			scr_text("* Nothing! I'll be going now, bye.", "Misty");
-		}
-		else
-		{
-		scr_text("* Hi, I like your suit.", "Misty");
-		scr_text("* Do you have a pass, young lady?", "SG");
-		scr_text("* Oh, well, no. I just thought I'd..", "Misty");
-		scr_text("* Move along.", "SG");
-		scr_text("* Oh. Okay then. Have a nice day.", "Misty");
-		global.sec = true;
-		}
-		break;
 		
 		case "Edgar0.5":
 		scr_text("* (Oh no it's Edgar)", "Misty");
@@ -267,27 +210,6 @@ switch(_text_id){
 		
 		break;
 
-		case "Front":
-		
-		if global.passobtained
-		{
-			scr_text("* If you need me, I'll just stand here forever.", "Guy");
-			scr_text("* You're a weird guy. I like it.", "Misty");
-			scr_text("* Pretty backhanded compliment you just gave me but I'll take it.", "Guy");
-			break;
-		}
-		
-		scr_text("* Why are you just standing here?", "Misty");
-		scr_text("* I was hoping to get a free room due to the epidemic happening lately.", "Guy");
-		scr_text("* Turns out, no one's here because they closed up shop a week ago.", "Guy");
-		scr_text("* I saved up to go to the beach and no one's even there!", "Guy");
-		scr_text("* This pass is basically worthless.", "Guy");
-		scr_text("* Oh, well, can I have it then?", "Misty");
-		scr_text("* Sure I guess. Have fun.", "Guy");
-		scr_text("* Thank you!", "Misty");
-		global.passobtained = true;
-		scr_text("[ You've obtained Beach Pass ]", "Misty");
-		break;
 		
 		
 		case "Max":
@@ -358,7 +280,7 @@ switch(_text_id){
 		case "Kels1":
 		
 		scr_text("* oh there you are.", "Jon");
-		scr_text("* Hi guys.", "Kels");
+		scr_text("* Sup guys.", "Kels");
 		scr_text("* What were you doing here?", "Misty");
 		scr_text("* Just watching the sunset.", "Kels");
 		scr_text("* sounds nice.", "Jon");
@@ -390,7 +312,7 @@ switch(_text_id){
 		scr_text("* (Are you serious?!)", "Misty");
 		scr_text("* You thought you guys were the only ones to find a magic pit? Think you're real clever, huh?", "Egg");
 		scr_text("* Well guess what, I found it.", "Egg"); 
-		scr_text("* I dove right in, and found some purple dust.", "Egg");
+		scr_text("* I dove right in, found some purple dust.", "Egg");
 		scr_text("* The dust helped a lot with the creation of this giant mech you see now.", "Egg");
 		scr_text("* Ohoho, how the tables have turned.", "Egg");
 		scr_text("* Listen, Edgar, we can talk about this.", "Misty");
@@ -408,9 +330,9 @@ switch(_text_id){
 		scr_text("* Nevermind, not phew.", "Kels");
 		scr_text("* Edgar if you don't stop we'll be forced to make you, and I really don't wanna do that!", "Misty");
 		scr_text("* Well that's too bad, because I do.", "Egg");
-		scr_text("* (misty maybe we should just fight him.)", "Jon");
-		scr_text("* (he'll take over the world and I can't imagine being ruled by a big nerd.)", "Jon");
-		scr_text("* (Yeah honestly I'm on Jon's side here.)", "Kels");
+		scr_text("* (Misty I think we gotta fight him.)", "Kels");
+		scr_text("* (He'll take over the world and I can't imagine being ruled by a big nerd.)", "Kels");
+		scr_text("* (yeah honestly i'm on Kels' side here.)", "Jon");
 		scr_text("* (Fine.)", "Misty");
 		scr_text("* Alright Edgar, let's end this here.", "Misty");
 		scr_text("* Hohoho, I see we've become feisty now. Well, I won't complain.", "Egg");

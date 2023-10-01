@@ -10,13 +10,7 @@ global.coffeeget = false
 
 global.friendquest1 = false;
 
-global.sec = false;
-
 global.egg = false;
-
-global.passobtained = false;
-
-global.passconfirmed = false;
 
 global.jondone = false;
 

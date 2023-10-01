@@ -12,8 +12,8 @@
   "conversionMode": 0,
   "duration": 47.995647,
   "parent": {
-    "name": "Misc",
-    "path": "folders/Music/Misc.yy",
+    "name": "Character Themes",
+    "path": "folders/Music/Character Themes.yy",
   },
   "preload": false,
   "sampleRate": 44100,
