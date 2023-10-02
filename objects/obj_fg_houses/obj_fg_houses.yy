@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_fghouse",
-    "path": "sprites/spr_fghouse/spr_fghouse.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

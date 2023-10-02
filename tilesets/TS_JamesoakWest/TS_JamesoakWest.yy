@@ -16,8 +16,8 @@
     "path": "folders/Tile Sets.yy",
   },
   "spriteId": {
-    "name": "spr_JamesoakWesttiles",
-    "path": "sprites/spr_JamesoakWesttiles/spr_JamesoakWesttiles.yy",
+    "name": "spr_Jamesoaktiles",
+    "path": "sprites/spr_Jamesoaktiles/spr_Jamesoaktiles.yy",
   },
   "spriteNoExport": true,
   "textureGroupId": {
