@@ -51,6 +51,7 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
+    {"name":"Overworld","order":6,"path":"folders/Sprites/Enemies/Overworld.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_KelsiandJonHouse","order":55,"path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},
@@ -192,6 +193,7 @@
     {"name":"spr_boombox","order":1,"path":"sprites/spr_boombox/spr_boombox.yy",},
     {"name":"Effect","order":1,"path":"scripts/Effect/Effect.yy",},
     {"name":"page_navigation","order":14,"path":"scripts/page_navigation/page_navigation.yy",},
+    {"name":"spr_ovtinizorpo","order":1,"path":"sprites/spr_ovtinizorpo/spr_ovtinizorpo.yy",},
     {"name":"death","order":3,"path":"scripts/death/death.yy",},
   ],
 }
