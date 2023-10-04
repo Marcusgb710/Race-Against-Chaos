@@ -43,6 +43,7 @@
     {"name":"Sprites","order":15,"path":"folders/Sprites.yy",},
     {"name":"Enemies","order":66,"path":"folders/Sprites/Enemies.yy",},
     {"name":"Machine","order":1,"path":"folders/Sprites/Enemies/Machine.yy",},
+    {"name":"Overworld","order":6,"path":"folders/Sprites/Enemies/Overworld.yy",},
     {"name":"Psyche","order":2,"path":"folders/Sprites/Enemies/Psyche.yy",},
     {"name":"Secret Bosses","order":5,"path":"folders/Sprites/Enemies/Secret Bosses.yy",},
     {"name":"Strong","order":3,"path":"folders/Sprites/Enemies/Strong.yy",},
@@ -51,7 +52,7 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
-    {"name":"Overworld","order":6,"path":"folders/Sprites/Enemies/Overworld.yy",},
+    {"name":"Enemy Spawner","order":1,"path":"folders/Objects/Enemy Spawner.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_KelsiandJonHouse","order":55,"path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},
