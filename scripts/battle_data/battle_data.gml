@@ -20,6 +20,7 @@ function battle_data(_spells){
 				known_spells: [_spells.stun, _spells.sleep],
 				effects: [],
 				sprite: spr_Meeks,
+				overworld_sprite: spr_ovmeeks
 				
 				
 			},
@@ -34,7 +35,8 @@ function battle_data(_spells){
 				turn: true,
 				known_spells: [_spells.hurt, _spells.stun],
 				effects: [],
-				sprite: spr_Tinizorpo
+				sprite: spr_Tinizorpo,
+				overworld_sprite: spr_ovtinizorpo
 				},
 					{
 					name: "Bfishimp",
