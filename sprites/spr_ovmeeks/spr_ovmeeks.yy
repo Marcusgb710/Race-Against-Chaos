@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Overworld",
-    "path": "folders/Sprites/Enemies/Overworld.yy",
+    "name": "Weak",
+    "path": "folders/Sprites/Enemies/Overworld/Weak.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

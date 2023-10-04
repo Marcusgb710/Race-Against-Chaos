@@ -18,7 +18,7 @@ enemy_positions = {
 	three:[{_x:5, _y: 10}, {_x:10 + _w, _y: 10}, {_x:10 + _w, _y: 15+ _h}]
 }
 
-detection_radius = 100;
+detection_radius = 220;
 enemy_idx = 0
 x_pos = 0
 y_pos = 0

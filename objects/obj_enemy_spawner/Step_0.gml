@@ -19,7 +19,7 @@ if(_detection_circle)
 		
 		var _distance = power((sqr(_distance_x) + sqr(_distance_y)), 0.5)
 		
-		var _speed = 0.3
+		var _speed = 0.6
 		
 		enemies[_i]._x += _speed * _distance_x / _distance;
 		enemies[_i]._y += _speed * _distance_y / _distance;
@@ -28,7 +28,11 @@ if(_detection_circle)
 	if(_battle_detection_circle)
 	{
 		show_debug_message("P")
-		room_goto(WeakEnemy)
+		if !instance_exists(obj_battransition)
+		{
+		var inst = instance_create_depth(x,y,-10000,obj_battransition)
+		inst.target_rm = WeakEnemy;
+		}
 	}
 	
 }
@@ -43,7 +47,7 @@ if(enemy_idx >= 4)
 	enemy_idx = 0
 }
 
-enemy_idx += 1/12;
+enemy_idx += 1/6;
 
 
 
