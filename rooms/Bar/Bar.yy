@@ -8,7 +8,6 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_2EC2EDDD","path":"rooms/Bar/Bar.yy",},
-    {"name":"inst_71B8A24A","path":"rooms/Bar/Bar.yy",},
     {"name":"inst_74AB4221","path":"rooms/Bar/Bar.yy",},
     {"name":"inst_2D3025D0","path":"rooms/Bar/Bar.yy",},
     {"name":"inst_27034CE3","path":"rooms/Bar/Bar.yy",},
@@ -27,11 +26,14 @@
     {"name":"inst_2A5470B0","path":"rooms/Bar/Bar.yy",},
     {"name":"inst_591CA4A2","path":"rooms/Bar/Bar.yy",},
     {"name":"inst_774F86A5","path":"rooms/Bar/Bar.yy",},
+    {"name":"inst_3BA3C0EE","path":"rooms/Bar/Bar.yy",},
   ],
   "isDnd": false,
   "layers": [
-    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Shader","depth":0,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_71B8A24A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_moodshader","path":"objects/obj_moodshader/obj_moodshader.yy",},"properties":[],"rotation":0.0,"scaleX":4.5,"scaleY":4.46875,"x":0.0,"y":0.0,},
+    {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Surface","depth":0,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3BA3C0EE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_light_rendering","path":"objects/obj_light_rendering/obj_light_rendering.yy",},"properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light_rendering","path":"objects/obj_light_rendering/obj_light_rendering.yy",},"propertyId":{"name":"col","path":"objects/obj_light_rendering/obj_light_rendering.yy",},"value":"$005300FF",},
+          ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":136.0,"y":144.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","depth":100,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_74AB4221","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":6.0,"scaleY":10.0,"x":160.0,"y":208.0,},

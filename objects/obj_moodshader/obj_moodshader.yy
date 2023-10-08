@@ -27,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_moodlighting",
-    "path": "sprites/spr_moodlighting/spr_moodlighting.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

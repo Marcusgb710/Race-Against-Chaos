@@ -1,15 +1,16 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_rainshader",
+  "name": "obj_light_rendering",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "VFX",
-    "path": "folders/Objects/VFX.yy",
+    "name": "Objects",
+    "path": "folders/Lighting System/Objects.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -25,7 +26,10 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [],
+  "properties": [
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"col","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"$00994E00","varType":7,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"intensity","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":true,"rangeMax":1.0,"rangeMin":0.0,"value":"0.4","varType":0,},
+  ],
   "solid": false,
   "spriteId": null,
   "spriteMaskId": null,
