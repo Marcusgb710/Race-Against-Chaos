@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_Jamesoaktiles",
   "bbox_bottom": 191,
-  "bbox_left": 48,
+  "bbox_left": 16,
   "bbox_right": 191,
   "bbox_top": 0,
   "bboxMode": 0,
@@ -20,7 +20,7 @@
   "height": 192,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"bb774f61-4f59-45d0-b778-ec0f56aa427c","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"18a52cc4-1bc4-450f-80c2-3d2b4059c650","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
