@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Weak",
-    "path": "folders/Sprites/Enemies/Overworld/Weak.yy",
+    "name": "Race Against Chaos",
+    "path": "Race Against Chaos.yyp",
   },
   "preMultiplyAlpha": false,
   "sequence": {

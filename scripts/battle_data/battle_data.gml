@@ -20,7 +20,9 @@ function battle_data(_spells){
 				known_spells: [_spells.stun, _spells.sleep],
 				effects: [],
 				sprite: spr_Meeks,
-				overworld_sprite: spr_ovmeeks
+				overworld_sprite: spr_ovmeeks,
+				overworld_fps:12,
+				animation_idx:0,
 				
 				
 			},
@@ -36,7 +38,9 @@ function battle_data(_spells){
 				known_spells: [_spells.hurt, _spells.stun],
 				effects: [],
 				sprite: spr_Tinizorpo,
-				overworld_sprite: spr_ovtinizorpo
+				overworld_sprite: spr_ovtinizorpo,
+				overworld_fps: 8,
+				animation_idx:0,
 				},
 					{
 					name: "Bfishimp",

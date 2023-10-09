@@ -20,17 +20,16 @@ enemy_positions = {
 
 detection_radius = 220;
 enemy_idx = 0
-x_pos = 0
-y_pos = 0
+
+_p_x = obj_player.x
+_p_y = obj_player.y
+
 
 
 for(var _i = 0; _i < enemy_amount; _i++)
 {
 	
 	
-	//draw_rectangle_color(x_pos, y_pos, x_pos+15, y_pos+15, c_black, c_black, c_blue, c_blue, 0)
-	//x_pos = 276 + enemy_positions.two[_i]._x
-	//y_pos = 376 + enemy_positions.two[_i]._y
 	enemies[_i]._x = 276 + enemy_positions.two[_i]._x
 	enemies[_i]._y = 376 + enemy_positions.two[_i]._y
 }
