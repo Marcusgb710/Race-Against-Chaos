@@ -41,6 +41,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Dialogue System/Sprites.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Extensions","folderPath":"folders/Extensions.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Lighting System","folderPath":"folders/Lighting System.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"group1","folderPath":"folders/Lighting System/group1.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Lighting System/Objects.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menu System","folderPath":"folders/Menu System.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Menu System/Fonts.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Music.yy",},
@@ -85,14 +87,12 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"VFX","folderPath":"folders/VFX.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls, Barriers, and Blocks","folderPath":"folders/Walls, Barriers, and Blocks.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Objects","folderPath":"folders/Lighting System/Objects.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"group1","folderPath":"folders/Lighting System/group1.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.8.0.98",
+    "IDEVersion": "2023.6.0.92",
   },
   "resources": [
     {"id":{"name":"spr_KelsiandJonHouse","path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},},
@@ -499,7 +499,6 @@
     {"roomId":{"name":"pbgtest","path":"rooms/pbgtest/pbgtest.yy",},},
     {"roomId":{"name":"puzzletestrm","path":"rooms/puzzletestrm/puzzletestrm.yy",},},
   ],
-  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

@@ -22,6 +22,8 @@
     {"name":"Sprites","order":3,"path":"folders/Dialogue System/Sprites.yy",},
     {"name":"Extensions","order":4,"path":"folders/Extensions.yy",},
     {"name":"Lighting System","order":24,"path":"folders/Lighting System.yy",},
+    {"name":"group1","order":4,"path":"folders/Lighting System/group1.yy",},
+    {"name":"Objects","order":3,"path":"folders/Lighting System/Objects.yy",},
     {"name":"Menu System","order":5,"path":"folders/Menu System.yy",},
     {"name":"Fonts","order":20,"path":"folders/Menu System/Fonts.yy",},
     {"name":"Music","order":6,"path":"folders/Music.yy",},
@@ -56,8 +58,6 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
-    {"name":"Objects","order":3,"path":"folders/Lighting System/Objects.yy",},
-    {"name":"group1","order":4,"path":"folders/Lighting System/group1.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_KelsiandJonHouse","order":55,"path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},
