@@ -93,7 +93,10 @@ _items = items();
 
 current_menu = battle_menu.main;
 _battle_data = battle_data(_spells);
-chosen_enemies = choose_room_enemies(_battle_data);
+//chosen_enemies = choose_room_enemies(_battle_data);
+chosen_enemies = enemies_in_room
+if(is_undefined(enemies_in_room)){chosen_enemies = choose_room_enemies(_battle_data)};
+
 enemy_data = create_enemies(chosen_enemies.enemies);
 
 song = chosen_enemies.music;

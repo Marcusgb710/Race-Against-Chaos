@@ -184,6 +184,7 @@
     {"name":"spr_GonzoboFont","order":2,"path":"sprites/spr_GonzoboFont/spr_GonzoboFont.yy",},
     {"name":"spr_Tinizorpo","order":2,"path":"sprites/spr_Tinizorpo/spr_Tinizorpo.yy",},
     {"name":"settings_controller","order":15,"path":"scripts/settings_controller/settings_controller.yy",},
+    {"name":"pick_room_enemies","order":9,"path":"scripts/pick_room_enemies/pick_room_enemies.yy",},
     {"name":"obj_mainmenu","order":1,"path":"objects/obj_mainmenu/obj_mainmenu.yy",},
     {"name":"spr_fountain","order":6,"path":"sprites/spr_fountain/spr_fountain.yy",},
     {"name":"game_effects","order":5,"path":"scripts/game_effects/game_effects.yy",},

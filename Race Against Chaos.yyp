@@ -410,6 +410,7 @@
     {"id":{"name":"settings_controller","path":"scripts/settings_controller/settings_controller.yy",},},
     {"id":{"name":"TS_Parking","path":"tilesets/TS_Parking/TS_Parking.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},
+    {"id":{"name":"pick_room_enemies","path":"scripts/pick_room_enemies/pick_room_enemies.yy",},},
     {"id":{"name":"obj_pusharea","path":"objects/obj_pusharea/obj_pusharea.yy",},},
     {"id":{"name":"spr_BaristaNPC","path":"sprites/spr_BaristaNPC/spr_BaristaNPC.yy",},},
     {"id":{"name":"spr_Kelsi_btl_UI","path":"sprites/spr_Kelsi_btl_UI/spr_Kelsi_btl_UI.yy",},},

@@ -1,12 +1,14 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-
+globalvar enemies_in_room;
+enemies_in_room = undefined;
 function battle_data(_spells){
     var _battle_enemy_data = 
 	{
 		_weak:{
 			chances : {a:0.5 , d:0.2, p:0.3},
 			music: mus_Battle_Against_A_Weak_Enemy,
+			_room: WeakEnemy,
 			enemies: [
 					{
 				name: "Meeks",
@@ -73,6 +75,7 @@ function battle_data(_spells){
 		,_strong:{
 			chances : {a:0.7 , d:0.2, p:0.1},
 			music: mus_Battle_Against_A_Strong_Enemy,
+			_room: StrongEnemy,
 			enemies:[
 					{
 					name: "Flora",
@@ -132,6 +135,7 @@ function battle_data(_spells){
 		,_psyche:{
 			chances : {a:0.3 , d:0.2, p:0.5},
 			music: mus_Battle_Against_A_Psyche_Enemy,
+			_room: PsycheEnemy,
 			enemies: [
 					{
 					name: "Haunted Pants",
@@ -177,6 +181,7 @@ function battle_data(_spells){
 		,_machine:{
 			chances : {a:0.7 , d:0.2, p:0.1},
 			music: mus_Battle_Against_A_Machine,
+			_room: MachEnemy,
 			enemies: [
 					{
 					name: "Moppy",

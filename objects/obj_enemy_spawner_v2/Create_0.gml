@@ -3,12 +3,11 @@
 
 data = battle_data(spells(game_effects()))
 
-enemy_data = data._weak.enemies;
+enemy_data = enemies_in_room;
 
 detection_radius = 10;
 
 battle_layer = layer_get_all_elements(layer_get_id("Battles"))
-show_debug_message(battle_layer)
 
 cream_color = make_color_rgb(255, 253, 208)
 radius = 5

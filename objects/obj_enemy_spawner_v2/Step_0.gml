@@ -14,7 +14,7 @@ for(var _i = 0; _i < array_length(battle_layer); _i++)
 	
 	if(_detection_circle)
 	{
-		room_goto(WeakEnemy)
+		room_goto(enemy_data._room)
 	}
 		
 

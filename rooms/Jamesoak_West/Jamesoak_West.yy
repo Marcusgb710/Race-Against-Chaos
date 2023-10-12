@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Jamesoak_West",
-  "creationCodeFile": "",
+  "creationCodeFile": "rooms/Jamesoak_West/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,
