@@ -7,6 +7,30 @@ var _left = keyboard_check_pressed(global.key_left);
 var _right = keyboard_check_pressed(global.key_right);
 var _select = keyboard_check_pressed(global.key_enter);
 
+if draw_txt{
+if(text_end_delay_timer >= 1){draw_txt = false return}
+if (string_length(text_to_draw) == string_length(drawn_text)){text_end_delay_timer += 1/text_end_delay}
+if (text_timer == 1 && string_length(text_to_draw) != string_length(drawn_text)){
+try
+{
+	
+	
+	drawn_text += string_char_at(text_to_draw, text_idx)
+	
+	text_idx +=1	
+
+}
+}
+if (text_timer >= 3){text_timer = 0}
+text_timer += 1
+}
+else
+{
+	text_idx = 1
+	text_timer = 0
+	text_end_delay_timer = 0
+}
+
 
 if(keyboard_check_pressed(vk_add))
 {
@@ -44,6 +68,8 @@ switch(current_state)
 {
 
 	case TURN_STATE.EFFECTS:
+	text_to_draw = ""
+	drawn_text = ""	
 		for (var _i=0; _i < party_count; _i++)
 			{
 				var _party_member = party[_i];
@@ -109,10 +135,13 @@ switch(current_state)
 		break;
 		
 	case TURN_STATE.PLAYER:
-	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation))
+	
+		
+	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
 	
-	
+	text_to_draw = ""
+	drawn_text = ""
 		if(_select)
 			{
 				var _current_option = current_menu[selected_option]
@@ -133,8 +162,8 @@ switch(current_state)
 						_current_option.action(_hero)
 						
 						picked_hero = selected_hero;
-						if(_current_option.name == "DEFEND"){hero_damage_text = _hero.current_defense - _before_hero_defense defend_hero = true hurt_hero = true}
-						else{hero_damage_text = _hero.current_hp - _before_hero_hp heal_hero = true hurt_hero = true}
+						if(_current_option.name == "DEFEND"){hero_damage_text = _hero.current_defense - _before_hero_defense defend_hero = true hurt_hero = true draw_txt = true text_to_draw = battle_text_._defense(hero_damage_text, _hero.name)}
+						else{hero_damage_text = _hero.current_hp - _before_hero_hp heal_hero = true hurt_hero = true draw_txt = true text_to_draw = battle_text_._heal(hero_damage_text, _hero.name)}
 						
 						selected_hero = selecting_hero;
 						
@@ -145,9 +174,14 @@ switch(current_state)
 					{
 					show_enemy_arrow = false;
 					var _enemy = enemies[selected_enemy];
+					var _ebhp = _enemy.current_hp
+					var _ebd = _enemy.current_defense
 					current_enemy_animation = selected_enemy
 					enemy_hurt_animation_activation = true;
 					_current_option.action(_enemy)
+					draw_txt = true;
+					
+					text_to_draw = battle_text_._damage(_ebd - _enemy.current_defense ,_ebhp - _enemy.current_hp,  _enemy)
 					}
 					
 					current_state = TURN_STATE.ENEMY;
@@ -232,9 +266,12 @@ switch(current_state)
 	}
 		break;
 	case TURN_STATE.ENEMY:
+
 		//if(!enemy_hurt_animation_activation)
-		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation))
+		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 		{
+		text_to_draw = ""
+		drawn_text = ""
 		var _current_turns_enemy = enemies[enemies_turn];
 		current_enemy_animation = enemies_turn
 		var _enemy_options = ["a", "d", "p"];
@@ -249,6 +286,8 @@ switch(current_state)
 		switch(_random_choice)
 		{
 			case "a":
+			var _bhp = _random_hero.current_hp
+			var _bd = _random_hero.current_defense
 				var _dmg = round(random_range(1, 2))
 				
 					var _carry_over_dmg = 0;
@@ -266,6 +305,8 @@ switch(current_state)
 				hero_damage_text = _dmg;
 				hurt_hero = true;
 				selected = false;
+				draw_txt = true
+				text_to_draw = battle_text_._damage(_bd - _random_hero.current_defense, _bhp - _random_hero.current_hp, _random_hero)
 				
 				break;
 				
@@ -273,7 +314,9 @@ switch(current_state)
 				_current_turns_enemy.current_defense += 5;
 				enemy_defense_text = $"s+5"
 				selected = false;
-				enemy_defense_animation_activation = true;				
+				enemy_defense_animation_activation = true;		
+				draw_txt = true;
+				text_to_draw = battle_text_._defense(5, _current_turns_enemy.name)
 				break;
 				
 			case "p":
@@ -295,17 +338,19 @@ switch(current_state)
 		break;
 		
 	case TURN_STATE.END:
-		//if(!hurt_hero && !enemy_defense_animation_activation)
-		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation))
-		{
+	
 		
+		//if(!hurt_hero && !enemy_defense_animation_activation)
+		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
+		{
+		text_to_draw = ""
+		drawn_text = ""
 		selected = false;
 		selecting = false;
 		friendly = false;
-		current_menu = battle_menu.main
+		current_menu = battle_menu.main;
 		selected_option = 0;
-		current_enemy_animation = selected_enemy
-		
+		current_enemy_animation = selected_enemy;
 		
 		enemies_turn += 1;
 		selected_hero += 1;

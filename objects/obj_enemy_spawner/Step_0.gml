@@ -3,6 +3,7 @@
 
 _p_x = obj_player.x
 _p_y = obj_player.y
+
 //logic
 var _detection_circle = abs(sqr(enemies[0]._x-_p_x) + sqr(enemies[0]._y-_p_y)) < sqr(detection_radius)
 var _battle_detection_circle = abs(sqr(enemies[0]._x-_p_x) + sqr(enemies[0]._y-_p_y)) < sqr(32)

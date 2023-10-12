@@ -196,3 +196,23 @@ if(draw_flee_screen)
 	draw_roundrect_color_ext(_flee_overlay_x, _flee_overlay_y, _flee_overlay_width, _flee_overlay_height, _rad, _rad, c_black, c_black, false)
 	draw_text(_flee_text_x, _flee_text_y, _flee_text)
 }
+
+
+var _text_box_width = global.view_width - 10
+var _text_box_height = 40
+var _text_box_y_buffer = 100 + _text_box_height
+var _rect_x = 5
+var _rect_y = 5
+
+var _battle_text_y = _rect_y
+var _txt_x = (((_rect_x +_text_box_width)/ 2) + (string_length(drawn_text)*fontsize)/2)
+
+
+	
+		//draw_rectangle_color(_rect_x, _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_black, c_black, c_black, c_black, 0 )
+		
+if draw_txt{	
+draw_rectangle_color(_rect_x , _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_white, c_white, c_white, c_white, 1 )
+draw_text((_rect_x +_text_box_width)/ 2 - (string_length(drawn_text)*fontsize)/2, _rect_y +2, "*"+drawn_text)
+}
+

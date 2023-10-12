@@ -22,8 +22,17 @@ enum TURN_STATE{
 	ENEMY,
 	END,
 }
-enemy_damage_text = ""
-enemy_defense_text = ""
+
+
+
+text_timer = 0
+text_idx = 1
+battle_text_ = battle_text()
+draw_txt = false
+text_to_draw = ""
+drawn_text = ""
+text_end_delay_timer = 0
+text_end_delay = 60
 
 battle_menu = {
 	main:[
@@ -89,6 +98,7 @@ enemy_data = create_enemies(chosen_enemies.enemies);
 
 song = chosen_enemies.music;
 party = hero_party(_spells, _items); 
+
 
 enemies = enemy_data[0];
 enemy_amount = enemy_data[1];
