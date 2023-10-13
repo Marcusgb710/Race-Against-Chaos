@@ -90,7 +90,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"spr_KelsiandJonHouse","path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},},
@@ -336,6 +336,7 @@
     {"id":{"name":"Sprite185","path":"sprites/Sprite185/Sprite185.yy",},},
     {"id":{"name":"TS_KelsiandJonHouse","path":"tilesets/TS_KelsiandJonHouse/TS_KelsiandJonHouse.yy",},},
     {"id":{"name":"spr_EdgarNEONPC","path":"sprites/spr_EdgarNEONPC/spr_EdgarNEONPC.yy",},},
+    {"id":{"name":"Jamesoak_Midtown","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},},
     {"id":{"name":"snd_E_B","path":"sounds/snd_E_B/snd_E_B.yy",},},
     {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},},
     {"id":{"name":"Item","path":"scripts/Item/Item.yy",},},
@@ -483,7 +484,6 @@
     {"roomId":{"name":"Premenu","path":"rooms/Premenu/Premenu.yy",},},
     {"roomId":{"name":"MistHouse","path":"rooms/MistHouse/MistHouse.yy",},},
     {"roomId":{"name":"Jamesoak_West","path":"rooms/Jamesoak_West/Jamesoak_West.yy",},},
-    {"roomId":{"name":"Jamesoak_Midtown","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},},
     {"roomId":{"name":"Bar","path":"rooms/Bar/Bar.yy",},},
     {"roomId":{"name":"GameOver","path":"rooms/GameOver/GameOver.yy",},},
     {"roomId":{"name":"Edgar","path":"rooms/Edgar/Edgar.yy",},},
@@ -494,7 +494,9 @@
     {"roomId":{"name":"MachEnemy","path":"rooms/MachEnemy/MachEnemy.yy",},},
     {"roomId":{"name":"pbgtest","path":"rooms/pbgtest/pbgtest.yy",},},
     {"roomId":{"name":"puzzletestrm","path":"rooms/puzzletestrm/puzzletestrm.yy",},},
+    {"roomId":{"name":"Jamesoak_Midtown","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

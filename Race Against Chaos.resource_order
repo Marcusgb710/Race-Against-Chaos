@@ -155,6 +155,7 @@
     {"name":"obj_battle_object_v2","order":6,"path":"objects/obj_battle_object_v2/obj_battle_object_v2.yy",},
     {"name":"ac_heal_animation","order":4,"path":"animcurves/ac_heal_animation/ac_heal_animation.yy",},
     {"name":"Sprite185","order":67,"path":"sprites/Sprite185/Sprite185.yy",},
+    {"name":"Jamesoak_Midtown","order":4,"path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},
     {"name":"Item","order":3,"path":"scripts/Item/Item.yy",},
     {"name":"spr_mistyhousetiles","order":56,"path":"sprites/spr_mistyhousetiles/spr_mistyhousetiles.yy",},
     {"name":"spr_backtrees","order":21,"path":"sprites/spr_backtrees/spr_backtrees.yy",},
