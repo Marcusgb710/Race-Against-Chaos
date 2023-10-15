@@ -119,8 +119,8 @@
   "lineHeight": 0,
   "maintainGms1Font": false,
   "parent": {
-    "name": "UI",
-    "path": "folders/Battle System/UI.yy",
+    "name": "Fonts",
+    "path": "folders/Battle System/UI/Fonts.yy",
   },
   "pointRounding": 0,
   "ranges": [

@@ -28,8 +28,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "UI",
-    "path": "folders/Battle System/UI.yy",
+    "name": "Backgrounds",
+    "path": "folders/Battle System/UI/Backgrounds.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

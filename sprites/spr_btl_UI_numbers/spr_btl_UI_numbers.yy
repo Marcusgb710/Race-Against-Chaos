@@ -104,8 +104,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "UI",
-    "path": "folders/Battle System/UI.yy",
+    "name": "Sprites",
+    "path": "folders/Battle System/UI/Sprites.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

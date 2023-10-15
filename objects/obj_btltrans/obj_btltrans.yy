@@ -11,8 +11,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "UI",
-    "path": "folders/Battle System/UI.yy",
+    "name": "Transitions",
+    "path": "folders/Battle System/UI/Transitions.yy",
   },
   "parentObjectId": {
     "name": "obj_pause",
