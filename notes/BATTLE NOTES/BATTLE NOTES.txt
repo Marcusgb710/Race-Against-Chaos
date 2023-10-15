@@ -1,0 +1,26 @@
+- Defending increases 5 pp to the defender. This system makes both
+defending a more valuable option while also giving the player a chance
+at strategy for certain fights.
+
+- You can't flee in bossfights. That'll probably break something.
+
+- Edgar's first fight has the strategy of "You need him to be asleep so you can do
+more damage to him". The way I coded this initially was having edgar have the exact 
+same health as you, while being able to do slightly more damage than you. However,
+with the way the sleep system worked, this was very rng based and would either 
+guarantee a loss or make the fight excrutiatingly easy because spamming attack was
+actually the better strategy.
+
+- Edgar NEO's fight basically went the same direction. Melee isn't good enough,
+you're fighting a robot. You need to use magic, but while he's asleep. Edgar can
+take a member out in 2-3 strikes in this fight, so you need to be cautious. All of
+this made sense until I discovered you could once again beat him quick by spamming 
+attack. Trying to be strategic actually made the fight LONGER and annoying.
+
+- Edgar NEO was also planned to have stun abilities. Quick robot bonk, lights out
+for a party member.
+
+- Edgar is beaten by Misty alone.
+
+- Edgar NEO is beaten by Misty, Jon, and Kelsi. Cory is nowhere to be found, probably
+fell asleep somewhere.
