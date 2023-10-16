@@ -308,8 +308,8 @@ switch(_text_id){
 		scr_text("* (''he?'' who's he talking about?)", "Jon");
 		scr_text("* (I think he's gone insane.)", "Kels");
 		scr_text("* (Maybe he means the robot?)", "Misty");
-		scr_text("* He said ''If you see those 4 again, Take them out.''", "Egg");
-		scr_text("* Of course, there's only 3 of you right now, so I have no clue if that was a misspeak or something.", "Egg");
+		scr_text("* He said ''While I gift you this power, cause as much mayhem as possible.''", "Egg");
+		scr_text("* And what not a better way to start that than dealing with you guys!", "Egg");
 		scr_text("* Woah woah woah! You're going to kill us?!", "Kels");
 		scr_text("* What? No.", "Egg");
 		scr_text("* Oh. Phew.", "Kels");
