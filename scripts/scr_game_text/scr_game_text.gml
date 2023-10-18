@@ -75,6 +75,16 @@ switch(_text_id){
 		scr_text("* ..Eh, Probably not.", "Misty");
 		break;
 	
+	case "Old Man Walt":
+		scr_text("* Howdy Misty.", "Old");
+		scr_text("* Hey Walt. How's business?", "Misty");
+		scr_text("* Oh, its horrible. Absolutely horrible.", "Old");
+		scr_text("* Still better than livin' with my ex wife though.", "Old");
+		scr_text("* Aw. Well, I'm sure it'll kick off soon. Just have hope.", "Misty");
+		scr_text("* That sure is a nice thing of you to say, Misty.", "Old");
+		scr_text("* So, what'll it be?", "Old");
+		break;
+	
 	case "Sleepy Cory Quest":
 	
 		if global.friendquest1 == true

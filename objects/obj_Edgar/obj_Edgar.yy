@@ -32,8 +32,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_EdgarNPC",
-    "path": "sprites/spr_EdgarNPC/spr_EdgarNPC.yy",
+    "name": "spr_EdgarD",
+    "path": "sprites/spr_EdgarD/spr_EdgarD.yy",
   },
   "spriteMaskId": null,
   "visible": true,

@@ -31,10 +31,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_EdgarMAD",
-    "path": "sprites/spr_EdgarMAD/spr_EdgarMAD.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }
