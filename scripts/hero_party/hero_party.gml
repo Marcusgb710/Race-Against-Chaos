@@ -1,5 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+globalvar last_room;
+
 function hero_party(_spells, _items){
 	var _party_data = 
 	[
@@ -16,7 +18,9 @@ function hero_party(_spells, _items){
 			known_spells: [_spells.heal, _spells.sleep],
 			inventory: [_items.tea,],
 			effects: [],
-			sprite: spr_Misty_btl_UI
+			sprite: spr_Misty_btl_UI,
+			last_pos:{_x:0, _y:0},
+			
 		},
 		{
 			name: "Jon",
@@ -31,7 +35,8 @@ function hero_party(_spells, _items){
 			known_spells: [_spells.hurt, _spells.stun],
 			inventory: [_items.cookie],
 			effects:[],
-			sprite: spr_John_btl_UI
+			sprite: spr_John_btl_UI,
+			last_pos:{_x:0, _y:0}
 		},
 		{
 			name: "Kelsi",
@@ -46,7 +51,8 @@ function hero_party(_spells, _items){
 			known_spells: [_spells.hurt, _spells.stun, _spells.sleep],
 			inventory: [_items.chocobar],
 			effects:[],
-			sprite: spr_Kelsi_btl_UI
+			sprite: spr_Kelsi_btl_UI,
+			last_pos:{_x:0, _y:0}
 		},
 		{
 			name: "Cory",
@@ -61,7 +67,8 @@ function hero_party(_spells, _items){
 			known_spells: [_spells.hurt, _spells.stun],
 			inventory: [_items.coffee],
 			effects:[],
-			sprite: spr_Cory_btl_UI
+			sprite: spr_Cory_btl_UI,
+			last_pos:{_x:0, _y:0}
 		},
 				
 	]

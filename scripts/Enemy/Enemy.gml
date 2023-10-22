@@ -11,6 +11,6 @@ function Enemy(_enemy) constructor{
 	max_melee_damage= _enemy.max_melee_damage
 	turn= _enemy.turn
 	known_spells= _enemy.known_spells
-	effects= _enemy.effects
+	effects= []
 	sprite= _enemy.sprite
 }

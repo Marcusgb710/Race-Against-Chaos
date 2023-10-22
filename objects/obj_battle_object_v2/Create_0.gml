@@ -17,12 +17,20 @@ enum BATTLE_MENU_PAGE{
 }
 
 enum TURN_STATE{
+	PLAYER_EFFECTS,
+	ENEMY_EFFECTS,
 	EFFECTS,
 	PLAYER,
 	ENEMY,
-	END,
+	END
+	
 }
 
+efx = false
+e = 0
+ee = 0
+
+select_effected_enemy = 0
 
 
 text_timer = 0
@@ -54,7 +62,7 @@ battle_menu = {
 		new Action("FLEE", BATTLE_MENU_STATE.ACTION, true) ,
 		]
 }
-
+enemy_damage_text = 0
 battle_menu.main[0].action = function(_target){
 	var _carry_over_dmg = 0;
 	
@@ -80,6 +88,7 @@ enemy_hurt_curve = animcurve_get_channel(ac_hurt_animation, "curve1");
 hero_hurt_curve = animcurve_get_channel(ac_hero_hurt_animation, "curve1");
 defense_animation = animcurve_get_channel(ac_defense_animaiton, "curve1");
 enemy_hurt_text_curve = animcurve_get_channel(ac_hurt_animation, "curve2");
+
 defense_curve_percent = 0;
 enemy_curve_percent = 0;
 hero_curve_percent = 0;
@@ -95,7 +104,7 @@ current_menu = battle_menu.main;
 _battle_data = battle_data(_spells);
 //chosen_enemies = choose_room_enemies(_battle_data);
 chosen_enemies = enemies_in_room
-if(is_undefined(enemies_in_room)){chosen_enemies = choose_room_enemies(_battle_data)};
+if(is_undefined(enemies_in_room)){chosen_enemies = choose_room_enemies(_battle_data) last_room = Premenu};
 
 enemy_data = create_enemies(chosen_enemies.enemies);
 

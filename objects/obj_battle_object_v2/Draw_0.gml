@@ -20,6 +20,8 @@ var _text_y = _y;
 var _hero_ui_x = 5;
 var _hero_ui_y = _y;
 
+
+
 var _enemy_y = room_height/ 2 - 64/2
 var _enemy_x;
 
@@ -51,16 +53,20 @@ for(var _i = 0; _i < array_length(party); _i++)
 	var _hero = party[_i]
 	if(_hero.in_party)
 	{
+		_hero.position = {}
+		_hero.position._x = _hero_ui_x
+		_hero.position._y = _hero_ui_y
+		
 		//draw damage numbers
 		if(hurt_hero && picked_hero == _i)
 		{
-		show_debug_message(picked_hero)
+		//show_debug_message(picked_hero)
 		var _hero_damage_text;
 		var _damage_text = 0;  
 		var _hero_damage_text_x = (_hero_ui_x + (sprite_get_width(spr_UIs)*(picked_hero+1))) / 2
 		var _hero_damage_text_y = _hero_ui_y + font_get_size(FontNumbers)
 		hero_hurt_percent += 1/60;
-		if(hero_hurt_percent > 1.2){hurt_hero = false;heal_hero = false;defend_hero = false; hero_hurt_percent = 0};
+		if(hero_hurt_percent > 1.2){hurt_hero = false;heal_hero = false;defend_hero = false; hero_hurt_percent = 0 efx = true};
 		var _position = animcurve_channel_evaluate(hero_hurt_curve, hero_hurt_percent);
 		var _start_y = _hero_damage_text_y;
 		var _end_y = _hero_damage_text_y - 5;
@@ -77,11 +83,36 @@ for(var _i = 0; _i < array_length(party); _i++)
 		draw_text_color(_hero_damage_text_x, _hero_damage_text_y, _hero_damage_text, _text_color, _text_color, _text_color, _text_color, 0.9);
 		
 		}
-		draw_set_font(FontNumbers);
-		draw_text(_hero_ui_x, _hero_ui_y, $"HP:{_hero.current_hp}")
-		draw_text(_hero_ui_x, _hero_ui_y + font_get_size(FontNumbers), $"PP:{_hero.current_pp}")
-		draw_set_font(BattleGonzobo);
+		var _health_and_pp_Xoffset = 12
+		var _health_and_pp_Yoffset = 20;
+		var _hoffset = 0;
+		
+		
+		var _current_pp = $"{_hero.current_pp}"
 		draw_sprite(_hero.sprite,-1,  _hero_ui_x, _hero_ui_y+font_get_size(FontNumbers)*2+ 3);	
+		draw_set_font(FontNumbers);
+		
+		for(var _j = 0; _j < string_length($"{_hero.current_hp}"); _j++)
+		{
+			var _num = string_char_at($"{_hero.current_hp}", _j+1)
+			
+			draw_text_transformed(_hero_ui_x+_health_and_pp_Xoffset+_hoffset, _hero_ui_y+_health_and_pp_Yoffset,_num, 0.8, 0.8, 0)
+			_hoffset += 5
+		}
+		_hoffset = 0
+		
+		for(var _j = 0; _j < string_length($"{_hero.current_pp}"); _j++)
+		{
+			var _num = string_char_at($"{_hero.current_pp}", _j+1)
+			
+			draw_text_transformed(_hero_ui_x+_health_and_pp_Xoffset +_hoffset, _hero_ui_y + font_get_size(FontNumbers)+_health_and_pp_Yoffset, _num, 0.8, 0.8, 0)
+			_hoffset += 5
+		}
+		//draw_text_transformed(_hero_ui_x+_health_and_pp_Xoffset, _hero_ui_y+_health_and_pp_Yoffset,_current_hp, 0.8, 0.8, 0)
+		//draw_text_transformed(_hero_ui_x+_health_and_pp_Xoffset, _hero_ui_y + font_get_size(FontNumbers)+_health_and_pp_Yoffset, $"{_hero.current_pp}", 0.8, 0.8, 0)
+		
+		draw_set_font(BattleGonzobo);
+		
 		_hero_ui_x += sprite_get_width(spr_UIs) + 5;
 	}
 }
@@ -120,7 +151,7 @@ for(var _i = 0; _i < enemy_amount; _i++)
 	if(enemy_hurt_animation_activation && current_enemy_animation == _i)
 	{
 	enemy_hurt_percent += 1/40;
-	if(enemy_hurt_percent > 1){enemy_hurt_animation_activation=false; enemy_hurt_percent = 0;  do_after_animation = true;}//enemy_hurt_percent -=1};
+	if(enemy_hurt_percent > 1){enemy_hurt_animation_activation=false; enemy_hurt_percent = 0;  do_after_animation = true efx = true}//enemy_hurt_percent -=1};
 	var _position = animcurve_channel_evaluate(enemy_hurt_curve, enemy_hurt_percent);
 	var _enemy_text_position = animcurve_channel_evaluate(enemy_hurt_text_curve, enemy_hurt_percent)
 	var _start_x = _enemy_x - 2;
@@ -133,6 +164,8 @@ for(var _i = 0; _i < enemy_amount; _i++)
 	var _text_distance = _end_y - _start_y
 	var _text_y = _start_y + (_text_distance * _enemy_text_position);
 	draw_text_color((_enemy._x +32), _text_y, enemy_damage_text, c_red, c_red, c_red, c_red, 0.8)
+	
+	
 	}
 	if(enemy_defense_animation_activation && current_enemy_animation == _i)
 	{
@@ -178,6 +211,46 @@ if(show_enemy_arrow)
 	draw_sprite_ext(spr_selectarrow, -1, _enemy_arrow_x, _enemy_arrow_y, 1, -1, 0, c_white, 1);	
 
 }
+//draw effects
+for (var _i=0; _i < party_count; _i++)
+{
+	var _party_member = party[_i];
+	var _effect_pos = 0
+	if(array_length(_party_member.effects) > 0)
+	{
+					
+		for(var _j = 0; _j < array_length(_party_member.effects); _j++)
+		{
+			if(array_length(_party_member.effects) > 0)
+				{
+				
+				var _effect = _party_member.effects[_j]
+				
+				draw_sprite_ext(_effect.effect_spr, 0, _party_member.position._x+_effect_pos, _party_member.position._y, 0.5, 0.5,0, c_white, 1)
+				_effect_pos += 16*0.5
+				}
+		}
+	}
+}
+for (var _i=0; _i < array_length(enemies); _i++)
+	{
+		var _enemy = enemies[_i];
+		
+			var _effect_pos = 0
+			for(var _j = 0; _j < array_length(_enemy.effects); _j++)
+			{
+				if(array_length(_enemy.effects) > 0)
+				{
+				
+				var _effect = _enemy.effects[_j]
+				draw_sprite(_effect.effect_spr, 0, _enemy._x+_effect_pos, _enemy._y - sprite_get_width(_effect.effect_spr))
+				_effect_pos += 16
+				}
+			}
+		
+	}
+		
+		
 
 //flee screen
 if(draw_flee_screen)
@@ -198,6 +271,8 @@ if(draw_flee_screen)
 }
 
 
+
+// draw battle textbax
 var _text_box_width = global.view_width - 10
 var _text_box_height = 40
 var _text_box_y_buffer = 100 + _text_box_height
@@ -205,14 +280,17 @@ var _rect_x = 5
 var _rect_y = 5
 
 var _battle_text_y = _rect_y
-var _txt_x = (((_rect_x +_text_box_width)/ 2) + (string_length(drawn_text)*fontsize)/2)
+var _txt_to_draw = $"*{drawn_text}"
+var _txt_x = (((_rect_x +_text_box_width)/ 2) - (string_length(text_to_draw)*fontsize)/2)
 
+show_debug_message($"BATTLEBOX TEXT FROM START:{_txt_x}")
+show_debug_message($"BATTLEBOX TEXT FROM START:{_rect_x + (string_length(_txt_to_draw)*fontsize)/2}")
 
 	
 		//draw_rectangle_color(_rect_x, _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_black, c_black, c_black, c_black, 0 )
 		
 if draw_txt{	
 draw_rectangle_color(_rect_x , _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_white, c_white, c_white, c_white, 1 )
-draw_text((_rect_x +_text_box_width)/ 2 - (string_length(drawn_text)*fontsize)/2, _rect_y +2, "*"+drawn_text)
+draw_text((_rect_x +_text_box_width)/ 2 - (string_length(_txt_to_draw)*fontsize)/2, _rect_y +2, _txt_to_draw)
 }
 

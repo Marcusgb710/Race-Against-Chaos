@@ -38,7 +38,7 @@ function battle_data(_spells){
 				max_melee_damage: 12,
 				turn: true,
 				known_spells: [_spells.hurt, _spells.stun],
-				effects: [],
+				effects:[],
 				sprite: spr_Tinizorpo,
 				overworld_sprite: spr_ovtinizorpo,
 				overworld_fps: 8,

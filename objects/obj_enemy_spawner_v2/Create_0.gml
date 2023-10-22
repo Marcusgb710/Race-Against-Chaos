@@ -5,7 +5,7 @@ data = battle_data(spells(game_effects()))
 
 enemy_data = enemies_in_room;
 
-detection_radius = 10;
+detection_radius = 5;
 
 battle_layer = layer_get_all_elements(layer_get_id("Battles"))
 

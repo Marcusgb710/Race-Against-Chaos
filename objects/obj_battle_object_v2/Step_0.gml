@@ -6,6 +6,7 @@ var _down = keyboard_check_pressed(global.key_down);
 var _left = keyboard_check_pressed(global.key_left);
 var _right = keyboard_check_pressed(global.key_right);
 var _select = keyboard_check_pressed(global.key_enter);
+var mvon = false;
 
 if draw_txt{
 if(text_end_delay_timer >= 1){draw_txt = false return}
@@ -34,8 +35,18 @@ else
 
 if(keyboard_check_pressed(vk_add))
 {
-	array_push(party[0].known_spells, _spells.superheal)
-	array_push(enemies[0].effects, _effects.fire)
+	if(!array_contains(party[0].known_spells, _spells.flame))
+	{
+		array_push(party[0].known_spells, _spells.flame)
+	}
+	
+	
+	//array_push(party[0].known_spells, _spells.freeze)
+	//array_push(party[0].known_spells, _spells.drain)
+	//array_push(party[0].known_spells, _spells.hurt)
+	//array_push(party[0].known_spells, _spells.stun)
+	//array_push(enemies[0].effects, _effects.fire)
+	add_effect(party[0], new Effect2(_effects.fire), _effects.fire.action)
 }
 
 
@@ -56,82 +67,131 @@ for (var _i=0; _i < array_length(enemies); _i++)
 		return;
 	}
 }
+
 if (do_after_animation)
 {
 	if after_animation > 1{ after_animation = 0 do_after_animation = false;}
-	after_animation += 1/60;	
+	after_animation += 1/60;
+	
 }
 
 if(can_move){
 	
 switch(current_state)
 {
-
-	case TURN_STATE.EFFECTS:
+	case TURN_STATE.ENEMY_EFFECTS:
+	
+	
+	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
+	{
+		var _enemy = enemies[select_effected_enemy];
+		
+		if(efx)
+		{
+			efx = false
+			e += 1
+		}
+		if e >= array_length(_enemy.effects){
+		current_state = TURN_STATE.ENEMY
+		e = 0
+		}
+	//show_debug_message(e)
+	
 	text_to_draw = ""
-	drawn_text = ""	
-		for (var _i=0; _i < party_count; _i++)
-			{
-				var _party_member = party[_i];
-				if(array_length(_party_member.effects) > 0)
-				{
+	drawn_text = ""
+	
+				
+	if(array_length(_enemy.effects) > 0)
+	{
 					
-					for(var _j = 0; _j < array_length(_party_member.effects); _j++)
-					{
-						var _effect = _party_member.effects[_j]
-						if(_effect.effect_counter <= 0)
-						{
-							
-							array_delete(_party_member.effects, _j, 1);
-						}
-						picked_hero = _i;
-						if _effect.friendly
-						{
-							
-							heal_hero = true;
-							hurt_hero = true;
-						}
-						else
-						{
-							hurt_hero = true;	
-						}
-						_effect.action(_party_member);
-						_effect.counter();
-					}
-				}
-			}
-		for (var _i=0; _i < array_length(enemies); _i++)
-			{
-				var _enemy = enemies[_i];
-				if(array_length(_enemy.effects) > 0)
-				{
-					for(var _j = 0; _j < array_length(_enemy.effects); _j++)
-					{
-						var _effect = _enemy.effects[_j]
-						if _effect.friendly
-						{
-							
-						}
-						else
-						{
-							current_enemy_animation = _i
-							enemy_hurt_animation_activation = true;
-							
-						}
-						if(_effect.effect_counter <= 0)
-						{
-							
-							array_delete(_enemy.effects, _j, 1);
-						}
+			var _effect = _enemy.effects[e]
+			//show_debug_message($"ENEMY Effect: {_effect.effect_counter}")			
 						
-						_effect.action(_enemy);
-						_effect.counter();
-					}
-				}
+			if _effect.friendly
+			{
+							
 			}
+			else
+			{
+				current_enemy_animation = select_effected_enemy
+				enemy_hurt_animation_activation = true;
+							
+			}
+			text_to_draw = battle_text_._effect(_effect.name, _enemy.name)
+			draw_txt = true
+			_effect.action(_enemy);
+						
+			if(_effect.effect_counter <= 0)
+			{
+				_effect.reset();
+				array_delete(_enemy.effects, e, 1);
+			}
+			_effect.counter();
+						
+						
+		}
+					
+	}
+	
+	
+	
+		break;	
 		
+	case TURN_STATE.PLAYER_EFFECTS:
+	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
+	{
+		var _party_member = party[selected_hero];
 		
+		if(efx)
+		{
+			efx = false
+			e += 1
+		}
+		if e >= array_length(_party_member.effects){
 		current_state = TURN_STATE.PLAYER
+		e = 0
+		}
+	//show_debug_message(e)
+	
+	text_to_draw = ""
+	drawn_text = ""
+	
+	if(array_length(_party_member.effects) > 0)			
+	//if(array_length(_party_member.effects) > 0 && !efx)
+	{
+					
+			var _effect = _party_member.effects[e]
+						
+			//show_debug_message($"Player Effect: {_effect.effect_counter}")
+			if _effect.friendly
+			{
+							
+			}
+			else
+			{
+				//current_enemy_animation = select_effected_enemy
+				//enemy_hurt_animation_activation = true;
+				hurt_hero = true
+							
+			}
+			text_to_draw = battle_text_._effect(_effect.name, _party_member.name)
+			draw_txt = true
+			_effect.action(_party_member);
+						
+			if(_effect.effect_counter <= 0)
+			{
+				_effect.reset()
+							
+				array_delete(_party_member.effects, e, 1);
+			}
+			_effect.counter();
+						
+	
+		}
+					
+	}
+		
+		
 		break;
 		
 	case TURN_STATE.PLAYER:
@@ -178,13 +238,14 @@ switch(current_state)
 					var _ebd = _enemy.current_defense
 					current_enemy_animation = selected_enemy
 					enemy_hurt_animation_activation = true;
+					//show_debug_message(enemies)
 					_current_option.action(_enemy)
 					draw_txt = true;
 					
 					text_to_draw = battle_text_._damage(_ebd - _enemy.current_defense ,_ebhp - _enemy.current_hp,  _enemy)
 					}
 					
-					current_state = TURN_STATE.ENEMY;
+					current_state = TURN_STATE.ENEMY_EFFECTS;
 					return;
 					}
 					
@@ -265,7 +326,10 @@ switch(current_state)
 			}
 	}
 		break;
+		
 	case TURN_STATE.ENEMY:
+		
+		
 
 		//if(!enemy_hurt_animation_activation)
 		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
@@ -273,6 +337,7 @@ switch(current_state)
 		text_to_draw = ""
 		drawn_text = ""
 		var _current_turns_enemy = enemies[enemies_turn];
+		//show_debug_message(_current_turns_enemy.effects)
 		current_enemy_animation = enemies_turn
 		var _enemy_options = ["a", "d", "p"];
 		randomize();
@@ -280,8 +345,9 @@ switch(current_state)
 		picked_hero = round(random_range(0, party_count-1))
 		var _random_hero = party[picked_hero]
 		var _random_choice = enemy_battle_decision(chosen_enemies.chances)
-		
-		show_debug_message(_random_choice)
+		if (_current_turns_enemy.turn)
+		{
+		//show_debug_message(_random_choice)
 		//select_option
 		switch(_random_choice)
 		{
@@ -332,8 +398,10 @@ switch(current_state)
 				break;
 			
 		}
+		}
 		
 		current_state = TURN_STATE.END
+		
 		}
 		break;
 		
@@ -351,16 +419,18 @@ switch(current_state)
 		current_menu = battle_menu.main;
 		selected_option = 0;
 		current_enemy_animation = selected_enemy;
+		e = 0;
 		
 		enemies_turn += 1;
 		selected_hero += 1;
+		select_effected_enemy += 1;
 		if (selected_hero > party_count-1){selected_hero = 0};
 		if(!party[selected_hero].turn){selected_hero += 1 if (selected_hero > party_count-1){selected_hero = 0};};
 		if (enemies_turn > enemy_amount-1){enemies_turn = 0};
-		if(!enemies[enemies_turn].turn){enemies_turn += 1 if (enemies_turn > enemy_amount-1){enemies_turn = 0};};
+		if(select_effected_enemy > enemy_amount - 1){select_effected_enemy = 0}
 		
 		can_move = true;
-		current_state = TURN_STATE.EFFECTS
+		current_state = TURN_STATE.PLAYER_EFFECTS
 		}
 		break;
 			
