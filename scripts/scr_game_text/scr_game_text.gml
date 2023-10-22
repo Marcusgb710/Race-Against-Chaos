@@ -10,6 +10,7 @@ switch(_text_id){
 		scr_text("* Better tie my hair up and get my jacket before I leave.", "Misty");
 		break;
 		
+	#region SAVE DIALOGUE	
 	case "First Save":
 		scr_text("* There's a boombox here.", "Misty");
 		scr_text("* It has a green button labeled ''SAVE'' and a red one labeled ''LOAD''.", "Misty");
@@ -50,8 +51,9 @@ switch(_text_id){
 		scr_text("* Eh, maybe later, when I'm in a more stressful situation.", "Misty");
 			scr_text_color(20, 59, c_yellow, c_yellow, c_orange, c_orange);
 		break;
+	#endregion
 	
-	//Psi Explanation
+	#region Psi Explanation
 	case "Book":
 		scr_text("* ''Psyche Magic and the story behind it.''", "Misty");
 		scr_text("* Hmm... Should I read this?", "Misty");
@@ -74,6 +76,88 @@ switch(_text_id){
 		case "N":
 		scr_text("* ..Eh, Probably not.", "Misty");
 		break;
+	#endregion
+	
+	#region First NPCS
+	case "Old Man Walt":
+		scr_text("* Howdy Misty.", "Old");
+		scr_text("* Hey Walt. How's business?", "Misty");
+		scr_text("* Oh, its horrible. Absolutely horrible.", "Old");
+		scr_text("* Still better than livin' with my ex wife though.", "Old");
+		scr_text("* Aw. Well, I'm sure it'll kick off soon. Just have hope.", "Misty");
+		scr_text("* That sure is a nice thing of you to say, Misty.", "Old");
+		scr_text("* So, what'll it be?", "Old");
+		break;
+		
+	case "Barista":
+		scr_text("* Oh hey Misty. Fancy seein' you here.", "Barista");
+		scr_text("* Yeah, well the campus is closed for the rest of the year so I've had a lot more free time recently.", "Misty")
+		scr_text("* Nice. Well, do you need anything?", "Barista");
+		scr_text("* Yes, actually. Do you know if Cory's working today?", "Misty");
+		scr_text("* He's at the gas station, but I wouldn't really say he's working.", "Barista");
+		scr_text("* Let me guess. You stopped by earlier and-", "Misty");
+		scr_text("* Yep, he was asleep.", "Barista");
+		scr_text("* Of course. Well, thanks.", "Misty");
+		scr_text("* Anytime.", "Barista");
+		scr_text("* (Okay so Cory is at the gas station. Thats in East Jamesoak. I should head there now.", "Misty");
+			scr_text_color(48, 62, c_yellow, c_yellow, c_yellow, c_yellow);
+	break;
+	
+	#endregion
+	
+	#region FIRST EDGAR ENCOUNTER
+		
+		case "Edgar0.5":
+		scr_text("* (Oh no it's Edgar)", "Misty");
+		break;
+		
+		case "Edgar1":
+		scr_text("* Well, well, well. Look who it is!", "Egg");
+		scr_text("* Edgar can you move out the way please?", "Misty");
+		scr_text("* Make me.", "Egg");
+		scr_text("* I don't want to, I just need you to-", "Misty");
+		scr_text("* Well if you're too chicken to fight, then I'm not moving.", "Egg");
+		scr_text("* This is my street, therefore I can say who comes and goes as I please.", "Egg");
+		scr_text("* This isn't even your street! Just move 8 pixels down, it's not hard, Edgar.", "Misty");
+		scr_text("* Tell you what.", "Egg");
+		scr_text("* If you can beat me in a duel...", "Egg");
+		scr_text("* Please no.", "Misty");
+		scr_text("* Then I'll humbly let you pass.", "Egg");
+		scr_text("* Can we not do that-", "Misty");
+		scr_text("* BUT.", "Egg");
+		scr_text("* If I win, in which I obviously will,", "Egg");
+		scr_text("* You'll be subjected to the worst punishment imaginable.", "Egg");
+		scr_text("* Oh no...Heavens no...", "Misty");
+		scr_text("* That's right.", "Egg");
+		scr_text("* Taking the long way, through Jamsie Beach, and getting sand in your shoes!", "Egg");
+		break;		
+		
+		case "Edgar1.2":
+		scr_text("* No! That'll take forever to get out!", "Misty");
+		scr_text("* Well if you don't want that, then I suggest you fight me.", "Egg");
+		scr_text("* ...You know what, I'll just cut through North Jamesoak.", "Misty");
+		scr_text("* Hmph.", "Egg");
+		global.egg = true;
+		break;
+		
+		case "Edgar2.1":
+		
+		scr_text("* HEY.", "Egg");
+		scr_text("* Hm?", "Misty");
+		
+		break;
+		
+		case "Edgar2":
+		
+		scr_text("* Why won't you fight me? Do you think I'm too weak? Not strong enough for your ''Magic Powers'', huh?", "Egg");
+		scr_text("* Wh..What? No, I just..", "Misty");
+		scr_text("* If you won't fight me then I'll just make you. I'll prove I'm better!", "Egg");
+		scr_text("* Wait a second! Why can't we just-", "Misty");
+		scr_text("* Engarde!", "Egg");
+		
+		break;
+
+		#endregion
 	
 	case "Sleepy Cory Quest":
 	
@@ -129,75 +213,8 @@ switch(_text_id){
 	break;
 	
 	
-	case "Barista":
-		scr_text("* Oh hey Misty. Fancy seein' you here.", "Barista");
-		scr_text("* Yeah, well the campus is closed for the rest of the year so I've had a lot more free time recently.", "Misty")
-		scr_text("* Nice. Well, do you need anything?", "Barista");
-		scr_text("* Yes, actually. Do you know if Cory's working today?", "Misty");
-		scr_text("* He's at the gas station, but I wouldn't really say he's working.", "Barista");
-		scr_text("* Let me guess. You stopped by earlier and-", "Misty");
-		scr_text("* Yep, he was asleep.", "Barista");
-		scr_text("* Of course. Well, thanks.", "Misty");
-		scr_text("* Anytime.", "Barista");
-		scr_text("* (Okay so Cory is at the gas station. Thats in East Jamesoak. I should head there now.", "Misty");
-			scr_text_color(48, 62, c_yellow, c_yellow, c_yellow, c_yellow);
-	break;
+	
 		
-		
-		case "Edgar0.5":
-		scr_text("* (Oh no it's Edgar)", "Misty");
-		break;
-		
-		case "Edgar1":
-		scr_text("* Well, well, well. Look who it is!", "Egg");
-		scr_text("* Edgar can you move out the way please?", "Misty");
-		scr_text("* Make me.", "Egg");
-		scr_text("* I don't want to, I just need you to-", "Misty");
-		scr_text("* Well if you're too chicken to fight, then I'm not moving.", "Egg");
-		scr_text("* This is my street, therefore I can say who comes and goes as I please.", "Egg");
-		scr_text("* This isn't even your street! Just move 8 pixels down, it's not hard, Edgar.", "Misty");
-		scr_text("* Tell you what.", "Egg");
-		scr_text("* If you can beat me in a duel...", "Egg");
-		scr_text("* Please no.", "Misty");
-		scr_text("* Then I'll humbly let you pass.", "Egg");
-		scr_text("* Can we not do that-", "Misty");
-		scr_text("* BUT.", "Egg");
-		scr_text("* If I win, in which I obviously will,", "Egg");
-		scr_text("* You'll be subjected to the worst punishment imaginable.", "Egg");
-		scr_text("* Oh no...Heavens no...", "Misty");
-		scr_text("* That's right.", "Egg");
-		scr_text("* Taking the long way, through Jamsie Beach, and getting sand in your shoes!", "Egg");
-		break;		
-
-		case "Edgar1.1":
-		scr_text("* !!!!!", "Misty");
-		break;
-		
-		case "Edgar1.2":
-		scr_text("* No! That'll take forever to get out!", "Misty");
-		scr_text("* Well if you don't want that, then I suggest you fight me.", "Egg");
-		scr_text("* ...You know what, I'll just take the long way.", "Misty");
-		scr_text("* Hmph.", "Egg");
-		global.egg = true;
-		break;
-		
-		case "Edgar2.1":
-		
-		scr_text("* HEY.", "Egg");
-		scr_text("* Hm?", "Misty");
-		
-		break;
-		
-		case "Edgar2":
-		
-		scr_text("* Why won't you fight me? Do you think I'm too weak? Not strong enough for your ''Magic Powers'', huh?", "Egg");
-		scr_text("* Wh..What? No, I just..", "Misty");
-		scr_text("* If you won't fight me then I'll just make you. I'll prove I'm better!", "Egg");
-		scr_text("* Wait a second! Why can't we just-", "Misty");
-		scr_text("* Engarde!", "Egg");
-		
-		break;
-
 		
 		
 		case "Max":
@@ -308,8 +325,8 @@ switch(_text_id){
 		scr_text("* (''he?'' who's he talking about?)", "Jon");
 		scr_text("* (I think he's gone insane.)", "Kels");
 		scr_text("* (Maybe he means the robot?)", "Misty");
-		scr_text("* He said ''If you see those 4 again, Take them out.''", "Egg");
-		scr_text("* Of course, there's only 3 of you right now, so I have no clue if that was a misspeak or something.", "Egg");
+		scr_text("* He said ''While I gift you this power, cause as much mayhem as possible.''", "Egg");
+		scr_text("* And what not a better way to start that than dealing with you guys!", "Egg");
 		scr_text("* Woah woah woah! You're going to kill us?!", "Kels");
 		scr_text("* What? No.", "Egg");
 		scr_text("* Oh. Phew.", "Kels");

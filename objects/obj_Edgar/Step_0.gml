@@ -1,17 +1,17 @@
+if !instance_exists(obj_player) exit;
 
-
-
-if instance_exists(obj_player)
-{
-	y = obj_player.y;
-	
-	
-	if obj_player.down_key || obj_player.up_key || obj_player.Cmove
-	{
-	image_index = obj_player.image_index;
-	}
-	else
+if !Cmove && global.egg == false
 	{
 	image_index = 0;
 	}
+	
+
+if global.egg = true
+{
+	if (!obj_player.down_key && !obj_player.up_key) 
+	{
+	image_index = 0;
+	}
+y = obj_player.y;
 }
+

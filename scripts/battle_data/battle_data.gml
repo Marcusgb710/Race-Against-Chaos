@@ -225,7 +225,7 @@ function battle_data(_spells){
 		],
 		}
 		,_bosses:{
-			music: mus_Battle_Against_A_Machine,
+			music: mus_Edgar_Finch,
 			enemies:[
 					{
 					name: "Edgar",
@@ -238,7 +238,7 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[],
 					effects: [],
-					sprite: spr_EdgarMAD
+					sprite: spr_btl_WeakEdgar
 					},
 					{
 					name: "Edgar NEO",
@@ -251,7 +251,7 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_EdgarNEONPC
+					sprite: spr_btl_Edgar
 					},
 		],
 		}

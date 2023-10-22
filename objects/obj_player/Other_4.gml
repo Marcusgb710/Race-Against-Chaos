@@ -13,7 +13,7 @@ casual = false;
 }
 
 
-if room == Jamesoak_West //|| room == Jamesoak_Midtown
+if room == Jamesoak_West || room == Jamesoak_Midtown
 {
 rain = true;
 sprite[RIGHT] = spr_MistyRainR;

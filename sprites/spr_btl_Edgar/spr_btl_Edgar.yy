@@ -5,7 +5,7 @@
   "bbox_bottom": 127,
   "bbox_left": 0,
   "bbox_right": 127,
-  "bbox_top": 19,
+  "bbox_top": 14,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -21,6 +21,7 @@
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"baecdb51-87c1-46c6-8dca-449be5d383b5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4d14ab6b-fb84-44b7-b7a2-4d6b8e07d42b","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 4,

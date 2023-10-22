@@ -164,6 +164,13 @@ if argument_count > 1 {
 		snd[page_number] = snd_kels_voice; 
 		break;
 		
+		case "Old":
+		txtb_spr[page_number] = spr_txtbox;
+		speaker[page_number] = "Old Man Walt";
+		speaker_side[page_number] = 1;
+		snd[page_number] = snd_Def_Voice; 
+		break;
+		
 		}
 		
 		
