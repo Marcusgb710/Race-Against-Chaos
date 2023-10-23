@@ -280,17 +280,21 @@ var _rect_x = 5
 var _rect_y = 5
 
 var _battle_text_y = _rect_y
-var _txt_to_draw = $"*{drawn_text}"
-var _txt_x = (((_rect_x +_text_box_width)/ 2) - (string_length(text_to_draw)*fontsize)/2)
+var _drawn_txt = $"*{drawn_text}"
+//var _txt_to_draw = $"*{text_to_draw}"
+var _txt_x = (((_rect_x +_text_box_width)/ 2) - (string_length($"*{text_to_draw}")*fontsize)/2)
 
-show_debug_message($"BATTLEBOX TEXT FROM START:{_txt_x}")
-show_debug_message($"BATTLEBOX TEXT FROM START:{_rect_x + (string_length(_txt_to_draw)*fontsize)/2}")
+//show_debug_message($"BATTLEBOX TEXT FROM START:{_txt_x}")
+//show_debug_message($"BATTLEBOX TEXT FROM START:{_rect_x + (string_length(_txt_to_draw)*fontsize)/2}")
+//show_debug_message($"STRING_LENGTH_PIXELS: {(string_length(_txt_to_draw)*fontsize)}")
+//show_debug_message($"STRING LENGTH: {(string_length(_txt_to_draw))}")
 
+	
 	
 		//draw_rectangle_color(_rect_x, _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_black, c_black, c_black, c_black, 0 )
 		
 if draw_txt{	
 draw_rectangle_color(_rect_x , _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_white, c_white, c_white, c_white, 1 )
-draw_text((_rect_x +_text_box_width)/ 2 - (string_length(_txt_to_draw)*fontsize)/2, _rect_y +2, _txt_to_draw)
+draw_text((_rect_x +_text_box_width)/ 2 - (string_length(_drawn_txt)*fontsize)/2, _rect_y +2, _drawn_txt)
 }
 

@@ -41,6 +41,7 @@ text_to_draw = ""
 drawn_text = ""
 text_end_delay_timer = 0
 text_end_delay = 60
+txt_idx = 0
 
 battle_menu = {
 	main:[

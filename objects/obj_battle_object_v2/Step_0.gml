@@ -9,14 +9,27 @@ var _select = keyboard_check_pressed(global.key_enter);
 var mvon = false;
 
 if draw_txt{
-if(text_end_delay_timer >= 1){draw_txt = false return}
-if (string_length(text_to_draw) == string_length(drawn_text)){text_end_delay_timer += 1/text_end_delay}
+var _t = text_display(text_to_draw)
+if(text_end_delay_timer >= 1){draw_txt = false txt_idx=0 return}
+if (string_length(_t[array_length(_t)-1]) == string_length(drawn_text)){text_end_delay_timer += 1/text_end_delay}
 if (text_timer == 1 && string_length(text_to_draw) != string_length(drawn_text)){
+	
 try
 {
 	
+	if(array_length(_t) > 1)
+	{
+		if(string_length(drawn_text) == string_length(_t[txt_idx]))
+		{
+			
+			
+			
+			if(txt_idx < array_length(_t)-1){txt_idx += 1 text_idx = 1 drawn_text = ""}
+		}
+		
+	}
 	
-	drawn_text += string_char_at(text_to_draw, text_idx)
+	drawn_text += string_char_at(_t[txt_idx], text_idx)
 	
 	text_idx +=1	
 
@@ -28,6 +41,7 @@ text_timer += 1
 else
 {
 	text_idx = 1
+	
 	text_timer = 0
 	text_end_delay_timer = 0
 }
@@ -219,7 +233,7 @@ switch(current_state)
 						
 						var _before_hero_hp = _hero.current_hp
 						var _before_hero_defense = _hero.current_defense					
-						_current_option.action(_hero)
+						_current_option.action(_hero, _hero)
 						
 						picked_hero = selected_hero;
 						if(_current_option.name == "DEFEND"){hero_damage_text = _hero.current_defense - _before_hero_defense defend_hero = true hurt_hero = true draw_txt = true text_to_draw = battle_text_._defense(hero_damage_text, _hero.name)}
@@ -239,7 +253,7 @@ switch(current_state)
 					current_enemy_animation = selected_enemy
 					enemy_hurt_animation_activation = true;
 					//show_debug_message(enemies)
-					_current_option.action(_enemy)
+					_current_option.action(_enemy, party[selected_hero])
 					draw_txt = true;
 					
 					text_to_draw = battle_text_._damage(_ebd - _enemy.current_defense ,_ebhp - _enemy.current_hp,  _enemy)
@@ -389,7 +403,7 @@ switch(current_state)
 				if(array_length(_current_turns_enemy.known_spells)> 0)
 				{
 					var _random_enemy_spell = round(random_range(0, array_length(_current_turns_enemy.known_spells)-1))
-					_current_turns_enemy.known_spells[_random_enemy_spell].action(_random_hero)
+					_current_turns_enemy.known_spells[_random_enemy_spell].action(_random_hero, _current_turns_enemy)
 					
 				}
 				_random_hero.current_hp -= round(random_range(1, 2));
