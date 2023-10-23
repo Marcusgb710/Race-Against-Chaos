@@ -1,4 +1,4 @@
-particle_system = part_system_create_layer("Rain", false);
+particle_system = part_system_create_layer("Surface", false);
 
 
 particletype_rain = part_type_create();

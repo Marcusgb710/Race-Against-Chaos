@@ -65,6 +65,8 @@
     {"name":"inst_45612E7","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},
     {"name":"inst_C439AFF","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},
     {"name":"inst_5215C82A","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},
+    {"name":"inst_4511A33","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},
+    {"name":"inst_10483738","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -72,6 +74,8 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_43AC3B66","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_light_rendering","path":"objects/obj_light_rendering/obj_light_rendering.yy",},"properties":[
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","objectId":{"name":"obj_light_rendering","path":"objects/obj_light_rendering/obj_light_rendering.yy",},"propertyId":{"name":"col","path":"objects/obj_light_rendering/obj_light_rendering.yy",},"value":"$00994E00",},
           ],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4511A33","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_ParticleSetup","path":"objects/obj_ParticleSetup/obj_ParticleSetup.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_10483738","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_particleemitter","path":"objects/obj_particleemitter/obj_particleemitter.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":0.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Walls","depth":100,"effectEnabled":true,"effectType":null,"gridX":8,"gridY":8,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_78B61F35","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":18.0,"x":944.0,"y":144.0,},
