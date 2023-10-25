@@ -1,12 +1,14 @@
 if (control)
 {
-right_key = keyboard_check(global.key_right) 
-up_key = keyboard_check(global.key_up) 
-left_key = keyboard_check(global.key_left) 
-down_key = keyboard_check(global.key_down) 
-interactkeypressed = keyboard_check_pressed(vk_space);
-xspd = (right_key - left_key) * move_spd;
-yspd = (down_key - up_key) * move_spd;
+if(can_move){
+	right_key = keyboard_check(global.key_right) 
+	up_key = keyboard_check(global.key_up) 
+	left_key = keyboard_check(global.key_left) 
+	down_key = keyboard_check(global.key_down) 
+	interactkeypressed = keyboard_check_pressed(vk_space);
+	xspd = (right_key - left_key) * move_spd;
+	yspd = (down_key - up_key) * move_spd;
+}
 
 //interact with push blocks
 if interactkeypressed == true

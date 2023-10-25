@@ -4,7 +4,7 @@
 if(keyboard_check_pressed(vk_tab))
 {
 	show = !show
-	if(instance_exists(obj_player)){obj_player.control = !obj_player.control}
+	if(instance_exists(obj_player)){obj_player.control = !obj_player.control obj_player.can_move = !obj_player.can_move}
 	command_type = ""
 	command = ""
 	adding_removing = false
@@ -17,7 +17,7 @@ if(keyboard_check_pressed(vk_tab))
 if(!show){return}
 if(!adding_removing)
 {
-	if(keyboard_check_released(ord("A")))
+	if(keyboard_check_released(ord("A")))//add items
 	{
 		command_type = "ADD"
 		adding_removing = true
@@ -26,7 +26,7 @@ if(!adding_removing)
 	{
 
 	}
-	if(keyboard_check_released(ord("D")))
+	if(keyboard_check_released(ord("D")))//remove items
 	{
 		command_type = "DELETE"
 		adding_removing = true
@@ -45,7 +45,7 @@ if(keyboard_check_pressed(vk_return))
 			add_item(party_inventory, items_, command);
 			break
 		case "DELETE":
-		remove_item(party_inventory, items_, command)
+		remove_item(party_inventory, items_, command);
 			break;
 	}
 

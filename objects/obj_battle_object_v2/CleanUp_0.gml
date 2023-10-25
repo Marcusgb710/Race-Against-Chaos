@@ -10,6 +10,7 @@ for(var _i = 0; _i < array_length(party); _i++)
 	party[_i].known_spells = _party[_i].known_spells
 	
 }
+_game.battle_party_data = party;
 save(_game)
 instance_destroy(obj_battle_object_v2);
 audio_stop_all()

@@ -1,5 +1,4 @@
-
-
+instance_create_depth(0, 0, -9999, obj_inventory_v2, {})
 
 if room == MistHouse
 {

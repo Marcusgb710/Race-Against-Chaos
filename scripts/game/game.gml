@@ -82,10 +82,5 @@ function game(){
 	
 	_game.room = room
 	
-	_game.inventory = {
-	
-	}
-	
-	
 	
 }

@@ -81,6 +81,7 @@ battle_menu.main[0].action = function(_target){
 	}
 battle_menu.main[3].action = function(_target){_target.current_defense += 2}
 battle_menu.main[4].action = function(_target){can_move = false
+	_game.battle_party_data = party;
 	save(_game)
 				draw_flee_screen = true;
 				alarm[0] = 240;}
