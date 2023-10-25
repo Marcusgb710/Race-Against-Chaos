@@ -81,7 +81,7 @@ battle_menu.main[0].action = function(_target){
 	}
 battle_menu.main[3].action = function(_target){_target.current_defense += 2}
 battle_menu.main[4].action = function(_target){can_move = false
-	save(party)
+	save(_game)
 				draw_flee_screen = true;
 				alarm[0] = 240;}
 
@@ -113,18 +113,10 @@ enemy_data = create_enemies(chosen_enemies.enemies);
 
 song = chosen_enemies.music;
 
-var _save_data = load();
-if(array_length(_save_data)>=1)
-{
-	party_data = _save_data;
-	//party = hero_party(_spells, _items);
-}
-else
-{
-	party_data = hero_party(_spells, _items);
-}
 
-party = create_party(party_data, _spells)
+
+
+party = create_party(_game.battle_party_data, _spells, _items)
 show_debug_message(party)
 
 
