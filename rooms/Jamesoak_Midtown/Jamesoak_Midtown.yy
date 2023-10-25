@@ -2,7 +2,7 @@
   "resourceType": "GMRoom",
   "resourceVersion": "1.0",
   "name": "Jamesoak_Midtown",
-  "creationCodeFile": "",
+  "creationCodeFile": "rooms/Jamesoak_Midtown/RoomCreationCode.gml",
   "inheritCode": false,
   "inheritCreationOrder": false,
   "inheritLayers": false,

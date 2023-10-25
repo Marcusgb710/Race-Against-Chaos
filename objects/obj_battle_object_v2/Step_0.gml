@@ -6,7 +6,7 @@ var _down = keyboard_check_pressed(global.key_down);
 var _left = keyboard_check_pressed(global.key_left);
 var _right = keyboard_check_pressed(global.key_right);
 var _select = keyboard_check_pressed(global.key_enter);
-var mvon = false;
+
 
 if draw_txt{
 var _t = text_display(text_to_draw)
@@ -252,7 +252,7 @@ switch(current_state)
 					var _ebd = _enemy.current_defense
 					current_enemy_animation = selected_enemy
 					enemy_hurt_animation_activation = true;
-					//show_debug_message(enemies)
+					
 					_current_option.action(_enemy, party[selected_hero])
 					draw_txt = true;
 					

@@ -2,6 +2,7 @@
 // You can write your code in this editor
 randomize()
 
+
 enum BATTLE_MENU_STATE{
 	TRANSFER,
 	ACTION,
@@ -80,6 +81,7 @@ battle_menu.main[0].action = function(_target){
 	}
 battle_menu.main[3].action = function(_target){_target.current_defense += 2}
 battle_menu.main[4].action = function(_target){can_move = false
+	save(party)
 				draw_flee_screen = true;
 				alarm[0] = 240;}
 
@@ -110,7 +112,20 @@ if(is_undefined(enemies_in_room)){chosen_enemies = choose_room_enemies(_battle_d
 enemy_data = create_enemies(chosen_enemies.enemies);
 
 song = chosen_enemies.music;
-party = hero_party(_spells, _items); 
+
+var _save_data = load();
+if(array_length(_save_data)>=1)
+{
+	party_data = _save_data;
+	//party = hero_party(_spells, _items);
+}
+else
+{
+	party_data = hero_party(_spells, _items);
+}
+
+party = create_party(party_data, _spells)
+show_debug_message(party)
 
 
 enemies = enemy_data[0];
