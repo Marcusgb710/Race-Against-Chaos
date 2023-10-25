@@ -6,7 +6,7 @@ if !Cmove && global.egg == false
 	}
 	
 
-if global.egg = true
+if global.egg == true
 {
 	if (!obj_player.down_key && !obj_player.up_key) 
 	{

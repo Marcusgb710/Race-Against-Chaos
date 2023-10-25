@@ -48,8 +48,8 @@
   },
   "origin": 0,
   "parent": {
-    "name": "group1",
-    "path": "folders/Lighting System/group1.yy",
+    "name": "Sprites",
+    "path": "folders/Lighting System/Sprites.yy",
   },
   "preMultiplyAlpha": true,
   "sequence": {
