@@ -9,6 +9,9 @@ adding_removing = false
 command = ""
 command_type = ""
 party_inventory = _game.battle_party_data[0].inventory
+start_close_timer = false
+close_timer = 0
+alphabet = ["A","B","C","D","E","F","G","H","I","J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 
 

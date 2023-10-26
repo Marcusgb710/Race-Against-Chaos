@@ -63,6 +63,7 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
+    {"name":"Shop System","order":26,"path":"folders/Shop System.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_KelsiandJonHouse","order":55,"path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},

@@ -93,6 +93,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"VFX","folderPath":"folders/VFX.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls, Barriers, and Blocks","folderPath":"folders/Walls, Barriers, and Blocks.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Shop System","folderPath":"folders/Shop System.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,
