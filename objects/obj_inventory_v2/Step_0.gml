@@ -1,13 +1,19 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
+
 #region opens and closes the inventory window also resets variables
 if(keyboard_check_pressed(vk_tab))
 {
-	show = !show
-	if(instance_exists(obj_player)){obj_player.control = !obj_player.control obj_player.can_move = !obj_player.can_move}
-	command_type = ""
-	command = ""
-	adding_removing = false
+	show = !show;
+	if(instance_exists(obj_player)){obj_player.control = !obj_player.control obj_player.can_move = !obj_player.can_move};	
+	command_type = "";
+	command = "";
+	party_inv_index = 0;
+	adding_removing = false;
+	debug = false;
 	
 }
 #endregion
@@ -30,13 +36,48 @@ if(start_close_timer)
 
 #region controls to decided if you are adding or removing an item from the inventory
 if(!show){return}
+
 if(!adding_removing)
 {
+		
+		if (keyboard_check_pressed(global.key_left)){
+		party_inv_index -= 1
+		if(party_inv_index < 0){party_inv_index = array_length(party)-1}
+	
+		}
+		if(keyboard_check_pressed(global.key_right))
+		{
+			party_inv_index += 1
+			if(party_inv_index >  array_length(party)-1){party_inv_index = 0}
+		}
+		if(!array_equals(party_inventory, party[party_inv_index].inventory)){
+			current_hero = party[party_inv_index];
+			party_inventory = current_hero.inventory;
+			menu_sprite = current_hero.sprite;
+		}
+	
+	
+	
+	
 	if(keyboard_check_released(ord("A")))//add items
 	{
 		command_type = "ADD"
 		adding_removing = true
 		command = ""
+		
+	}
+	if(keyboard_check(ord("F")) && keyboard_check_pressed(ord("G")))
+	{
+		debug = !debug
+		party_inv_index = 0
+		if(debug){
+		party = _game.battle_party_data;
+		return;
+		}
+		party = []
+		array_foreach( _game.battle_party_data, function(_hero){if(_hero.in_party){return array_push(party, _hero)}})
+		
+		
 		
 	}
 	if(keyboard_check_released(ord("S")))
@@ -52,7 +93,6 @@ if(!adding_removing)
 	return
 }
 #endregion
-
 
 #region keyboard input for adding items with commands
 if(keyboard_check_pressed(vk_return))
