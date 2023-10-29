@@ -33,6 +33,32 @@ for (var i = 0; i < SLOTS; i += 1)
 	
 		
 }
+if(debug){
+draw_set_font(FontNumbers)
+var _health_and_pp_Xoffset = 12
+var _health_and_pp_Yoffset = 3;
+var _hoffset = 0;
+var _y = (camy+216) - sprite_get_height(menu_sprite) - amount_to_move_enemy_up;
+var _x =(camx + 288)/2 - sprite_get_width(menu_sprite) - 16;
+draw_rectangle_color(_x, _y, _x+sprite_get_width(menu_sprite), _y+sprite_get_height(menu_sprite), c_black, c_black, c_black, c_black, 0);
+draw_sprite(menu_sprite, 1, _x, _y)
+for(var _j = 0; _j < string_length($"{current_hero.current_hp}"); _j++)
+		{
+			var _num = string_char_at($"{current_hero.current_hp}", _j+1)
+			
+			draw_text_transformed(_x+_health_and_pp_Xoffset+_hoffset, _y+_health_and_pp_Yoffset,_num, 0.8, 0.8, 0)
+			_hoffset += 5
+		}
+		_hoffset = 0
+		
+		for(var _j = 0; _j < string_length($"{current_hero.current_pp}"); _j++)
+		{
+			var _num = string_char_at($"{current_hero.current_pp}", _j+1)
+			
+			draw_text_transformed(_x+_health_and_pp_Xoffset +_hoffset, _y + font_get_size(FontNumbers)+_health_and_pp_Yoffset, _num, 0.8, 0.8, 0)
+			_hoffset += 5
+		}
+}
 
 if(adding_removing)
 {
