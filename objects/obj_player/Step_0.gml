@@ -1,4 +1,4 @@
-if (control)
+if (control) || Cmove
 {
 if(can_move){
 	right_key = keyboard_check(global.key_right) 

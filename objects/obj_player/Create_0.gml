@@ -19,6 +19,8 @@ sprite[LEFT] = spr_MistyL;
 sprite[DOWN] = spr_MistyD;
 
 sprite[SURP] = spr_MistySurprise;
+sprite[BED1] = spr_MistyChillin;
+sprite[BED2] = spr_MistyChillin2;
 
 
 face = DOWN;

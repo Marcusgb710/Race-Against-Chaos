@@ -50,6 +50,7 @@
     {"name":"Battle UI Scripts","order":2,"path":"folders/Scripts/Battle Scripts/Battle UI Scripts.yy",},
     {"name":"Sequences","order":12,"path":"folders/Sequences.yy",},
     {"name":"Shaders","order":13,"path":"folders/Shaders.yy",},
+    {"name":"Shop System","order":26,"path":"folders/Shop System.yy",},
     {"name":"Sounds","order":14,"path":"folders/Sounds.yy",},
     {"name":"Sprites","order":15,"path":"folders/Sprites.yy",},
     {"name":"Enemies","order":66,"path":"folders/Sprites/Enemies.yy",},
@@ -63,7 +64,6 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
-    {"name":"Shop System","order":26,"path":"folders/Shop System.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_KelsiandJonHouse","order":55,"path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},
@@ -146,6 +146,7 @@
     {"name":"spr_LakehouseTiles","order":35,"path":"sprites/spr_LakehouseTiles/spr_LakehouseTiles.yy",},
     {"name":"spr_ball","order":34,"path":"sprites/spr_ball/spr_ball.yy",},
     {"name":"spr_backtreesD","order":33,"path":"sprites/spr_backtreesD/spr_backtreesD.yy",},
+    {"name":"spr_MistyChillin2","order":6,"path":"sprites/spr_MistyChillin2/spr_MistyChillin2.yy",},
     {"name":"obj_curtain","order":1,"path":"objects/obj_curtain/obj_curtain.yy",},
     {"name":"spr_reset","order":32,"path":"sprites/spr_reset/spr_reset.yy",},
     {"name":"spr_parkingtiles","order":30,"path":"sprites/spr_parkingtiles/spr_parkingtiles.yy",},
