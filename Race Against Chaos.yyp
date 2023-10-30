@@ -94,14 +94,17 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"VFX","folderPath":"folders/VFX.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls, Barriers, and Blocks","folderPath":"folders/Walls, Barriers, and Blocks.yy",},
+<<<<<<< HEAD
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Debug","folderPath":"folders/Debug.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Daycycle System","folderPath":"folders/Daycycle System.yy",},
+=======
+>>>>>>> e74f1c97963723cf3991d49874099fa26b808acd
   ],
   "IncludedFiles": [],
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"spr_KelsiandJonHouse","path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},},
@@ -273,6 +276,7 @@
     {"id":{"name":"spr_ball","path":"sprites/spr_ball/spr_ball.yy",},},
     {"id":{"name":"spr_backtreesD","path":"sprites/spr_backtreesD/spr_backtreesD.yy",},},
     {"id":{"name":"obj_tp","path":"objects/obj_tp/obj_tp.yy",},},
+    {"id":{"name":"spr_MistyChillin2","path":"sprites/spr_MistyChillin2/spr_MistyChillin2.yy",},},
     {"id":{"name":"obj_curtain","path":"objects/obj_curtain/obj_curtain.yy",},},
     {"id":{"name":"spr_GanlaFlytrap","path":"sprites/spr_GanlaFlytrap/spr_GanlaFlytrap.yy",},},
     {"id":{"name":"obj_JonNPC","path":"objects/obj_JonNPC/obj_JonNPC.yy",},},
@@ -530,6 +534,7 @@
     {"roomId":{"name":"pbgtest","path":"rooms/pbgtest/pbgtest.yy",},},
     {"roomId":{"name":"puzzletestrm","path":"rooms/puzzletestrm/puzzletestrm.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],

@@ -10,7 +10,7 @@
   "bitRate": 128,
   "compression": 0,
   "conversionMode": 0,
-  "duration": 47.995647,
+  "duration": 57.5971,
   "parent": {
     "name": "Character Themes",
     "path": "folders/Music/Character Themes.yy",

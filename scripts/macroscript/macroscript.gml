@@ -5,6 +5,5 @@
 
 
 #macro SURP 4
-#macro MAD 5
-#macro MAD2 6
-#macro MAD3 7
+#macro BED1 5
+#macro BED2 6
