@@ -2,13 +2,16 @@
 // You can write your code in this editor
 
 
-
+if(obj_debug.show){return}
 
 #region opens and closes the inventory window also resets variables
 if(keyboard_check_pressed(vk_tab))
 {
 	show = !show;
-	if(instance_exists(obj_player)){obj_player.can_move = false; obj_player.control = false;};	
+	if(instance_exists(obj_player)){
+	if(!show && obj_player.can_move = false){obj_player.can_move = true; obj_player.control = true;}
+	else{obj_player.can_move = false; obj_player.control = false;};
+	}		
 	command_type = "";
 	command = "";
 	party_inv_index = 0;
@@ -35,7 +38,7 @@ if(start_close_timer)
 
 
 #region controls to decided if you are adding or removing an item from the inventory
-if(!show){if(instance_exists(obj_player)){obj_player.can_move = true; obj_player.control = true;};return}
+if(!show){return}
 
 if(!adding_removing)
 {

@@ -1,0 +1,6 @@
+ADD PARTY <party members name> //Adds a member to the party
+DEL PARTY <party members name> //Removes a member from the party
+SET TIME <number> //Sets the time based on the value given
+TIME TICK <number> //Sets the tick speed value incressing or decreasing the time of day;
+ADD ITEM <party members name> <item name> //Add an item to a party member
+DEL ITEM <party members name> <item name> //Remove an item to a party member

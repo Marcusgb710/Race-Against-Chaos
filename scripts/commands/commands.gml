@@ -6,6 +6,7 @@ function Commands() constructor{
 	function addparty(_member){
 		
 			var _party = _game.battle_party_data;
+			
 			var _new_party = [];
 			for(var _i = 0; _i < array_length(_party); _i ++)
 			{
@@ -13,7 +14,7 @@ function Commands() constructor{
 				show_debug_message($"{_member} {_party_member.name}")
 				if(!_party_member.in_party && string_lower(_party_member.name) == string_lower(_member)){
 					_party_member.in_party = true;
-					return $"ADDED {_member}"	
+					return $"ADDED {string_upper(_member)}"	
 				}
 			}
 			return "DID NOT ADD ANYONE"
@@ -27,7 +28,7 @@ function Commands() constructor{
 			{
 				var _party_member = _party[_i];
 				if(_party_member.in_party && string_lower(_party_member.name) == string_lower(_member)){_party_member.in_party = false;
-					return $"REMOVED {_member}"	
+					return $"REMOVED {string_upper(_member)}"	
 					}
 				
 			}
@@ -67,16 +68,61 @@ function Commands() constructor{
 	function settime(_time){
 		
 		var _day_cycle = obj_daynnite;
+		var _user_time_input = _time
 		if(real(_time) > _day_cycle.opacity * 100){_time = _day_cycle.night_time*100 }
 		if(instance_exists(_day_cycle)){
 			time_source_pause(_day_cycle.time_cycle)
 			_day_cycle.opacity = real(_time)*0.01;
 			time_source_resume(_day_cycle.time_cycle)
-			return $"TIME SET TO {_time}"
+			return $"TIME SET TO {_user_time_input}"
 		}
 		return "COULD NOT SET THE TIME"
 	}
 	
+	function additem(_args){
+			var _items = items();
+			var _member = _args[0];
+			var _item = _args[1];
+			var _party = _game.battle_party_data;
+			var _new_party = [];
+			for(var _i = 0; _i < array_length(_party); _i ++)
+			{
+				var _party_member = _party[_i];
+				show_debug_message($"{_member} {_party_member.name}")
+				if(string_lower(_party_member.name) == string_lower(_member)){
+					return add_item(_party_member.inventory, _items, _item) + $" TO {string_upper(_party_member.name)}"
+						
+				}
+			}
+		
+	}
 	
+	function delitem(_args){
+			var _items = items();
+			var _member = _args[0];
+			var _item = _args[1];
+			var _party = _game.battle_party_data;
+			var _new_party = [];
+			for(var _i = 0; _i < array_length(_party); _i ++)
+			{
+				var _party_member = _party[_i];
+				show_debug_message($"{_member} {_party_member.name}")
+				if(string_lower(_party_member.name) == string_lower(_member)){
+					return remove_item(_party_member.inventory, _items, _item) + $" FROM {string_upper(_party_member.name)}"
+						
+				}
+			}
+		
+	}
 	
+	//function changeroom(_room){
+		//switch(_room){
+			//case "misty":
+				
+				//break;
+			
+		//}
+		
+	//}
+
 }

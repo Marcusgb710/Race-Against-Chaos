@@ -117,8 +117,9 @@ song = chosen_enemies.music;
 
 
 
-party = create_party(_game.battle_party_data, _spells, _items)
-show_debug_message(party)
+_party = create_party(_game.battle_party_data, _spells, _items)
+party = []
+array_foreach(_party, function(_value){if(_value.in_party){array_push(party, _value)}})
 
 
 enemies = enemy_data[0];

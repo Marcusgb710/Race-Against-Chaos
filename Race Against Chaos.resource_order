@@ -158,6 +158,7 @@
     {"name":"exit_game","order":7,"path":"scripts/exit_game/exit_game.yy",},
     {"name":"spr_Meeks","order":6,"path":"sprites/spr_Meeks/spr_Meeks.yy",},
     {"name":"audiofade","order":1,"path":"scripts/audiofade/audiofade.yy",},
+    {"name":"COMMAND NOTES","order":29,"path":"notes/COMMAND NOTES/COMMAND NOTES.yy",},
     {"name":"commands","order":1,"path":"scripts/commands/commands.yy",},
     {"name":"spr_mainmenu","order":6,"path":"sprites/spr_mainmenu/spr_mainmenu.yy",},
     {"name":"spr_MistySitting","order":2,"path":"sprites/spr_MistySitting/spr_MistySitting.yy",},

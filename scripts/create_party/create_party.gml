@@ -6,9 +6,8 @@ function create_party(_party_list, _spells, _items){
 	for(var _i = 0; _i < array_length(_party_list); _i++)
 	{
 		var _hero = _party_list[_i]
+		
 		array_push(_party, new Party(_hero, _spells, _items))
-	
-	
 	}
 	return _party
 }
