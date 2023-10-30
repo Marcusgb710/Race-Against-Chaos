@@ -2,29 +2,6 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function Commands() constructor{
 	
-	function get_member(_member){
-		var _party_member_to_get;
-		switch(_member){
-			case PARTY.MISTY:
-				_party_member_to_get = "misty"
-				break;
-				
-			case PARTY.JON:
-				_party_member_to_get = "jon"
-				break;
-				
-			case PARTY.KELSI:
-				_party_member_to_get = "kelsi"
-				break;
-				
-			case PARTY.CORY:
-				_party_member_to_get = "cory"
-				break;
-		}
-			return _party_member_to_get;
-	}
-	
-	
 	
 	function addparty(_member){
 		
@@ -87,9 +64,6 @@ function Commands() constructor{
 		
 	}
 		
-		
-		
-	
 	function settime(_time){
 		
 		var _day_cycle = obj_daynnite;

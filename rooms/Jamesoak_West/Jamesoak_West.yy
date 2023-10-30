@@ -84,6 +84,7 @@
     {"name":"inst_3516B5A8","path":"rooms/Jamesoak_West/Jamesoak_West.yy",},
     {"name":"inst_5739322F","path":"rooms/Jamesoak_West/Jamesoak_West.yy",},
     {"name":"inst_6F03649D","path":"rooms/Jamesoak_West/Jamesoak_West.yy",},
+    {"name":"inst_7E48EBB2","path":"rooms/Jamesoak_West/Jamesoak_West.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -180,6 +181,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6CED7AAA_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":489.0,"y":482.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4AB840AC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-368.0,"y":488.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_6F03649D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_enemy_spawner_v2","path":"objects/obj_enemy_spawner_v2/obj_enemy_spawner_v2.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":504.0,"y":592.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7E48EBB2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_daynnite","path":"objects/obj_daynnite/obj_daynnite.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-64.0,"y":160.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRTileLayer","resourceVersion":"1.1","name":"Tiles","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"tiles":{"SerialiseHeight":63,"SerialiseWidth":63,"TileCompressedData":[
 64,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,57,56,268435491,35,268435490,34,268435490,34,268435490,34,268435491,35,57,56,57,56,57,56,57,56,57,56,57,56,57,

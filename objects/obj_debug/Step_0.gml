@@ -1,9 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-
-
-
 if(keyboard_check(vk_control) && keyboard_check_pressed(vk_alt))
 {
 	show = !show;
@@ -62,6 +58,10 @@ if(keyboard_check_pressed(keyboard_key))
 	}
 	
 }
+
+
+
+
 
 
 
