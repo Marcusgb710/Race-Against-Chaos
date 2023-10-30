@@ -94,11 +94,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Timelines","folderPath":"folders/Timelines.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"VFX","folderPath":"folders/VFX.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Walls, Barriers, and Blocks","folderPath":"folders/Walls, Barriers, and Blocks.yy",},
-<<<<<<< HEAD
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Debug","folderPath":"folders/Debug.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Daycycle System","folderPath":"folders/Daycycle System.yy",},
-=======
->>>>>>> e74f1c97963723cf3991d49874099fa26b808acd
   ],
   "IncludedFiles": [],
   "isEcma": false,
@@ -178,7 +173,6 @@
     {"id":{"name":"spr_fade","path":"sprites/spr_fade/spr_fade.yy",},},
     {"id":{"name":"spr_coffee","path":"sprites/spr_coffee/spr_coffee.yy",},},
     {"id":{"name":"spr_lightning","path":"sprites/spr_lightning/spr_lightning.yy",},},
-    {"id":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},},
     {"id":{"name":"obj_battrigger","path":"objects/obj_battrigger/obj_battrigger.yy",},},
     {"id":{"name":"spr_foiliage","path":"sprites/spr_foiliage/spr_foiliage.yy",},},
     {"id":{"name":"spr_beachsign","path":"sprites/spr_beachsign/spr_beachsign.yy",},},
@@ -197,7 +191,6 @@
     {"id":{"name":"spr_edgarNEO_bg","path":"sprites/spr_edgarNEO_bg/spr_edgarNEO_bg.yy",},},
     {"id":{"name":"TS_Pool2","path":"tilesets/TS_Pool2/TS_Pool2.yy",},},
     {"id":{"name":"quests","path":"scripts/quests/quests.yy",},},
-    {"id":{"name":"commands","path":"scripts/commands/commands.yy",},},
     {"id":{"name":"snd_kels_voice","path":"sounds/snd_kels_voice/snd_kels_voice.yy",},},
     {"id":{"name":"obj_transition","path":"objects/obj_transition/obj_transition.yy",},},
     {"id":{"name":"spr_btl_MayorDiza","path":"sprites/spr_btl_MayorDiza/spr_btl_MayorDiza.yy",},},
@@ -211,7 +204,6 @@
     {"id":{"name":"spr_MistyDR","path":"sprites/spr_MistyDR/spr_MistyDR.yy",},},
     {"id":{"name":"obj_enemy_spawner_v2","path":"objects/obj_enemy_spawner_v2/obj_enemy_spawner_v2.yy",},},
     {"id":{"name":"spr_JohnnySitting","path":"sprites/spr_JohnnySitting/spr_JohnnySitting.yy",},},
-    {"id":{"name":"process_commands","path":"scripts/process_commands/process_commands.yy",},},
     {"id":{"name":"spr_speaktrigger","path":"sprites/spr_speaktrigger/spr_speaktrigger.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"spr_CoryCH","path":"sprites/spr_CoryCH/spr_CoryCH.yy",},},
@@ -234,7 +226,6 @@
     {"id":{"name":"spr_txtbox","path":"sprites/spr_txtbox/spr_txtbox.yy",},},
     {"id":{"name":"snd_Rain","path":"sounds/snd_Rain/snd_Rain.yy",},},
     {"id":{"name":"diatest","path":"rooms/diatest/diatest.yy",},},
-    {"id":{"name":"obj_daynnite","path":"objects/obj_daynnite/obj_daynnite.yy",},},
     {"id":{"name":"mus_Corys_Theme","path":"sounds/mus_Corys_Theme/mus_Corys_Theme.yy",},},
     {"id":{"name":"obj_slopewall","path":"objects/obj_slopewall/obj_slopewall.yy",},},
     {"id":{"name":"hero_party","path":"scripts/hero_party/hero_party.yy",},},

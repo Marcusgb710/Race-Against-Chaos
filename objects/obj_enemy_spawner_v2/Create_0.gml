@@ -15,4 +15,3 @@ radius = 5
 _p_x = obj_player.x
 _p_y = obj_player.y
 
-
