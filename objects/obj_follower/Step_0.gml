@@ -2,10 +2,10 @@ if !instance_exists(obj_player) exit;
 
 switch(obj_player.torecordsprite[record]){
 	
-case spr_MistyD: sprite_index = spr_CoryD; break;
-case spr_MistyR: sprite_index = spr_CoryR; break;
-case spr_MistyU: sprite_index = spr_CoryU; break;
-case spr_MistyL: sprite_index = spr_CoryL; break;
+case obj_player.sprite[DOWN]: sprite_index = spr_CoryD; break;
+case obj_player.sprite[RIGHT]: sprite_index = spr_CoryR; break;
+case obj_player.sprite[UP]: sprite_index = spr_CoryU; break;
+case obj_player.sprite[LEFT]: sprite_index = spr_CoryL; break;
 
 	
 }

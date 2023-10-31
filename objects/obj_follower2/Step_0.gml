@@ -2,10 +2,10 @@ if !instance_exists(obj_player) exit;
 
 switch(obj_player.torecordsprite[record]){
 	
-case spr_MistyD: sprite_index = spr_KelsieD; break;
-case spr_MistyR: sprite_index = spr_KelsieR; break;
-case spr_MistyU: sprite_index = spr_KelsieU; break;
-case spr_MistyL: sprite_index = spr_KelsieL; break;
+case obj_player.sprite[DOWN]: sprite_index = spr_KelsieD; break;
+case obj_player.sprite[RIGHT]: sprite_index = spr_KelsieR; break;
+case obj_player.sprite[UP]: sprite_index = spr_KelsieU; break;
+case obj_player.sprite[LEFT]: sprite_index = spr_KelsieL; break;
 
 	
 }

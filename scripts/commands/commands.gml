@@ -14,6 +14,13 @@ function Commands() constructor{
 				show_debug_message($"{_member} {_party_member.name}")
 				if(!_party_member.in_party && string_lower(_party_member.name) == string_lower(_member)){
 					_party_member.in_party = true;
+					
+					switch(_member){
+						case "jon":
+						addJon();
+						break;	
+					}
+					
 					return $"ADDED {string_upper(_member)}"	
 				}
 			}
@@ -28,6 +35,13 @@ function Commands() constructor{
 			{
 				var _party_member = _party[_i];
 				if(_party_member.in_party && string_lower(_party_member.name) == string_lower(_member)){_party_member.in_party = false;
+					
+					switch(_member){
+						case "jon":
+						delJon();
+						break;	
+					}
+					
 					return $"REMOVED {string_upper(_member)}"	
 					}
 				

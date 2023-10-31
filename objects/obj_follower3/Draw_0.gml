@@ -1,6 +1,6 @@
 
 event_inherited();
-if room == PortVinai || room == PortVinai2
+/*if room == PortVinai || room == PortVinai2
 {
 image_blend = c_orange;
 

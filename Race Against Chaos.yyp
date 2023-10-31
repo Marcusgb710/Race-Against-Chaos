@@ -101,7 +101,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.6.0.92",
+    "IDEVersion": "2023.8.2.108",
   },
   "resources": [
     {"id":{"name":"spr_KelsiandJonHouse","path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},},
@@ -272,6 +272,7 @@
     {"id":{"name":"spr_MistyChillin2","path":"sprites/spr_MistyChillin2/spr_MistyChillin2.yy",},},
     {"id":{"name":"obj_curtain","path":"objects/obj_curtain/obj_curtain.yy",},},
     {"id":{"name":"spr_GanlaFlytrap","path":"sprites/spr_GanlaFlytrap/spr_GanlaFlytrap.yy",},},
+    {"id":{"name":"spr_streetlight","path":"sprites/spr_streetlight/spr_streetlight.yy",},},
     {"id":{"name":"obj_JonNPC","path":"objects/obj_JonNPC/obj_JonNPC.yy",},},
     {"id":{"name":"mus_Pong","path":"sounds/mus_Pong/mus_Pong.yy",},},
     {"id":{"name":"spr_reset","path":"sprites/spr_reset/spr_reset.yy",},},
@@ -280,6 +281,7 @@
     {"id":{"name":"spr_blackbars","path":"sprites/spr_blackbars/spr_blackbars.yy",},},
     {"id":{"name":"spr_sunnydayPar","path":"sprites/spr_sunnydayPar/spr_sunnydayPar.yy",},},
     {"id":{"name":"convert_virtualkey_to_name","path":"scripts/convert_virtualkey_to_name/convert_virtualkey_to_name.yy",},},
+    {"id":{"name":"obj_streetlight","path":"objects/obj_streetlight/obj_streetlight.yy",},},
     {"id":{"name":"snd_Def_Voice","path":"sounds/snd_Def_Voice/snd_Def_Voice.yy",},},
     {"id":{"name":"exit_game","path":"scripts/exit_game/exit_game.yy",},},
     {"id":{"name":"mus_Moon_City","path":"sounds/mus_Moon_City/mus_Moon_City.yy",},},
@@ -497,7 +499,6 @@
     {"id":{"name":"BATTLE NOTES","path":"notes/BATTLE NOTES/BATTLE NOTES.yy",},},
     {"id":{"name":"mus_Mayor_Diza","path":"sounds/mus_Mayor_Diza/mus_Mayor_Diza.yy",},},
     {"id":{"name":"spr_Strong_bg","path":"sprites/spr_Strong_bg/spr_Strong_bg.yy",},},
-    {"id":{"name":"obj_fg_houses","path":"objects/obj_fg_houses/obj_fg_houses.yy",},},
     {"id":{"name":"snd_confirm","path":"sounds/snd_confirm/snd_confirm.yy",},},
     {"id":{"name":"spr_Mach_bg","path":"sprites/spr_Mach_bg/spr_Mach_bg.yy",},},
     {"id":{"name":"spr_MistyRainU","path":"sprites/spr_MistyRainU/spr_MistyRainU.yy",},},
@@ -532,6 +533,7 @@
     {"roomId":{"name":"pbgtest","path":"rooms/pbgtest/pbgtest.yy",},},
     {"roomId":{"name":"puzzletestrm","path":"rooms/puzzletestrm/puzzletestrm.yy",},},
   ],
+  "templateType": null,
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},
   ],
