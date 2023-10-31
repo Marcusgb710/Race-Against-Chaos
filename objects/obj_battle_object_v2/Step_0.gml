@@ -1,13 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
+#region set controls for the battle controls
 play_audio(song);
 var _up = keyboard_check_pressed(global.key_up);
 var _down = keyboard_check_pressed(global.key_down);
 var _left = keyboard_check_pressed(global.key_left);
 var _right = keyboard_check_pressed(global.key_right);
 var _select = keyboard_check_pressed(global.key_enter);
+#endregion
 
-
+#region controls for text drawing on screen
 if draw_txt{
 var _t = text_display(text_to_draw)
 if(text_end_delay_timer >= 1){draw_txt = false txt_idx=0 return}
@@ -45,8 +47,9 @@ else
 	text_timer = 0
 	text_end_delay_timer = 0
 }
+#endregion
 
-
+#region debug controls
 if(keyboard_check_pressed(vk_add))
 {
 	if(!array_contains(party[0].known_spells, _spells.flame))
@@ -63,7 +66,9 @@ if(keyboard_check_pressed(vk_add))
 	add_effect(party[0], new Effect2(_effects.fire), _effects.fire.action)
 }
 
+#endregion
 
+#region enemy death 
 for (var _i=0; _i < array_length(enemies); _i++)
 {
 	var _enemy = enemies[_i];
@@ -81,18 +86,23 @@ for (var _i=0; _i < array_length(enemies); _i++)
 		return;
 	}
 }
+#endregion
 
+#region timer that creats a buffer between animations
 if (do_after_animation)
 {
 	if after_animation > 1{ after_animation = 0 do_after_animation = false;}
 	after_animation += 1/60;
 	
 }
+#endregion
 
+#region game flow
 if(can_move){
 	
 switch(current_state)
 {
+#region enemy effects 
 	case TURN_STATE.ENEMY_EFFECTS:
 	
 	
@@ -150,7 +160,9 @@ switch(current_state)
 	
 	
 		break;	
-		
+	#endregion
+
+#region player effects
 	case TURN_STATE.PLAYER_EFFECTS:
 	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
@@ -207,7 +219,9 @@ switch(current_state)
 		
 		
 		break;
-		
+	#endregion
+
+#region players turn
 	case TURN_STATE.PLAYER:
 	
 		
@@ -340,7 +354,9 @@ switch(current_state)
 			}
 	}
 		break;
-		
+#endregion
+
+#region enemies turn
 	case TURN_STATE.ENEMY:
 		
 		
@@ -418,7 +434,9 @@ switch(current_state)
 		
 		}
 		break;
-		
+#endregion
+
+#region end turn
 	case TURN_STATE.END:
 	
 		
@@ -447,12 +465,14 @@ switch(current_state)
 		current_state = TURN_STATE.PLAYER_EFFECTS
 		}
 		break;
-			
+#endregion	
 		
 }
 	
 }
+#endregion
 
+#region final check for enemy death
 for (var _i=0; _i < array_length(enemies); _i++)
 {
 	var _enemy = enemies[_i];
@@ -470,6 +490,7 @@ for (var _i=0; _i < array_length(enemies); _i++)
 		return;
 	}
 }
+#endregion
 
 
 

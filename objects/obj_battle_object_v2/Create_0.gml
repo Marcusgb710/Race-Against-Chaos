@@ -2,7 +2,7 @@
 // You can write your code in this editor
 randomize()
 
-
+#region battle enums
 enum BATTLE_MENU_STATE{
 	TRANSFER,
 	ACTION,
@@ -26,14 +26,17 @@ enum TURN_STATE{
 	END
 	
 }
+#endregion
 
+#region effects variables
 efx = false
 e = 0
 ee = 0
 
 select_effected_enemy = 0
+#endregion
 
-
+#region textbox variables
 text_timer = 0
 text_idx = 1
 battle_text_ = battle_text()
@@ -43,7 +46,9 @@ drawn_text = ""
 text_end_delay_timer = 0
 text_end_delay = 60
 txt_idx = 0
+#endregion
 
+#region battle menu controls and variables
 battle_menu = {
 	main:[
 		new Action("ATTACK", BATTLE_MENU_STATE.ACTION, false) ,
@@ -85,7 +90,9 @@ battle_menu.main[4].action = function(_target){can_move = false
 	save(_game)
 				draw_flee_screen = true;
 				alarm[0] = 240;}
+#endregion
 
+#region animation curve variables
 enemy_arrow_curve = animcurve_get_channel(ac_arrow_animation, "curve1");
 hero_arrow_curve = animcurve_get_channel(ac_arrow_animation, "curve2");
 enemy_hurt_curve = animcurve_get_channel(ac_hurt_animation, "curve1");
@@ -98,8 +105,9 @@ enemy_curve_percent = 0;
 hero_curve_percent = 0;
 enemy_hurt_percent = 0;
 hero_hurt_percent = 0;
+#endregion
 
-
+#region game data variables
 _effects = game_effects();
 _spells = spells(_effects);
 _items = items();
@@ -125,25 +133,28 @@ array_foreach(_party, function(_value){if(_value.in_party){array_push(party, _va
 enemies = enemy_data[0];
 enemy_amount = enemy_data[1];
 party_count = get_party_count(party);
+#endregion
 
+#region animation variables
 hero_damage_text = 0;
 hurt_hero = false;
 heal_hero = false;
 defend_hero = false;
-picked_hero = 0;
-
 after_animation = 0;
 do_after_animation = false;
+#endregion
 
+#region battle selection variables
 
+picked_hero = 0;
 enemies_turn = 0;
 selected_hero = 0;
 selected_enemy = 0;
 selected_option = 0;
 current_enemy_animation = selected_hero;
+#endregion
 
-heal_hero = false;
-defend_hero = false;
+#region boolean battle variables
 selecting_hero = undefined;
 friendly = false;
 selecting = false;
@@ -156,5 +167,6 @@ can_move = true;
 enemy_hurt_animation_activation = false; //lol the varable name rhymes
 enemy_heal_animaiton_activation = false;
 enemy_defense_animation_activation = false;
+#endregion
 
 current_state = TURN_STATE.PLAYER;
