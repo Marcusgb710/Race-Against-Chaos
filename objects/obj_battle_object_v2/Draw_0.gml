@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+#region draw variables
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
@@ -46,6 +46,9 @@ for(var _i =0; _i < array_length(current_menu); _i++){
 	_text_y += 10;
 	//show_debug_message(sprite_get_height(spr_blackbars))
 }
+#endregion
+
+#region draw hero sprite boxes and animations
 
 // draw hero sprite boxes
 for(var _i = 0; _i < array_length(party); _i++)
@@ -116,10 +119,9 @@ for(var _i = 0; _i < array_length(party); _i++)
 		_hero_ui_x += sprite_get_width(spr_UIs) + 5;
 	}
 }
+#endregion
 
-
-
-
+#region draw enemy selection arrow
 // draw currently selected hero arrow
 if(show_hero_selection_curve)
 {
@@ -139,8 +141,9 @@ var _selection = 10 * selected_option;
 var _battle_arrow_x = _text_x - sprite_get_width(spr_btlarrow) - 2;
 var _battle_arrow_y = _y  + _selection;
 draw_sprite(spr_btlarrow, -1, _battle_arrow_x, _battle_arrow_y);
+#endregion
 
-
+#region draw enemy and do enemy animations
 //draw enemies
 for(var _i = 0; _i < enemy_amount; _i++)
 {
@@ -194,7 +197,9 @@ for(var _i = 0; _i < enemy_amount; _i++)
 	}
 
 }
+#endregion
 
+#region draw enemy selection arrow
 // draw enemy arrow
 if(show_enemy_arrow)
 {
@@ -211,7 +216,9 @@ if(show_enemy_arrow)
 	draw_sprite_ext(spr_selectarrow, -1, _enemy_arrow_x, _enemy_arrow_y, 1, -1, 0, c_white, 1);	
 
 }
-//draw effects
+#endregion
+
+#region draw effects
 for (var _i=0; _i < party_count; _i++)
 {
 	var _party_member = party[_i];
@@ -249,10 +256,9 @@ for (var _i=0; _i < array_length(enemies); _i++)
 			}
 		
 	}
+#endregion
 		
-		
-
-//flee screen
+#region draw flee screen
 if(draw_flee_screen)
 {
 	var _flee_overlay_x = 50;
@@ -269,9 +275,9 @@ if(draw_flee_screen)
 	draw_roundrect_color_ext(_flee_overlay_x, _flee_overlay_y, _flee_overlay_width, _flee_overlay_height, _rad, _rad, c_black, c_black, false)
 	draw_text(_flee_text_x, _flee_text_y, _flee_text)
 }
+#endregion
 
-
-
+#region draw battle textbox
 // draw battle textbax
 var _text_box_width = global.view_width - 10
 var _text_box_height = 40
@@ -288,4 +294,4 @@ if draw_txt{
 draw_rectangle_color(_rect_x , _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_white, c_white, c_white, c_white, 1 )
 draw_text((_rect_x +_text_box_width)/ 2 - (string_length(_drawn_txt)*fontsize)/2, _rect_y +2, _drawn_txt)
 }
-
+#endregion
