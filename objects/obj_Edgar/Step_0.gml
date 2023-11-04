@@ -8,9 +8,10 @@ if !Cmove && global.egg == false
 
 if global.egg == true
 {
-	if (!obj_player.down_key && !obj_player.up_key) 
+	if (y == obj_player.y) 
 	{
 	image_index = 0;
+	
 	}
 y = obj_player.y;
 }
