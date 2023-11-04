@@ -1,0 +1,14 @@
+Navigate to the Scripts folder and open the spells script.
+
+add spells by typing _spells.<spellname> and setting it equal to a constructor object EX. _spells.fireball = new GameSpell().
+	arguments:
+		name| string: "the name of the spell"
+		type| enum: (should always be set to this) BATTLE_MENU_STATE.ACTION
+		friendly| boolean: determines if this spell will heal/defend or attack
+		pp_cost| real: the amount of "spell juice" needed for the spell to cast.
+		
+add the spell action by typing _spells.<spellname>.action and set it to an anonymous function.
+EX.  _spells.fireball.action = function(...){...}.
+	function arguments:
+		_target| struct: This should be a struct of the target for the action to be applied to.
+		_caster| struct: This should be a struct of the character that causes the action
