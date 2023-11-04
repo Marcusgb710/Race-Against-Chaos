@@ -5,30 +5,36 @@
 //up 0
 //down3
 //enter 4
-
+#region controls
 var _up = keyboard_check_pressed(pages.controls[0].key);
 var _left = keyboard_check(pages.controls[1].key);
 var _right = keyboard_check(pages.controls[2].key);
 var _down = keyboard_check_pressed(pages.controls[3].key);
 var _interact;
 _interact = keyboard_check_released(pages.controls[4].key);
+#endregion
 
+#region debug debug debug
 if(keyboard_check_pressed(vk_add)){_debug_option_main_page.show = !_debug_option_main_page.show}
+#endregion
 
+#region This defines how the controls work when you are changing a menu option
 if (selected_option != undefined){
 	
 	_shift_index = settings_controller(selected_option, _left, _right, _shift_index)
 	
 }
+#endregion
 
+#region this would control how the input selection works.//change this
 if keyboard_key != vk_nokey && selecting_input
 {
-	show_debug_message(keyboard_key) 
+	
 	selected_option.key = keyboard_key
 	selecting_input = false 
 	selected_option._show_overlay = false
 	}
-
+#endregion
 if(!selecting){
 if(_down){
 	selected_menu += 1;
@@ -54,7 +60,7 @@ if(_up){
 if(_interact){
 	var _option = page[selected_menu];
 	selected_option = _option
-	
+#region if you are changing a menu option the functionality goes here i.e changing volume, changing input
 	if(selecting)
 	{
 		selecting = false;
@@ -63,6 +69,7 @@ if(_interact){
 		return
 		
 	}
+#endregion
 	if(_option.func == menu_element_type.page_transfer)
 	{
 		var _results = page_navigation(_option, pages); 

@@ -70,7 +70,7 @@ battle_menu = {
 		]
 }
 enemy_damage_text = 0
-battle_menu.main[0].action = function(_target){
+battle_menu.main[0].action = function(_target, _caster=undefined){
 	var _carry_over_dmg = 0;
 	
 	if(_target.current_defense > 0)
@@ -84,8 +84,8 @@ battle_menu.main[0].action = function(_target){
 	_target.current_hp -= 4 
 	enemy_damage_text = $"-4"
 	}
-battle_menu.main[3].action = function(_target){_target.current_defense += 2}
-battle_menu.main[4].action = function(_target){can_move = false
+battle_menu.main[3].action = function(_target, _caster=undefined){_target.current_defense += 2}
+battle_menu.main[4].action = function(_target, _caster=undefined){can_move = false
 	_game.battle_party_data = party;
 	save(_game)
 				draw_flee_screen = true;

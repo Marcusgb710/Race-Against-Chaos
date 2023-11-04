@@ -1,0 +1,10 @@
+All the pages are stored in struct objects. 
+each object is similar but the page your on determines how the struct is outlined
+
+if you go into the obj_menu_v2 object and look at pages youll see each page has a type which i used to help determine what
+functionality is being used with each page.
+
+The selecting mechanics are highkey botched they worked so i pushed so if you want feel free to change that as well.
+
+ill leave regions for each section and have little notes on what each part does
+

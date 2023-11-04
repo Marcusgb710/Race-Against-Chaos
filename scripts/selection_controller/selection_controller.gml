@@ -3,6 +3,7 @@
 function selection_controller(_element){
 	switch(_element.func)
 	{
+		//change this
 		case(menu_element_type.slider):
 			var _starting_x = (global.view_width /2) +16
 			var _ending_x = _starting_x + 64
@@ -14,7 +15,7 @@ function selection_controller(_element){
 	
 		
 		case(menu_element_type.shift):
-			
+			/// change this
 			if(_element._text == "WINDOWED")
 			{
 				window_set_fullscreen(0);

@@ -23,7 +23,7 @@ if(close_timer >= 1)
 }
 if(start_close_timer)
 {
-	close_timer += 1/60;
+	close_timer += 1/90;
 	return;
 }
 

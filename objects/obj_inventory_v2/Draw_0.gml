@@ -62,14 +62,15 @@ for(var _j = 0; _j < string_length($"{current_hero.current_hp}"); _j++)
 
 if(adding_removing)
 {
-	var _t_x = 3
+	var _t_x = camx - 54
 	var _t_y = camy-6+12+(((SLOTS-1) div rowlength)+1)*36
 	var _t_w = camx+288
 	var _t_h = camy-6+12+(((SLOTS-1) div rowlength)+1)*36 +12
 	draw_set_font(Gonzobo)
 	
-	draw_rectangle(_t_x, _t_y, _t_w, _t_h, false)
+	draw_rectangle(_t_x, _t_y, _t_w, _t_h, false);
 	draw_text_ext_color(_t_x+2, _t_y + 3, command, -1, -1, c_black, c_black, c_black, c_black, 1)
+	
 	
 }
 

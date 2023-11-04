@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Menu System",
-    "path": "folders/Menu System.yy",
+    "name": "Helper Functions",
+    "path": "folders/Menu System/Helper Functions.yy",
   },
 }

@@ -3,7 +3,7 @@
 function Commands() constructor{
 	
 	
-	function addparty(_member){
+	addparty = function(_member){
 		
 			var _party = _game.battle_party_data;
 			
@@ -26,8 +26,8 @@ function Commands() constructor{
 			}
 			return "DID NOT ADD ANYONE"
 	}
-	
-	function delparty(_member){
+	addparty.arg_count = 1;
+	delparty = function(_member){
 		
 			var _party = _game.battle_party_data;
 	
@@ -48,8 +48,8 @@ function Commands() constructor{
 			}
 			return $"NO ONE WAS REMOVED"
 	}
-	
-	function timetick(_time){
+	delparty.arg_count = 1;
+	timetick = function(_time){
 		
 		var _day_cycle = obj_daynnite;
 		if(instance_exists(_day_cycle)){
@@ -78,8 +78,8 @@ function Commands() constructor{
 	return $"COULD NOT SET TIME TICK TO {_time}"	
 		
 	}
-		
-	function settime(_time){
+	timetick.arg_count = 1;	
+	settime = function(_time){
 		
 		var _day_cycle = obj_daynnite;
 		var _user_time_input = _time
@@ -92,8 +92,8 @@ function Commands() constructor{
 		}
 		return "COULD NOT SET THE TIME"
 	}
-	
-	function additem(_args){
+	settime.arg_count = 1;
+	additem = function(_args){
 			var _items = items();
 			var _member = _args[0];
 			var _item = _args[1];
@@ -110,8 +110,9 @@ function Commands() constructor{
 			}
 		
 	}
+	additem.arg_count = 1;
 	
-	function delitem(_args){
+	delitem = function(_args){
 			var _items = items();
 			var _member = _args[0];
 			var _item = _args[1];
@@ -128,7 +129,14 @@ function Commands() constructor{
 			}
 		
 	}
+	delitem.arg_count = 1
 	
+	resettime = function(){
+		var _time_set = settime("0");
+		var _tick_set = timetick("120");
+		return _time_set + " and " + _tick_set;
+	}
+	resettime.arg_count = 0
 	//function changeroom(_room){
 		//switch(_room){
 			//case "misty":
