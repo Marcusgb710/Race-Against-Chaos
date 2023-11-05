@@ -25,7 +25,7 @@ sprite[BED2] = spr_MistyChillin2;
 
 face = DOWN;
 
-//inventory_system = instance_create_depth(0, 0, -9999, obj_inventory_v2, {})
+//inventory_system = instance_create_depth(0, 0, -9999, obj_inventory, {})
 
 rain = false;
 casual = false;

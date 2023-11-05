@@ -1,0 +1,14 @@
+Navigate to the Scripts folder and open the items script.
+
+add items by typing _items.<itemname> and setting it equal to a constructor object EX. _items.benjiwengies = new Item().
+	arguments:
+		name| string: "the name of the item"
+		type| enum: (should always be set to this) BATTLE_MENU_STATE.ACTION
+		friendly| boolean: determines if this spell will heal/defend or attack
+		item_spr| Asset.GMSprite: determines the sprite for the item.
+		
+add the item action by typing _items.<itemname>.action and set it to an annnymous function.
+EX. _items.benjiwengies.action = function(...){...}.
+	function arguments:
+		_target| struct: This should be a struct of the target for the action to be applied to.
+		_caster| struct: This should be a struct of the character that causes the action

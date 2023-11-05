@@ -1,0 +1,15 @@
+Navigate to the Scripts folder and open the game_effects script.
+
+add effects by typing _effects.<effectname> and setting it equal to a struct object EX. _effects.freeze={}.
+	arguments:
+		name| string: "the name of the effect"
+		type| enum: (should always be set to this) BATTLE_MENU_STATE.ACTION
+		friendly| boolean: determines if this spell will heal/defend or attack
+		effect_counter| real: determines the amount of rounds the effect is active for.
+		effect_spr| Asset.GMSprite: determines the sprite for the effect.
+		
+add the effect action by typing _effects.<effectname>.action and set it to an annnymous function.
+EX. _effects.freeze.action = function(...){...}.
+	function arguments:
+		_target| struct: This should be a struct of the target for the action to be applied to.
+		_caster| struct: This should be a struct of the character that causes the action

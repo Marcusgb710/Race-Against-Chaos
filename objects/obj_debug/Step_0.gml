@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(obj_inventory_v2.show){return}
+if(obj_inventory.show){return}
 if(keyboard_check(vk_control) && keyboard_check_pressed(vk_alt))
 {
 	show = !show;
@@ -23,7 +23,7 @@ if(close_timer >= 1)
 }
 if(start_close_timer)
 {
-	close_timer += 1/60;
+	close_timer += 1/90;
 	return;
 }
 

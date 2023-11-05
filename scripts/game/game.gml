@@ -1,12 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function game(){
+function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME. ONCE CALLED YOU DONT NEED TO CALL IT AGAIN
+#region initializing variables
 	globalvar _game;
 	_game = {};
 	var _effects = game_effects();
 	var _spells = spells(_effects);
 	var _items = items();
 	
+#endregion
+#region game party data
 	_game.battle_party_data = [
 		{
 			name: "Misty",
@@ -75,12 +78,27 @@ function game(){
 		},
 				
 	]
-	
-	_game.quests = {
-		
-	}
-	
+#endregion
+
+#region game quests
+	_game.quests = [
+		{
+			name: "Exit Room",
+			completed: false,
+		},
+		{
+			name: "Go To Bar",
+			completed: false,
+		},
+		{
+			name: "Find Edgar",
+			completed: false,
+		}
+	]
+#endregion
+
+#region game room to be saved
 	_game.room = room
-	
+#endregion
 	
 }
