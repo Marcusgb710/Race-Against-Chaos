@@ -1,4 +1,4 @@
-instance_create_depth(0, 0, -9999, obj_inventory_v2, {})
+instance_create_depth(0, 0, -9999, obj_inventory, {})
 instance_create_depth(0, 0, -9999, obj_debug, {})
 instance_create_depth(0, 0, -9888, obj_quest, {})
 

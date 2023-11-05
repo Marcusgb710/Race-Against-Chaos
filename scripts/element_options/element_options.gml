@@ -35,25 +35,31 @@ function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shi
 			break;
 			
 		case (menu_element_type.input):
-		
+			
+			_text = $"Key: {global._fhinputKeys[_element.key]}";
+			draw_text(_x_pos, _y_pos, _text);
+			
 			if (_element._show_overlay){
-				var _overlay_width = 64;
-				var _overlay_height = 64;
-				var _overlay_x = global.view_width /2;
-				var _overlay_y = global.view_height /2;
-				var _color = c_white;
-				draw_rectangle_color(_overlay_x, _overlay_y, _overlay_width , _overlay_height, _color, _color, _color, _color, false);
-				draw_set_color(c_black);
-				draw_text((_overlay_x + _overlay_width)/2, (_overlay_y+_overlay_height)/2, $"{global._fhinputKeys[_element.key]}");
+				var _function = function(_element) {
+					draw_set_halign(fa_left);
+					var _overlay_width = 128;
+					var _overlay_height = 48;
+					var _overlay_x = (global.view_width - _overlay_width)/2;
+					var _overlay_y = (global.view_height - _overlay_height)/2;
+					var _color = c_white;
+					draw_rectangle_color(_overlay_x, _overlay_y, _overlay_x+_overlay_width , _overlay_y+_overlay_height, _color, _color, _color, _color, false);
+					draw_set_color(c_black);
+					var _key = global._fhinputKeys[_element.key];
+					draw_text(_overlay_x + (_overlay_width-string_width(_key))/2, _overlay_y + (_overlay_height-string_height(_key))/2, $"{_key}");
+				}
+				return _function
 			}
 		
 		
-			_text = $"Key {global._fhinputKeys[_element.key]}"
-			draw_text(_x_pos, _y_pos, _text);
 		
-			break;
+			
 		
 	}
 	
-	
+	return false
 }

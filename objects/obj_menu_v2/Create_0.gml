@@ -96,7 +96,7 @@ pages = {
 	],
 	graphics:[
 			{
-				name: "RESOLUTION",
+				name: "WINDOW SIZE",
 				func: menu_element_type.shift,
 				selected: false,
 				options: ["288 x 216", "864 x 648", "1296 x 972"],
@@ -221,6 +221,7 @@ page = pages.main
 selected_menu = 1;
 
 
+key_durations = [0, 0, 0, 0]
 
 toggle_position = 0;
 

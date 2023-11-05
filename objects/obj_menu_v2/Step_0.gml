@@ -12,6 +12,22 @@ var _right = keyboard_check(pages.controls[2].key);
 var _down = keyboard_check_pressed(pages.controls[3].key);
 var _interact;
 _interact = keyboard_check_released(pages.controls[4].key);
+
+
+if _left {key_durations[1] += 1}
+else {key_durations[1] = 0}
+if _right {key_durations[2] += 1}
+else {key_durations[2] = 0}
+
+/// some nicer scrolling currently click every 1/6 of a second. may move tis and add nicer sliding to the sliders
+var _fps = game_get_speed(gamespeed_fps);
+_left = false;
+_right = false;
+if key_durations[1] == 1 {_left = true}
+if key_durations[1]/_fps > 0.75 and key_durations[1] % int64(1/6*_fps) == 0{_left = true;}
+if key_durations[2] == 1 {_right = true;}
+if key_durations[2]/_fps > 0.75 and key_durations[2] % int64(1/6*_fps) == 0{_right = true;}
+
 #endregion
 
 #region debug debug debug

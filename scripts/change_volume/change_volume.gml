@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function change_volume_v2(_option, _value){
+function change_volume(_option, _value){
 	var _name = _option.name;
 	
 	switch(_name){

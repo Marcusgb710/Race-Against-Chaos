@@ -30,17 +30,16 @@ function settings_controller(_option, _left_key, _right_key, _shift_index){
 			}
 			if(_shift_index >= array_length(_option.options))
 			{
-				_shift_index  = 0;	
+				_shift_index = 0;	
 			}
 			if (_shift_index < 0)
 			{
-				_shift_index = array_length(_option.options);	
+				_shift_index = array_length(_option.options)-1;	
 			}
 			_option._text = _option.options[_shift_index]
 			break;
 				
-			case(menu_element_type.input):
-		
+		case(menu_element_type.input):
 			break;
 	}
 			
