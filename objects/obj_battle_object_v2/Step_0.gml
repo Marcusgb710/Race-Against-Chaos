@@ -63,7 +63,7 @@ if(keyboard_check_pressed(vk_add))
 	//array_push(party[0].known_spells, _spells.hurt)
 	//array_push(party[0].known_spells, _spells.stun)
 	//array_push(enemies[0].effects, _effects.fire)
-	add_effect(party[0], new Effect2(_effects.fire), _effects.fire.action)
+	//add_effect(party[0], new Effect2(_effects.fire), _effects.fire.action)
 }
 
 #endregion

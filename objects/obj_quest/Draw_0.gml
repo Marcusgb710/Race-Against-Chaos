@@ -9,9 +9,9 @@ var _quest_text_y = _cam_y + 15;
 draw_set_font(_font);
 var _string_length = string_length(_quests_[quest_index].name) * font_get_size(_font);
 
-
+draw_set_alpha(opacity)
 draw_text_transformed(_quest_text_x-_string_length, _quest_text_y, _quests_[quest_index].name, 1, 1, 0)
-
+draw_set_alpha(1);
 
 
 

@@ -1,5 +1,8 @@
 depth = -20000
 
+if instance_exists(obj_player){obj_player.control = false obj_player.can_move = false}
+if instance_exists(obj_quest){obj_quest.show = false obj_quest.opacity = 0}
+
 //textbox parameters
 textbox_width = 200;
 textbox_height = 64;
