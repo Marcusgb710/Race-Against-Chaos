@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_bluebellchurch",
-  "bbox_bottom": 63,
-  "bbox_left": 4,
-  "bbox_right": 59,
-  "bbox_top": 3,
+  "bbox_bottom": 127,
+  "bbox_left": 5,
+  "bbox_right": 122,
+  "bbox_top": 7,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"69e2e83f-dc4c-42aa-880a-83a468b338aa",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6988164f-bfde-4cc3-b5e4-4f80b84b35a9",},
   ],
   "gridX": 1,
   "gridY": 1,
-  "height": 64,
+  "height": 128,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"81c023a6-6dfa-4c53-bde1-e9db4fa14e97","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"68e55d7e-17d1-486b-96ca-3af5284014f1","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 9,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"69e2e83f-dc4c-42aa-880a-83a468b338aa","path":"sprites/spr_bluebellchurch/spr_bluebellchurch.yy",},},},"Disabled":false,"id":"dd804d99-5bf7-40f4-86bc-0072e66728c5","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6988164f-bfde-4cc3-b5e4-4f80b84b35a9","path":"sprites/spr_bluebellchurch/spr_bluebellchurch.yy",},},},"Disabled":false,"id":"b541667c-f196-404d-92dd-693ee0f6a2ff","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 128,
 }
