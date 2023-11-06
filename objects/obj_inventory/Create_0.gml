@@ -1,8 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+inventory_slots = 10
+
 items_ = items()
 rowlength = 5;
-inventory = array_create(SLOTS,-1);
+inventory = array_create(inventory_slots,-1);
 randomize();
 debug = false;
 show = false;
