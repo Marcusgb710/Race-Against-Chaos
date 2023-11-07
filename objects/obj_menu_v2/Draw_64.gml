@@ -17,14 +17,13 @@ var draw_override = []
 draw_line(_middlex, _y1, _middlex, _y2)
 draw_set_font(Gonzobo);
 
-for( var _i = 0; _i < _page_array_length; _i +=1)
+for (var _i = 0; _i < _page_array_length; _i++)
 {	
 	var _menu_option = page[_i]	
 	
 	if (_menu_option.show)
 	{
-		
-		array_push(draw_override, [element_options(_menu_option, _y, _middlex, _middley, _selected_level, _shift_index, _show_overlay, selected_option), _menu_option]);
+		array_push(draw_override, [element_options(_menu_option, _y, _middlex, _middley, _selected_level, _shift_index, selected_option), _menu_option]);
 		
 		
 			draw_set_halign(fa_right);
@@ -43,14 +42,7 @@ for( var _i = 0; _i < _page_array_length; _i +=1)
 			draw_set_color(c_white);
 		
 		
-		
-		
-		
-		
-
-		
-		
-		_y += option_buffer *2
+		_y += option_buffer * 2
 		
 	}
 	
@@ -58,8 +50,8 @@ for( var _i = 0; _i < _page_array_length; _i +=1)
 
 
 
-for(var _i = 0; _i < array_length(draw_override); _i +=1) {
-	if draw_override[_i][0] != false {
+for(var _i = 0; _i < array_length(draw_override); _i++) {
+	if draw_override[_i][0] != undefined {
 		draw_override[_i][0](draw_override[_i][1])
 	}
 }

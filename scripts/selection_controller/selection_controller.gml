@@ -1,10 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function selection_controller(_element){
-	switch(_element.func)
+function selection_controller(_element, _menu){
+	switch (_menu)
 	{
-		//change this
-		case(menu_element_type.slider):
+		case (PAGE_NAV.AUDIO):
+			
 			var _starting_x = (global.view_width /2) +16
 			var _ending_x = _starting_x + 64
 			var _normalize = (_element.pos.x_ - _starting_x)/(_ending_x - _starting_x) * 100
@@ -12,17 +12,19 @@ function selection_controller(_element){
 		
 			break;
 		
-	
 		
-		case(menu_element_type.shift):
-			/// change this
-			
+		case (PAGE_NAV.GRAPHICS):
 			
 			change_window_mode(_element)
 			
-			//_element._text = _element.options[_shift_index]	
-			
 			break;
-				
+		
+		case (PAGE_NAV.CONTROLS):
+			
+			if _element.select_key != vk_nokey {
+				_element.key = _element.select_key
+			}
+			break;
+		
 	}
 }

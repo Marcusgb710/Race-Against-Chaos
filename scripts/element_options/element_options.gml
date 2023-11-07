@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shift_index, _show_overlay, _selected_element){
+function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shift_index, _selected_element){
 	draw_set_halign(fa_left);
 	
 	switch(_element.func){
@@ -49,7 +49,7 @@ function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shi
 					var _color = c_white;
 					draw_rectangle_color(_overlay_x, _overlay_y, _overlay_x+_overlay_width , _overlay_y+_overlay_height, _color, _color, _color, _color, false);
 					draw_set_color(c_black);
-					var _key = global._fhinputKeys[_element.key];
+					var _key = global._fhinputKeys[_element.select_key];
 					draw_text(_overlay_x + (_overlay_width-string_width(_key))/2, _overlay_y + (_overlay_height-string_height(_key))/2, $"{_key}");
 				}
 				return _function
@@ -61,5 +61,5 @@ function element_options(_element, _y_pos, _x_pos, _middley, _current_room, _shi
 		
 	}
 	
-	return false
+	return undefined
 }

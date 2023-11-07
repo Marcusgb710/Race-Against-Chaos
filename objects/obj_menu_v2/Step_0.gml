@@ -10,23 +10,14 @@ var _up = keyboard_check_pressed(pages.controls[0].key);
 var _left = keyboard_check(pages.controls[1].key);
 var _right = keyboard_check(pages.controls[2].key);
 var _down = keyboard_check_pressed(pages.controls[3].key);
-var _interact;
-_interact = keyboard_check_released(pages.controls[4].key);
+var _interact = keyboard_check_released(pages.controls[4].key);
 
-
-if _left {key_durations[1] += 1}
-else {key_durations[1] = 0}
-if _right {key_durations[2] += 1}
-else {key_durations[2] = 0}
-
-/// some nicer scrolling currently click every 1/6 of a second. may move tis and add nicer sliding to the sliders
+/// some nicer scrolling currently click every 1/6 of a second. may move this and add nicer sliding to the sliders
+key_durations[1] = (key_durations[1]+1)*_left
+key_durations[2] = (key_durations[2]+1)*_right
 var _fps = game_get_speed(gamespeed_fps);
-_left = false;
-_right = false;
-if key_durations[1] == 1 {_left = true}
-if key_durations[1]/_fps > 0.75 and key_durations[1] % int64(1/6*_fps) == 0{_left = true;}
-if key_durations[2] == 1 {_right = true;}
-if key_durations[2]/_fps > 0.75 and key_durations[2] % int64(1/6*_fps) == 0{_right = true;}
+_left = key_durations[1] == 1 || (key_durations[1]/_fps > 0.75 && key_durations[1] % int64(1/6*_fps) == 0)
+_right = key_durations[2] == 1 || (key_durations[2]/_fps > 0.75 && key_durations[2] % int64(1/6*_fps) == 0)
 
 #endregion
 
@@ -42,15 +33,7 @@ if (selected_option != undefined){
 }
 #endregion
 
-#region this would control how the input selection works.//change this
-if keyboard_key != vk_nokey && selecting_input
-{
-	
-	selected_option.key = keyboard_key
-	selecting_input = false 
-	selected_option._show_overlay = false
-	}
-#endregion
+
 if(!selecting){
 if(_down){
 	selected_menu += 1;
@@ -66,31 +49,49 @@ if(_down){
 }
 if(_up){
 	selected_menu -= 1
-	if(page == pages.main && pages.main[0].show == false && selected_menu < 1||selected_menu < 0){
+	if(page == pages.main && pages.main[0].show == false && selected_menu < 1 || selected_menu < 0){
 		selected_menu = _page_array_length-1;
 	}
 	audio_play_sound(snd_selectsound, 5, false);
 	
 	}
 }
+
+
+
+
+
+
+var _option = page[selected_menu];
+selected_option = _option
+
+if _option.func == menu_element_type.input {
+	if _option._show_overlay && !(keyboard_key == vk_nokey) && !(keyboard_key == pages.controls[4].key){
+		page[selected_menu].select_key = keyboard_key
+	}
+}
+
+
 if(_interact){
-	var _option = page[selected_menu];
-	selected_option = _option
-#region if you are changing a menu option the functionality goes here i.e changing volume, changing input
-	if(selecting)
-	{
+	
+	
+	
+	#region if you are changing a menu option the functionality goes here i.e changing volume, changing input
+	if (selecting) {
+		_option._show_overlay = false
 		selecting = false;
 		selected_option = undefined
-		selection_controller(_option)
+		selection_controller(_option, current_menu)
 		return
-		
 	}
-#endregion
+	#endregion
 	if(_option.func == menu_element_type.page_transfer)
 	{
 		var _results = page_navigation(_option, pages); 
 		page = _results[0]; 
 		selected_menu = _results[1];
+		current_menu = _results[2]
+		
 	}
 	else if(_option.name == "EXIT"){
 		global.key_down = pages.controls[3].key;
@@ -103,17 +104,16 @@ if(_interact){
 	else if(page == pages.debug && _option.func == menu_element_type.debug){
 		_selected_level = _option._room;
 		}
-	else if(_option.func == menu_element_type.slider || _option.func == menu_element_type.shift){
-			
-			selecting = !selecting
-			
+	else if(_option.func == menu_element_type.slider || _option.func == menu_element_type.shift || _option.func == menu_element_type.input){
+		
+		selecting = !selecting
+		
 	}
-	else if(_option.func == menu_element_type.input)
-	{
-		selected_option = _option
-		selected_option._show_overlay = !selected_option._show_overlay;
-		selecting_input = true;
+	if(_option.func == menu_element_type.input) {
+		_option._show_overlay = true;
 	}
+	
+	
 	audio_play_sound(snd_confirm, 5, false);
 }
 

@@ -16,22 +16,22 @@ function page_navigation(option, pages){
 			break;
 		case(PAGE_NAV.DEBUG):
 			_page = pages.debug;
-			_selected_option =0;
+			_selected_option = 0;
 			break;
 		case(PAGE_NAV.AUDIO):
 			if !(audio_is_playing(snd_guy_voice)) { audio_play_sound(snd_guy_voice, 1, false); }
 			_page = pages.audio;
-			_selected_option =0;
+			_selected_option = 0;
 			break;
 		case(PAGE_NAV.GRAPHICS):
 			_page = pages.graphics;
-			_selected_option =0;
+			_selected_option = 0;
 			break;	
 		case(PAGE_NAV.CONTROLS):
 			_page = pages.controls;
-			_selected_option =0;
+			_selected_option = 0;
 			break;
 	}
 	
-	return [_page, _selected_option];
+	return [_page, _selected_option, option.goto];
 }

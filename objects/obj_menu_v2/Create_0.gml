@@ -101,7 +101,7 @@ pages = {
 				selected: false,
 				options: ["288 x 216", "864 x 648", "1296 x 972"],
 				_text:"",
-				show:true,
+				show: true,
 			},//resolution
 			{
 				name: "WINDOW MODE",
@@ -110,7 +110,7 @@ pages = {
 				options:["WINDOWED", "FULLSCREEN"],
 				_text: "",
 				show: true
-			},//window modw
+			},//window mode
 			{
 			name:"BACK",
 			func: menu_element_type.page_transfer,
@@ -126,6 +126,7 @@ pages = {
 		key: vk_up,
 		show: true,
 		_show_overlay: false,
+		select_key: vk_nokey,
 	},//up
 	{
 		name: "LEFT",
@@ -134,6 +135,7 @@ pages = {
 		key: vk_left,
 		show: true,
 		_show_overlay: false,
+		select_key: vk_nokey,
 	},//left
 	{
 		name: "RIGHT",
@@ -142,6 +144,7 @@ pages = {
 		key: vk_right,
 		show: true,
 		_show_overlay: false,
+		select_key: vk_nokey,
 	},//right
 	{
 		name: "DOWN",
@@ -150,6 +153,7 @@ pages = {
 		key: vk_down,
 		show: true,
 		_show_overlay: false,
+		select_key: vk_nokey,
 	},//down
 	
 	{
@@ -159,6 +163,7 @@ pages = {
 		key: vk_space,
 		show: true,
 		_show_overlay: false,
+		select_key: vk_nokey,
 	},
 	{
 			name:"BACK",
@@ -213,13 +218,14 @@ pages = {
 }
 
 _selected_level = MistHouse;
-selecting_input = false
+selecting_input = undefined
 selected_key = undefined
 
 page = pages.main
 
 selected_menu = 1;
 
+current_menu = PAGE_NAV.MAIN
 
 key_durations = [0, 0, 0, 0]
 
