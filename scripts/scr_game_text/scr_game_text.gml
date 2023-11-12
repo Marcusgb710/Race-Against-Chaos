@@ -103,6 +103,17 @@ switch(_text_id){
 			scr_text_color(48, 62, c_yellow, c_yellow, c_yellow, c_yellow);
 	break;
 	
+	case "Security":
+		scr_text("* Hi there. I like your suit.", "Misty");
+		scr_text("* Do you have a parent or guardian, young lady?", "SG");
+		scr_text("* No, why?", "Misty");
+		scr_text("* Can't be allowed in the hall as an unsupervised teenager.", "SG");
+		scr_text("* Why not?", "Misty");
+		scr_text("* Look, I don't get paid to answer your questions.", "SG");
+		scr_text("* I get paid to stand here and make sure you don't get in, so beat it.", "SG");
+		scr_text("* Fine.", "Misty");
+	break;
+	
 	#endregion
 	
 	#region FIRST EDGAR ENCOUNTER
