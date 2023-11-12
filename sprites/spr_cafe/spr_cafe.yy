@@ -1,11 +1,11 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_hihattheather",
+  "name": "spr_cafe",
   "bbox_bottom": 127,
-  "bbox_left": 9,
-  "bbox_right": 116,
-  "bbox_top": 39,
+  "bbox_left": 0,
+  "bbox_right": 127,
+  "bbox_top": 51,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b79a71c5-a806-4527-9e2c-4c9c0262c112",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e4dda59-d707-40a8-9bfa-41bd0ece3bb4",},
   ],
-  "gridX": 1,
-  "gridY": 1,
+  "gridX": 0,
+  "gridY": 0,
   "height": 128,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"334b0230-4865-4ed1-adbb-e58e428e3aa9","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e11e5064-367e-4e16-8462-187a7e9fe675","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -32,7 +32,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_hihattheather",
+    "name": "spr_cafe",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b79a71c5-a806-4527-9e2c-4c9c0262c112","path":"sprites/spr_hihattheather/spr_hihattheather.yy",},},},"Disabled":false,"id":"5c87facf-bd20-4f09-8644-dbe016253b0d","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4e4dda59-d707-40a8-9bfa-41bd0ece3bb4","path":"sprites/spr_cafe/spr_cafe.yy",},},},"Disabled":false,"id":"ee90907f-949d-4e7a-b942-ca48a7f3ec89","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

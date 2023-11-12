@@ -2,10 +2,10 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_KelsiandJonHouse",
-  "bbox_bottom": 63,
+  "bbox_bottom": 79,
   "bbox_left": 0,
-  "bbox_right": 63,
-  "bbox_top": 20,
+  "bbox_right": 79,
+  "bbox_top": 7,
   "bboxMode": 0,
   "collisionKind": 1,
   "collisionTolerance": 0,
@@ -13,11 +13,11 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d640267a-a17c-48b7-a677-e96d57ac72ae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa769072-724f-4c8f-8815-cca2e29dbbb5",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 80,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3b9dcd87-3b9f-4828-b988-4a66a7410fb5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Buildings",
+    "path": "folders/Sprites/Buildings.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d640267a-a17c-48b7-a677-e96d57ac72ae","path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},},},"Disabled":false,"id":"e0da8ec4-fbaf-4181-8f74-1a667452308c","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aa769072-724f-4c8f-8815-cca2e29dbbb5","path":"sprites/spr_KelsiandJonHouse/spr_KelsiandJonHouse.yy",},},},"Disabled":false,"id":"606e0dde-0e5c-4f01-a44b-ec59eb9a9789","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 80,
 }
