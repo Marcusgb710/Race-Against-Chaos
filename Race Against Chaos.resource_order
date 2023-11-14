@@ -69,6 +69,7 @@
     {"name":"Timelines","order":17,"path":"folders/Timelines.yy",},
     {"name":"VFX","order":18,"path":"folders/VFX.yy",},
     {"name":"Walls, Barriers, and Blocks","order":19,"path":"folders/Walls, Barriers, and Blocks.yy",},
+    {"name":"Shop Animation Curves","order":3,"path":"folders/Animation Curves/Shop Animation Curves.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_pawnshop","order":7,"path":"objects/obj_pawnshop/obj_pawnshop.yy",},
@@ -86,7 +87,12 @@
     {"name":"spr_drawer","order":45,"path":"sprites/spr_drawer/spr_drawer.yy",},
     {"name":"spr_chocobar","order":4,"path":"sprites/spr_chocobar/spr_chocobar.yy",},
     {"name":"addparty","order":2,"path":"scripts/addparty/addparty.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_parkfence","order":56,"path":"sprites/spr_parkfence/spr_parkfence.yy",},
+=======
+    {"name":"spr_parkfence","order":64,"path":"sprites/spr_parkfence/spr_parkfence.yy",},
+    {"name":"window_open","order":10,"path":"scripts/window_open/window_open.yy",},
+>>>>>>> Stashed changes
     {"name":"spr_MistyCasualL","order":1,"path":"sprites/spr_MistyCasualL/spr_MistyCasualL.yy",},
     {"name":"Enemy","order":4,"path":"scripts/Enemy/Enemy.yy",},
     {"name":"spr_cutscenetrigger","order":44,"path":"sprites/spr_cutscenetrigger/spr_cutscenetrigger.yy",},
@@ -267,8 +273,14 @@
     {"name":"spr_MistyChillin","order":4,"path":"sprites/spr_MistyChillin/spr_MistyChillin.yy",},
     {"name":"spr_battletrans","order":4,"path":"sprites/spr_battletrans/spr_battletrans.yy",},
     {"name":"FontNumbers","order":1,"path":"fonts/FontNumbers/FontNumbers.yy",},
+<<<<<<< Updated upstream
     {"name":"spr_pushblockice","order":1,"path":"sprites/spr_pushblockice/spr_pushblockice.yy",},
     {"name":"spr_shadow","order":2,"path":"sprites/spr_shadow/spr_shadow.yy",},
+=======
+    {"name":"get_max_string_length","order":1,"path":"scripts/get_max_string_length/get_max_string_length.yy",},
+    {"name":"spr_pushblockice","order":2,"path":"sprites/spr_pushblockice/spr_pushblockice.yy",},
+    {"name":"spr_shadow","order":3,"path":"sprites/spr_shadow/spr_shadow.yy",},
+>>>>>>> Stashed changes
     {"name":"get_party_count","order":4,"path":"scripts/get_party_count/get_party_count.yy",},
     {"name":"obj_applyrippleshader","order":5,"path":"objects/obj_applyrippleshader/obj_applyrippleshader.yy",},
     {"name":"spr_selectarrow","order":1,"path":"sprites/spr_selectarrow/spr_selectarrow.yy",},

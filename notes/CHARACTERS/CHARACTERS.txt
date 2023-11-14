@@ -12,7 +12,7 @@
 			inventory| array[_items]: an array of items the character can use,
 			effects| array[_effects]: an array of effects the character has applied to it(resets to an empty array when a battle ends),
 			sprite| Assets.GMSprite: The batttle sprite for a character,
-			last_pos| struct{_x|real, _x|real}: The last position of a character before a battle initiation or room change,
+			last_pos| struct{_x|real, _y|real}: The last position of a character before a battle initiation or room change,
 			
 		},
 		

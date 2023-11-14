@@ -1,3 +1,6 @@
+if(!instance_exists(obj_player)){return}
+follow = obj_player;
+
 
 if follow != noone 
 {

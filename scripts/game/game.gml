@@ -9,6 +9,10 @@ function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME
 	var _items = items();
 	
 #endregion
+
+#region Gold for game
+_game.gold = 500;
+#endregion
 #region game party data
 	_game.battle_party_data = [
 		{
