@@ -7,7 +7,13 @@ switch(_text_id){
 		scr_text("* Man.", "Misty");
 		scr_text("* I love hearing the sound of rain against the windows.", "Misty");
 		scr_text("* It sounds like its raining cats and dogs, though.", "Misty");
-		scr_text("* Better tie my hair up and get my jacket before I leave.", "Misty");
+		scr_text("* I'll put my jacket on whenever I go outside.", "Misty");
+		break;
+		
+	case "MiSecondLine":
+		scr_text("* I should look for Cory. Not sure if he's working today, though.", "Misty");
+		scr_text("* Maybe someone at the bar would know where he is.", "Misty");
+		scr_text("* (Bar's the pinkish-red building on the right)", "Misty");
 		break;
 		
 	#region SAVE DIALOGUE	

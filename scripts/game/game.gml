@@ -91,13 +91,17 @@ _game.gold = 500;
 			completed: false,
 		},
 		{
-			name: "Go To Bar",
+			name: "Ask Around",
 			completed: false,
 		},
 		{
-			name: "Find Edgar",
+			name: "Go to East Js",
 			completed: false,
-		}
+		},
+		{
+			name: "Find Cory",	
+			completed: false,
+		},
 	]
 #endregion
 

@@ -7,3 +7,4 @@
 #macro SURP 4
 #macro BED1 5
 #macro BED2 6
+#macro RAINMODE 7

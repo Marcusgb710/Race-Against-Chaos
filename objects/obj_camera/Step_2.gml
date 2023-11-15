@@ -19,12 +19,6 @@ camera_set_view_pos(view_camera[0],x-(camw*0.5),y-(camh*0.5));
 
 #region MUSIC
 
-if (room == MistHouse) && !audio_is_playing(mus_Mistys_Theme) && !instance_exists(obj_cutscene)
-{
-	audio_stop_all();
-	audio_play_sound(mus_Mistys_Theme, 1, true)	
-}
-
 if (room == Jamesoak_West || room == Jamesoak_Midtown) && !audio_is_playing(mus_Jamesoak)
 {
 	audio_stop_all();

@@ -2,7 +2,7 @@ instance_create_depth(0, 0, -9999, obj_inventory, {})
 instance_create_depth(0, 0, -9999, obj_debug, {})
 instance_create_depth(0, 0, -9888, obj_quest, {})
 
-if room == MistHouse
+if room == MistHouse 
 {
 casual = true;
 sprite[RIGHT] = spr_MistyCasualR;
@@ -14,7 +14,7 @@ casual = false;
 }
 
 
-if room == Jamesoak_West || room == Jamesoak_Midtown
+if (room == Jamesoak_West || room == Jamesoak_Midtown)
 {
 rain = true;
 sprite[RIGHT] = spr_MistyRainR;

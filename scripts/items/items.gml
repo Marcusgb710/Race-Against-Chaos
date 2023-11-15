@@ -17,5 +17,8 @@ function items(){
 	_items.popcorn = new Item("POPCORN", BATTLE_MENU_STATE.ACTION, true, spr_popcorn, 300)
 	_items.popcorn.action = function(_target, _caster=undefined){_target.current_hp += 10}
 	
+	_items.bandage = new Item("BANDAGE", BATTLE_MENU_STATE.ACTION, true, spr_bandage, 50)
+	_items.bandage.action = function(_target, _caster=undefined){_target.current_hp += 15}
+	
 	return _items;
 }
