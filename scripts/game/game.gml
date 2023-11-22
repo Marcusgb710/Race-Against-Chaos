@@ -89,24 +89,50 @@ _game.gold = 500;
 		{
 			name: "Exit Room",
 			completed: false,
+			id: "q1",
+			meta:{
+				type: "room",
+				room: MistHouse,
+				leaving: true,
+			}
 		},
 		{
 			name: "Ask Around",
 			completed: false,
+			id: "q2",
+			meta:{
+			type: "speech",
+			done: false,
+			}
 		},
 		{
 			name: "Go to East Js",
 			completed: false,
+			id: "q3",
+			meta:{
+				type: "room",
+				room: Premenu,
+				leaving: false,
+			}
 		},
 		{
 			name: "Find Cory",	
 			completed: false,
+			id: "q4",
+			meta:{
+			type: "speech",
+			done: false,
+			}
 		},
 	]
 #endregion
 
 #region game room to be saved
-	_game.room = room
+	_game.room = undefined
 #endregion
-	
+
+#region rooms entered
+_game.last_room_entered = undefined
+
+#endregion
 }

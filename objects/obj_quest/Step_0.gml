@@ -1,16 +1,24 @@
 if(_quests_[quest_index].completed){quest_index += 1}
 
-mhsexit = false;
-cor_ = false;
+
+
 
 current_quest = _quests_[quest_index];
 
-switch(quest_index){
-	case 0:
-		if(mhsexit = true){current_quest.completed = true;}
+switch(current_quest.meta.type){
+	
+	case "speech":
+		speech_quest(current_quest.id)
 		break;
-	case 1:
-		if(cor = true){current_quest.completed = true;}
+		
+	case "battle":
+		
+		break;
+	
+	case "room":
+		room_quest(current_quest.id, current_quest.meta.room, current_quest.meta.leaving)
+		break;
+	
 	
 }
 
