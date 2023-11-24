@@ -60,7 +60,26 @@ function game_text_v2(){
 		new GameDialog("* Well if you don't want that, then I suggest you fight me.", "Egg", snd_egg_voice),
 		new GameDialog("* ...You know what, I'll just cut through North Jamesoak.", "Misty", snd_mist_voice),
 		new GameDialog("* Hmph.", "Egg", snd_egg_voice),
-		]
+		],
+		
+		security:[
+		new GameDialog("* Hi there. I like your suit.", "Misty", snd_mist_voice),
+		new GameDialog("* Do you have a parent or guardian, young lady?", "SG", snd_Def_Voice),
+		new GameDialog("* No, why?", "Misty", snd_mist_voice),
+		new GameDialog("* Can't be allowed in the hall as an unsupervised teenager.", "SG", snd_Def_Voice),
+		new GameDialog("* Why not?", "Misty", snd_mist_voice),
+		new GameDialog("* Look, I don't get paid to answer your questions.", "SG", snd_Def_Voice),
+		new GameDialog("* I get paid to stand here and make sure you don't get in, so beat it.", "SG", snd_Def_Voice),
+		new GameDialog("* Fine.", "Misty", snd_mist_voice),
+		],
+		
+		maxwell:[
+		new GameDialog("* Hey Max, Are Jon and Kels here?", "Misty", snd_mist_voice),
+		new GameDialog("* Jon is. Kelsi went off somewhere.", "Max", snd_Def_Voice),
+		new GameDialog("* He should be in his room if you need him. The door's unlocked.", "Max", snd_Def_Voice),
+		new GameDialog("* Oh okay. Thanks.", "Misty", snd_mist_voice),
+		new GameDialog("* No problem.", "Max", snd_Def_Voice),
+		],
 	}
 	return _dialog
 }

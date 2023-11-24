@@ -1,0 +1,1 @@
+_items = ["BANDAGE", "BANDAGE", "BANDAGE", "BANDAGE"];
