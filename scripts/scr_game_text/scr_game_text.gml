@@ -16,6 +16,7 @@ switch(_text_id){
 		scr_text("* (Bar's the pinkish-red building on the right)", "Misty");
 		break;
 		
+		
 	#region SAVE DIALOGUE	
 	case "First Save":
 		scr_text("* There's a boombox here.", "Misty");

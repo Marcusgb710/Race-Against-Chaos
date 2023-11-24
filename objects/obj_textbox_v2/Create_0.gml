@@ -8,15 +8,25 @@ font_scale = 0.9
 font_size = font_get_size(font);
 font_size_scaled = font_size * font_scale
 
-text_to_be_drawn = current_dialog_block[1].dialog
+sound_timer = 0;
+sound_timer_end = 6
+text_pause_timer = 0;
+text_pause_timer_increment = 1/9
+start_text_pause_timer = false;
+
 
 text_idx = 1;
 dialog_idx = 0;
 next = false;
+next_char_timer = 0;
+next_char_timer_increment_setting = 2;
+next_char_timer_increment = 1/next_char_timer_increment_setting;
+
 next_timer_increment_setting = 60
 next_timer_increment = 1/next_timer_increment_setting
-next_timer = 0; 
-speaker = current_dialog_block[dialog_idx].speaker
+next_timer = 0;
+
+
 
 cam_x = camera_get_view_x(view_camera[0]);
 cam_y = camera_get_view_y(view_camera[0]);
@@ -27,6 +37,13 @@ textbox_w = cam_w - (x_buffer*2);
 textbox_h = 50;
 textbox_x = cam_x + x_buffer;
 textbox_y = cam_y + cam_h - textbox_h;
+
+speaker = current_dialog_block[dialog_idx].speaker;
+speaker_sound = current_dialog_block[dialog_idx].speaker_sound;
+nathans_way = current_dialog_block[dialog_idx].dialog;
+
+nathans_way = nathans_textbox_fix(nathans_way, textbox_w)
+
 name_textbox_w = string_length(speaker)*font_size;
 name_textbox_h = font_size + 10;
 name_textbox_x = textbox_x + textbox_w - name_textbox_w;
@@ -40,10 +57,12 @@ name_text_y = name_textbox_y
 text_x = textbox_x + font_size_scaled;
 text_y = textbox_y + 9;
 
-//game_text(t.mifirstline, textbox_w, font_size_scaled)
+//game_text(current_dialog_block, textbox_w, font_size_scaled)
 
-
-
+line_break = 1;
+//nathans_way = text_to_be_drawn
+nathans_idx = 1;
+nathans_idx_incrementor = 1;
 
 
 
@@ -54,24 +73,21 @@ font_color = c_white
 
 
 function stop_player(){
-	with(obj_player){
-		can_move = false;
-		control = false;
-		
-	}
+    with(obj_player){
+        can_move = false;
+        control = false;
+        
+    }
 }
 function resume_player_movement(){
-	with(obj_player){
-		can_move = true;
-		control = true;
-		
-	}
-	
+    with(obj_player){
+        can_move = true;
+        control = true;
+        
+    }
+    
 }
 stop_player();
-
-
-
 
 
 
