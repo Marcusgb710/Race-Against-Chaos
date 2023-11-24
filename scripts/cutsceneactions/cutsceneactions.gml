@@ -227,13 +227,14 @@ function cutscene_change_image_speed(obj, imgspd){
 function cutscene_create_textbox(str){
 
 text_id = str;
-	
+print(text_id);
 if global.dialoguerunning == false{
-	create_textbox(text_id);
+	create_textbox_v2(string_lower(text_id))
+	//create_textbox(text_id);
 	global.dialoguerunning = true;
 	}
 	
-if !instance_exists(obj_textbox){
+if !instance_exists(obj_textbox_v2){
 	cutscene_end_action();
 	global.dialoguerunning = false;
 	}

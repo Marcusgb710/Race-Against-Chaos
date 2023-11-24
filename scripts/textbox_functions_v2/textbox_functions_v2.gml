@@ -60,5 +60,51 @@ function game_text(string_array, textbox_width, font_size){
 		
 		//show_debug_message(a[_i].dialog)
 	}
-	
+
+function create_textbox_v2(_val=0){
+	var _dialog;
+	var _textbox_dialog = undefined;
+	var _game_text = game_text_v2();
+	if(is_int32(_val) || is_numeric(_val))
+	{
+		var _temp_val = _val;
+		var _struct_names = struct_get_names(_game_text);
+		if(_temp_val > array_length(_struct_names)-1){print($"INDEXING ERROR: VALUE IS GREATER THAN SIZE OF ARRAY"); return;}
+		if(_temp_val < -(array_length(_struct_names))){print($"INDEXING ERROR: VALUE IS SMALLER THAN SIZE OF LIST"); return;}
+		if(_temp_val < 0){
+			_temp_val = array_length(_struct_names) - abs(_val)
+		}
+		
+		_textbox_dialog = _game_text[$ array_get(_struct_names, _temp_val)];
+		
+	}
+	if(is_string(_val))
+	{
+		var _temp_val = _val;
+		if(string_pos(".", _temp_val)){
+			var _period_pos = string_pos(".", _temp_val);
+			_temp_val = string_replace(_temp_val, ".", "_")
+		}
+		var _found = false;
+		var _struct_names = struct_get_names(_game_text);
+		for(var _i=0; _i < array_length(_struct_names); _i++)
+		{
+			var _name = _struct_names[_i];
+			if(_name == _temp_val){_found = true; break;}
+		}
+		
+		if(!_found){print($"VALUE ERROR: VALUE DOES NOT EXIST. (maybe a typo or something)"); return;}
+		_textbox_dialog = _game_text[$ _temp_val];
+	}
+	if(is_struct(_val)){
+		_textbox_dialog = _val;
+	}
+	if(is_undefined(_textbox_dialog))
+	{
+		var _struct_names = struct_get_names(_game_text);
+		_textbox_dialog = _game_text[$ array_get(_struct_names, _val)];
+	}
+	var _instance = instance_create_depth(0, 0, -9999, obj_textbox_v2, {current_dialog_block: _textbox_dialog})
+	return _instance;
+}
 
