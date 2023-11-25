@@ -116,7 +116,7 @@ _game.gold = 500;
 			}
 		},
 		{
-			name: "Find Cory",	
+			name: "Detour",	
 			completed: false,
 			id: "q4",
 			meta:{
@@ -124,6 +124,7 @@ _game.gold = 500;
 			done: false,
 			}
 		},
+		
 	]
 #endregion
 

@@ -116,7 +116,7 @@ if (x != xprevious || y != yprevious){
 	}
 	
 	
-if rain == false && casual == false
+if casual == false
 {
 sprite[RIGHT] = spr_MistyR;
 sprite[UP] = spr_MistyU;

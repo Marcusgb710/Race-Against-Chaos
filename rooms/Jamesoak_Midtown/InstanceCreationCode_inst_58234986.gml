@@ -2,7 +2,7 @@ t_scene_info = [
 [cutscene_pause_sound, mus_Jamesoak],
 [cutscene_create_textbox, "Edgar0.5"],
 [cutscene_change_face, obj_player, LEFT],
-[cutscene_move_char, obj_player, 98, 368, false, 1],
+[cutscene_move_char, obj_player, 96, 368, false, 1],
 [cutscene_change_sprite_index, obj_Edgar, spr_EdgarR],
 [cutscene_play_sound, mus_Nerdy_Annoyance, 1, true],
 [cutscene_create_textbox, "Edgar1"],
