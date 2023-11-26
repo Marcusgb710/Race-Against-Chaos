@@ -59,7 +59,6 @@ function game_text_v2(){
 		new GameDialog("* No! That'll take forever to get out!", "Misty", snd_mist_voice),
 		new GameDialog("* Well if you don't want that, then I suggest you fight me.", "Edgar", snd_egg_voice),
 		new GameDialog("* ...You know what, I'll just cut through North Jamesoak.", "Misty", snd_mist_voice),
-<<<<<<< Updated upstream
 		new GameDialog("* Hmph.", "Egg", snd_egg_voice),
 		],
 		
@@ -81,10 +80,10 @@ function game_text_v2(){
 		new GameDialog("* Oh okay. Thanks.", "Misty", snd_mist_voice),
 		new GameDialog("* No problem.", "Max", snd_Def_Voice),
 		],
-=======
-		new GameDialog("* Hmph.", "Edgar", snd_egg_voice),
-		]
->>>>>>> Stashed changes
+
+		//new GameDialog("* Hmph.", "Edgar", snd_egg_voice),
+		//]
+
 	}
 	return _dialog
 }
