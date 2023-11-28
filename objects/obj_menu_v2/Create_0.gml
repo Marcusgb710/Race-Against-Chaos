@@ -213,6 +213,19 @@ pages = {
 			show: true
 		},
 		{
+			name: "MIDTOWN",
+			_room: Jamesoak_Midtown,
+			func: menu_element_type.debug,
+			show: true
+		},
+		{
+			name: "JAMES WEST",
+			_room: Jamesoak_West,
+			func: menu_element_type.debug,
+			show: true
+		},
+		
+		{
 			name:"BACK",
 			func: menu_element_type.page_transfer,
 			show: true,

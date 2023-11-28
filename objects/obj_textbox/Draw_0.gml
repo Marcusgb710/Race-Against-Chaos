@@ -95,6 +95,7 @@ if text_pause_timer <= 0
 if draw_char < text_length[page]
     {
 	 draw_char += text_spd;
+	
 	 draw_char = clamp(draw_char, 0, text_length[page]);
 	  if !audio_is_playing(snd[page]) {
 		 audio_play_sound(snd[page], 8, false); 

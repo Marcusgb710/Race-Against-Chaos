@@ -10,8 +10,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Shop System/Objects.yy",
+    "name": "Shop System",
+    "path": "folders/Shop System.yy",
   },
   "parentObjectId": null,
   "persistent": false,

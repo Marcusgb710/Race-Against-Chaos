@@ -12,6 +12,12 @@ if(can_move){
 	yspd = (down_key - up_key) * _m;
 }
 
+//testing
+if(keyboard_check_pressed(ord("L"))){
+	//print(get_quest_by_id("q1"));
+	//if(!is_undefined(_game.last_room_entered)){show_debug_message(room_get_name(_game.last_room_entered))}
+}
+
 //interact with push blocks
 if interactkeypressed == true
 {
@@ -112,7 +118,7 @@ if (x != xprevious || y != yprevious){
 	}
 	
 	
-if rain == false && casual == false
+if casual == false
 {
 sprite[RIGHT] = spr_MistyR;
 sprite[UP] = spr_MistyU;

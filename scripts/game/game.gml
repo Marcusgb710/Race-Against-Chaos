@@ -9,6 +9,10 @@ function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME
 	var _items = items();
 	
 #endregion
+
+#region Gold for game
+_game.gold = 500;
+#endregion
 #region game party data
 	_game.battle_party_data = [
 		{
@@ -85,20 +89,51 @@ function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME
 		{
 			name: "Exit Room",
 			completed: false,
+			id: "q1",
+			meta:{
+				type: "room",
+				room: MistHouse,
+				leaving: true,
+			}
 		},
 		{
-			name: "Go To Bar",
+			name: "Ask Around",
 			completed: false,
+			id: "q2",
+			meta:{
+			type: "speech",
+			done: false,
+			}
 		},
 		{
-			name: "Find Edgar",
+			name: "Go to East Js",
 			completed: false,
-		}
+			id: "q3",
+			meta:{
+				type: "room",
+				room: Premenu,
+				leaving: false,
+			}
+		},
+		{
+			name: "Detour",	
+			completed: false,
+			id: "q4",
+			meta:{
+			type: "speech",
+			done: false,
+			}
+		},
+		
 	]
 #endregion
 
 #region game room to be saved
-	_game.room = room
+	_game.room = undefined
 #endregion
-	
+
+#region rooms entered
+_game.last_room_entered = undefined
+
+#endregion
 }

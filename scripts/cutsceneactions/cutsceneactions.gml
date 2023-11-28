@@ -33,6 +33,18 @@ function cutscene_spawn_battle(trm){
 	
 }
 
+///@arg object
+///@arg variable
+///@arg value
+function cutscene_change_variable(obj_, var_, val){
+	with (obj_)
+	{
+		variable_instance_set(id, var_, val)	
+	}
+	cutscene_end_action();
+	
+}
+
 #endregion
 
 #region SOUND
@@ -186,8 +198,19 @@ function cutscene_change_sprite_index(obj, spr){
 
 ///@arg obj
 ///@arg sprite_id
-function cutscene_change_face(obj, sprid){
+///@arg moving?
+function cutscene_change_face(obj, sprid, mov = false){
 	obj.face = sprid
+	
+	if mov == true
+	{
+	obj.Cmove = true;	
+	}
+	else
+	{
+	obj.Cmove = false;	
+	}
+	
 	cutscene_end_action();
 }
 	
@@ -204,13 +227,14 @@ function cutscene_change_image_speed(obj, imgspd){
 function cutscene_create_textbox(str){
 
 text_id = str;
-	
+print(text_id);
 if global.dialoguerunning == false{
-	create_textbox(text_id);
+	create_textbox_v2(string_lower(text_id))
+	//create_textbox(text_id);
 	global.dialoguerunning = true;
 	}
 	
-if !instance_exists(obj_textbox){
+if !instance_exists(obj_textbox_v2){
 	cutscene_end_action();
 	global.dialoguerunning = false;
 	}

@@ -7,8 +7,15 @@ switch(_text_id){
 		scr_text("* Man.", "Misty");
 		scr_text("* I love hearing the sound of rain against the windows.", "Misty");
 		scr_text("* It sounds like its raining cats and dogs, though.", "Misty");
-		scr_text("* Better tie my hair up and get my jacket before I leave.", "Misty");
+		scr_text("* I'll put my jacket on whenever I go outside.", "Misty");
 		break;
+		
+	case "MiSecondLine":
+		scr_text("* I should look for Cory. Not sure if he's working today, though.", "Misty");
+		scr_text("* Maybe someone at the bar would know where he is.", "Misty");
+		scr_text("* (Bar's the pinkish-red building on the right)", "Misty");
+		break;
+		
 		
 	#region SAVE DIALOGUE	
 	case "First Save":
@@ -101,6 +108,17 @@ switch(_text_id){
 		scr_text("* Anytime.", "Barista");
 		scr_text("* (Okay so Cory is at the gas station. Thats in East Jamesoak. I should head there now.", "Misty");
 			scr_text_color(48, 62, c_yellow, c_yellow, c_yellow, c_yellow);
+	break;
+	
+	case "Security":
+		scr_text("* Hi there. I like your suit.", "Misty");
+		scr_text("* Do you have a parent or guardian, young lady?", "SG");
+		scr_text("* No, why?", "Misty");
+		scr_text("* Can't be allowed in the hall as an unsupervised teenager.", "SG");
+		scr_text("* Why not?", "Misty");
+		scr_text("* Look, I don't get paid to answer your questions.", "SG");
+		scr_text("* I get paid to stand here and make sure you don't get in, so beat it.", "SG");
+		scr_text("* Fine.", "Misty");
 	break;
 	
 	#endregion

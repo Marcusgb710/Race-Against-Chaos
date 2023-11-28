@@ -27,7 +27,6 @@ face = DOWN;
 
 //inventory_system = instance_create_depth(0, 0, -9999, obj_inventory, {})
 
-rain = false;
 casual = false;
 can_move = true
 
