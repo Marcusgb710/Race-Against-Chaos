@@ -12,7 +12,6 @@ function selection_controller(_element, _menu){
 		
 			break;
 		
-		
 		case (PAGE_NAV.GRAPHICS):
 			
 			change_window_mode(_element)
@@ -21,9 +20,8 @@ function selection_controller(_element, _menu){
 		
 		case (PAGE_NAV.CONTROLS):
 			
-			if _element.select_key != vk_nokey {
-				_element.key = _element.select_key
-			}
+			change_input_key(_element)
+			
 			break;
 		
 	}

@@ -238,6 +238,7 @@
     {"name":"spr_items","order":3,"path":"sprites/spr_items/spr_items.yy",},
     {"name":"spr_Tinizorpo","order":2,"path":"sprites/spr_Tinizorpo/spr_Tinizorpo.yy",},
     {"name":"invfunctionsV2","order":1,"path":"scripts/invfunctionsV2/invfunctionsV2.yy",},
+    {"name":"change_input_key","order":11,"path":"scripts/change_input_key/change_input_key.yy",},
     {"name":"settings_controller","order":10,"path":"scripts/settings_controller/settings_controller.yy",},
     {"name":"pick_room_enemies","order":9,"path":"scripts/pick_room_enemies/pick_room_enemies.yy",},
     {"name":"spr_Kelsi_btl_UI","order":7,"path":"sprites/spr_Kelsi_btl_UI/spr_Kelsi_btl_UI.yy",},

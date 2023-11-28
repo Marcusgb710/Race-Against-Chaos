@@ -88,8 +88,8 @@ battle_menu.main[3].action = function(_target, _caster=undefined){_target.curren
 battle_menu.main[4].action = function(_target, _caster=undefined){can_move = false
 	_game.battle_party_data = party;
 	save(_game)
-				draw_flee_screen = true;
-				alarm[0] = 240;}
+	draw_flee_screen = true;
+	alarm[0] = 240;}
 #endregion
 
 #region animation curve variables
@@ -170,3 +170,5 @@ enemy_defense_animation_activation = false;
 #endregion
 
 current_state = TURN_STATE.PLAYER;
+
+event_inherited();

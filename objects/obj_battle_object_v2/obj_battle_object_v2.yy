@@ -15,7 +15,10 @@
     "name": "Battle System",
     "path": "folders/Battle System.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_pause",
+    "path": "objects/obj_pause/obj_pause.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

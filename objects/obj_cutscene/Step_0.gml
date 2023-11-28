@@ -1,5 +1,3 @@
-obj_player.can_move = false;
-
 
 switch(len){
 	

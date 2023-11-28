@@ -1,7 +1,7 @@
 scene_info = -1;
 scene = 0;
-if instance_exists(obj_player){obj_player.control = false}
-if instance_exists(obj_quest){obj_quest.show = false;}
+
+event_inherited()
 
 timer = 0;
 

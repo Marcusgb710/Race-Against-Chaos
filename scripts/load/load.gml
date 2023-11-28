@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function load(){
 	try{
-	var _file = file_text_open_read("datafiles/"+"_savee_.txt");
+	var _file = file_text_open_read("datafiles/"+"_save_.txt");
 	var _encoded_string = file_text_read_string(_file)
 	
 	var _decoded_data = base64_decode(_encoded_string)

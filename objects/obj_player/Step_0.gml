@@ -6,8 +6,10 @@ if(can_move){
 	left_key = keyboard_check(global.key_left) 
 	down_key = keyboard_check(global.key_down) 
 	interactkeypressed = keyboard_check_pressed(vk_space);
-	xspd = (right_key - left_key) * move_spd;
-	yspd = (down_key - up_key) * move_spd;
+	var _m = move_spd
+	if right_key+up_key+left_key+down_key == 2 {_m*=lengthdir_x(1, 45)}
+	xspd = (right_key - left_key) * _m;
+	yspd = (down_key - up_key) * _m;
 }
 
 //interact with push blocks

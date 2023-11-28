@@ -17,4 +17,3 @@ _game.battle_party_data = _party;
 save(_game)
 instance_destroy(obj_battle_object_v2);
 audio_stop_all()
-

@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 if(!show){exit}
 var _font = Gonzobo;
 var _cam_x = camera_get_view_x(view_camera[0]);

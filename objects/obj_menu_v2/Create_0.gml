@@ -126,7 +126,7 @@ pages = {
 		key: vk_up,
 		show: true,
 		_show_overlay: false,
-		select_key: vk_nokey,
+		select_key: vk_up,
 	},//up
 	{
 		name: "LEFT",
@@ -135,7 +135,7 @@ pages = {
 		key: vk_left,
 		show: true,
 		_show_overlay: false,
-		select_key: vk_nokey,
+		select_key: vk_left,
 	},//left
 	{
 		name: "RIGHT",
@@ -144,7 +144,7 @@ pages = {
 		key: vk_right,
 		show: true,
 		_show_overlay: false,
-		select_key: vk_nokey,
+		select_key: vk_right,
 	},//right
 	{
 		name: "DOWN",
@@ -153,9 +153,8 @@ pages = {
 		key: vk_down,
 		show: true,
 		_show_overlay: false,
-		select_key: vk_nokey,
+		select_key: vk_down,
 	},//down
-	
 	{
 		name: "INTERACT",
 		func: menu_element_type.input,
@@ -163,7 +162,16 @@ pages = {
 		key: vk_space,
 		show: true,
 		_show_overlay: false,
-		select_key: vk_nokey,
+		select_key: vk_space,
+	},
+	{
+		name: "PAUSE",
+		func: menu_element_type.input,
+		selected: false,
+		key: vk_escape,
+		show: true,
+		_show_overlay: false,
+		select_key: vk_escape,
 	},
 	{
 			name:"BACK",
