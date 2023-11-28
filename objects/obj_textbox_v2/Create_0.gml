@@ -3,6 +3,7 @@
 
 
 //text_speed
+
 font = Gonzobo
 font_scale = 0.9
 font_size = font_get_size(font);
@@ -18,6 +19,7 @@ start_text_pause_timer = false;
 text_idx = 1;
 dialog_idx = 0;
 next = false;
+needs_next = true;
 next_char_timer = 0;
 next_char_timer_increment_setting = 2;
 next_char_timer_increment = 1/next_char_timer_increment_setting;
@@ -33,10 +35,17 @@ cam_y = camera_get_view_y(view_camera[0]);
 cam_w = camera_get_view_width(view_camera[0]);
 cam_h = camera_get_view_height(view_camera[0]);
 x_buffer = 41;
+
 textbox_w = cam_w - (x_buffer*2);
 textbox_h = 50;
 textbox_x = cam_x + x_buffer;
 textbox_y = cam_y + cam_h - textbox_h;
+if(x!=0){
+textbox_x = x;
+}
+if(y !=0){
+textbox_y = y;	
+}
 
 speaker = current_dialog_block[dialog_idx].speaker;
 speaker_sound = current_dialog_block[dialog_idx].speaker_sound;
@@ -70,7 +79,7 @@ nathans_idx_incrementor = 1;
 //longest_string_length
 textbox_sprite = spr_txtbox
 font_color = c_white
-
+in_battle=false;
 
 function stop_player(){
     with(obj_player){

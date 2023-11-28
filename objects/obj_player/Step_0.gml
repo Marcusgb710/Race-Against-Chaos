@@ -1,3 +1,9 @@
+if(load_){
+	x = _game.battle_party_data[0].last_pos._x
+	y = _game.battle_party_data[0].last_pos._y
+	load_ = false;
+	
+}
 if (control) || Cmove
 {
 if(can_move){

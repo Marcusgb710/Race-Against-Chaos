@@ -2,6 +2,7 @@ event_inherited();
 
 hp = 100;
 max_hp = hp;
+load_ = false
 
 xspd = 0;
 yspd = 0;

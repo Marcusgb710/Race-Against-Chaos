@@ -1,13 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(!in_battle){
 cam_x = camera_get_view_x(view_camera[0]);
 cam_y = camera_get_view_y(view_camera[0]);
 cam_w = camera_get_view_width(view_camera[0]);
 cam_h = camera_get_view_height(view_camera[0]);
+
 textbox_w = cam_w - (x_buffer*2)
 textbox_h = 68
 textbox_x = cam_x + x_buffer
 textbox_y = cam_y + cam_h - textbox_h - 5
+}
 text_x = textbox_x + font_size_scaled;
 text_y = textbox_y + 9;
 speaker = current_dialog_block[dialog_idx].speaker
@@ -23,6 +26,7 @@ name_text_y = name_textbox_y + name_textbox_h /2 - font_size_scaled/2
 if(dialog_idx >= array_length(current_dialog_block)){dialog_idx = 0}
 
 if(keyboard_check_pressed(global.key_enter)){
+	if(!needs_next){return}
 	if(nathans_idx < string_length(nathans_way))
 	{
 		//nathans_idx_incrementor = 3;
@@ -92,7 +96,12 @@ if(nathans_idx >= string_length(nathans_way) && dialog_idx < array_length(curren
 	
 	next = true
 }
-if(nathans_idx >= string_length(nathans_way)){return}
+if(nathans_idx >= string_length(nathans_way)){
+	if(!needs_next){
+	
+		audio_stop_sound(speaker_sound);
+		obj_battle_object_v2.att=true}
+	return}
 if(sound_timer >= sound_timer_end)
 {
 	sound_timer = 0;

@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(instance_exists(obj_quest)){
+obj_quest.show = false;
+}
 #region set controls for the battle controls
 play_audio(song);
 var _up = keyboard_check_pressed(global.key_up);
@@ -10,43 +13,9 @@ var _select = keyboard_check_pressed(global.key_enter);
 #endregion
 
 #region controls for text drawing on screen
-if draw_txt{
-var _t = text_display(text_to_draw)
-if(text_end_delay_timer >= 1){draw_txt = false txt_idx=0 return}
-if (string_length(_t[array_length(_t)-1]) == string_length(drawn_text)){text_end_delay_timer += 1/text_end_delay}
-if (text_timer == 1 && string_length(text_to_draw) != string_length(drawn_text)){
-	
-try
-{
-	
-	if(array_length(_t) > 1)
-	{
-		if(string_length(drawn_text) == string_length(_t[txt_idx]))
-		{
-			
-			
-			
-			if(txt_idx < array_length(_t)-1){txt_idx += 1 text_idx = 1 drawn_text = ""}
-		}
-		
-	}
-	
-	drawn_text += string_char_at(_t[txt_idx], text_idx)
-	
-	text_idx +=1	
+if(text_timer >= 1){text_timer = 0 draw_txt=false; att=false; instance_destroy(obj_textbox_v2)}
+if(att){text_timer += 1/60}
 
-}
-}
-if (text_timer >= 3){text_timer = 0}
-text_timer += 1
-}
-else
-{
-	text_idx = 1
-	
-	text_timer = 0
-	text_end_delay_timer = 0
-}
 #endregion
 
 #region debug controls
@@ -400,6 +369,7 @@ switch(current_state)
 				}
 				hero_damage_text = _dmg;
 				hurt_hero = true;
+				enemy_attack_animation_activation = true;
 				selected = false;
 				draw_txt = true
 				text_to_draw = battle_text_._damage(_bd - _random_hero.current_defense, _bhp - _random_hero.current_hp, _random_hero)

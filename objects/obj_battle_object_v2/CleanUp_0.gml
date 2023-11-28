@@ -15,5 +15,8 @@ for(var _i = 0; _i < array_length(_party); _i++)
 }
 _game.battle_party_data = _party;
 save(_game)
+if(instance_exists(obj_quest)){
+obj_quest.show = true;
+}
 instance_destroy(obj_battle_object_v2);
 audio_stop_all()

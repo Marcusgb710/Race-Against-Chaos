@@ -99,6 +99,35 @@ if(_interact){
 		global.key_left = pages.controls[1].key;
 		global.key_up = pages.controls[0].key;
 		global.key_right = pages.controls[2].key;
+		
+		game();
+		var _data = load();
+		//show_debug_message(_data)
+
+		//print(_data.room)
+		//print(_data.last_room_entered)
+		if(variable_struct_exists(_data, "debug_version")){
+			print(_data.debug_version);
+			print(_game.debug_version);
+		if(_data.debug_version != _game.debug_version){
+			room_goto(_selected_level);
+			return;
+		}
+		}
+		if(!is_array(_data) && array_length(struct_get_names(_data)) != 0){
+			//_game = _data
+			
+			//if(!is_undefined(_game.room))
+			//{
+			//	_selected_level = _game.room
+				
+			//}
+				
+		}
+		with(obj_player)
+		{
+			load_ = true;
+		}
 		room_goto(_selected_level);
 		}
 	else if(page == pages.debug && _option.func == menu_element_type.debug){

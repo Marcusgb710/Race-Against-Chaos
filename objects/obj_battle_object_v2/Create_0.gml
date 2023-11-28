@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 randomize()
-
+if(instance_exists(obj_quest)){
+obj_quest.show = false;
+}
 #region battle enums
 enum BATTLE_MENU_STATE{
 	TRANSFER,
@@ -37,6 +39,7 @@ select_effected_enemy = 0
 #endregion
 
 #region textbox variables
+att = false;
 text_timer = 0
 text_idx = 1
 battle_text_ = battle_text()
@@ -99,6 +102,7 @@ enemy_hurt_curve = animcurve_get_channel(ac_hurt_animation, "curve1");
 hero_hurt_curve = animcurve_get_channel(ac_hero_hurt_animation, "curve1");
 defense_animation = animcurve_get_channel(ac_defense_animaiton, "curve1");
 enemy_hurt_text_curve = animcurve_get_channel(ac_hurt_animation, "curve2");
+enemy_attack_animation = animcurve_get_channel(ac_enemy_attack_animation, "curve1");
 
 defense_curve_percent = 0;
 enemy_curve_percent = 0;
@@ -167,8 +171,20 @@ can_move = true;
 enemy_hurt_animation_activation = false; //lol the varable name rhymes
 enemy_heal_animaiton_activation = false;
 enemy_defense_animation_activation = false;
+enemy_attack_animation_activation = false;
 #endregion
 
+<<<<<<< Updated upstream
 current_state = TURN_STATE.PLAYER;
 
 event_inherited();
+=======
+function bezier(_p0, _p1, _p2, _t){
+	
+	var _px = _p0[0]*sqr((1-_t))+2*(1-_t)*_t*_p1[0] + _p2[0]*sqr(_t)
+	var _py = _p0[1]*sqr((1-_t))+2*(1-_t)*_t*_p1[1] + _p2[1]*sqr(_t)
+	return [_px, _py];
+}
+
+current_state = TURN_STATE.PLAYER;
+>>>>>>> Stashed changes

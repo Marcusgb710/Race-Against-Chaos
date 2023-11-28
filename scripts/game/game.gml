@@ -1,13 +1,24 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME. ONCE CALLED YOU DONT NEED TO CALL IT AGAIN
+
 #region initializing variables
 	globalvar _game;
+	globalvar _load;
+	_load = false;
 	_game = {};
 	var _effects = game_effects();
 	var _spells = spells(_effects);
 	var _items = items();
 	
+#endregion
+
+#region
+///DO NOT TOUCH
+
+_game.debug_version = "2.0.1"
+
+///DO NOT TOUCH
 #endregion
 
 #region Gold for game

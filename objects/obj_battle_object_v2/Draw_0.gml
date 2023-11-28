@@ -69,7 +69,7 @@ for(var _i = 0; _i < array_length(party); _i++)
 		var _hero_damage_text_x = (_hero_ui_x + (sprite_get_width(spr_UIs)*(picked_hero+1))) / 2
 		var _hero_damage_text_y = _hero_ui_y + font_get_size(FontNumbers)
 		hero_hurt_percent += 1/60;
-		if(hero_hurt_percent > 1.2){hurt_hero = false;heal_hero = false;defend_hero = false; hero_hurt_percent = 0 efx = true};
+		if(hero_hurt_percent > 1.2){hurt_hero = false;heal_hero = false;defend_hero = false; enemy_attack_animation_activation=false; hero_hurt_percent = 0 efx = true};
 		var _position = animcurve_channel_evaluate(hero_hurt_curve, hero_hurt_percent);
 		var _start_y = _hero_damage_text_y;
 		var _end_y = _hero_damage_text_y - 5;
@@ -190,6 +190,26 @@ for(var _i = 0; _i < enemy_amount; _i++)
 	
 	_enemy._y = _start_y + (_distance * _position);
 	}
+	if(enemy_attack_animation_activation && current_enemy_animation == _i)
+	{
+			var _position = animcurve_channel_evaluate(enemy_attack_animation, hero_hurt_percent);
+			
+			var _points = [[_enemy_x , _enemy_y-5],[_enemy_x , _enemy_y+30],[ _enemy_x+90 , _enemy_y+30]]
+			var _t = hero_hurt_percent / 0.8;
+			var _bezier_points = bezier(_points[0], _points[1], _points[2], _t);
+			//var _start_x = _enemy_x + exp(3)
+			var _start_x = _bezier_points[0];
+			var _end_x = _enemy_x;
+			//var _start_y = _enemy_y + 3
+			var _start_y =_bezier_points[1];
+			var _end_y = _enemy_y;
+			var _distance_y = _end_y - _start_y;
+			var _distance = _end_x - _start_x;
+			_enemy._x = _start_x + (_distance * _position);
+			_enemy._y = _start_y + (_distance_y * _position);
+		
+	}
+	
 	draw_sprite(_enemy.sprite, -1, _enemy._x , _enemy._y);
 	if(enemy_amount > 1)
 	{
@@ -284,6 +304,9 @@ var _text_box_height = 40
 var _text_box_y_buffer = 100 + _text_box_height
 var _rect_x = 5
 var _rect_y = 5
+print(drawn_text)
+print(text_to_draw)
+var _gt = [new GameDialog($"* {text_to_draw}", "", snd_Def_Voice)]
 
 var _battle_text_y = _rect_y
 var _drawn_txt = $"*{drawn_text}"
@@ -291,7 +314,27 @@ var _drawn_txt = $"*{drawn_text}"
 var _txt_x = (((_rect_x +_text_box_width)/ 2) - (string_length($"*{text_to_draw}")*fontsize)/2)
 
 if draw_txt{	
+	
+if(!instance_exists(obj_textbox_v2)){
+var _inst = instance_create_depth(0, 0, -99999, obj_textbox_v2, {current_dialog_block: _gt,}); 
+with(_inst)
+{
+	in_battle= true;
+	textbox_y = _rect_y;
+	textbox_h = _text_box_height;
+	textbox_w = _text_box_width;
+	textbox_x = _rect_x;
+	nathans_way = current_dialog_block[dialog_idx].dialog;
+	nathans_way = nathans_textbox_fix(nathans_way, textbox_w);
+	needs_next = false;
+	textbox_sprite = spr_blacktxtboxtst;
+	
+}
+}
+
 draw_rectangle_color(_rect_x , _rect_y, + _rect_x + _text_box_width, _rect_y +_text_box_height, c_white, c_white, c_white, c_white, 1 )
 draw_text((_rect_x +_text_box_width)/ 2 - (string_length(_drawn_txt)*fontsize)/2, _rect_y +2, _drawn_txt)
 }
+
+
 #endregion
