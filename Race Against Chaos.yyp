@@ -466,7 +466,6 @@
     {"id":{"name":"snd_victory","path":"sounds/snd_victory/snd_victory.yy",},},
     {"id":{"name":"spr_Tinizorpo","path":"sprites/spr_Tinizorpo/spr_Tinizorpo.yy",},},
     {"id":{"name":"invfunctionsV2","path":"scripts/invfunctionsV2/invfunctionsV2.yy",},},
-    {"id":{"name":"change_input_key","path":"scripts/change_input_key/change_input_key.yy",},},
     {"id":{"name":"StrongEnemy","path":"rooms/StrongEnemy/StrongEnemy.yy",},},
     {"id":{"name":"settings_controller","path":"scripts/settings_controller/settings_controller.yy",},},
     {"id":{"name":"TS_Parking","path":"tilesets/TS_Parking/TS_Parking.yy",},},

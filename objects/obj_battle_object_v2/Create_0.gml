@@ -174,11 +174,11 @@ enemy_defense_animation_activation = false;
 enemy_attack_animation_activation = false;
 #endregion
 
-<<<<<<< Updated upstream
+
 current_state = TURN_STATE.PLAYER;
 
 event_inherited();
-=======
+
 function bezier(_p0, _p1, _p2, _t){
 	
 	var _px = _p0[0]*sqr((1-_t))+2*(1-_t)*_t*_p1[0] + _p2[0]*sqr(_t)
@@ -187,4 +187,4 @@ function bezier(_p0, _p1, _p2, _t){
 }
 
 current_state = TURN_STATE.PLAYER;
->>>>>>> Stashed changes
+

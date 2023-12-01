@@ -126,7 +126,7 @@ if(_interact){
 		}
 		with(obj_player)
 		{
-			load_ = true;
+			//load_ = true;
 		}
 		room_goto(_selected_level);
 		}
