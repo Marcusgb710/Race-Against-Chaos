@@ -7,13 +7,16 @@
 instance_create_depth(0, 0, -9999, obj_inventory, {})
 instance_create_depth(0, 0, -9999, obj_debug, {})
 instance_create_depth(0, 0, -9888, obj_quest, {})
-
-if(load_){
-	print("PEEEEEEEEEEEEEENISSSSSSSSSSS")
+if(_load){
+	
 	print(_game.battle_party_data[0].last_pos);
-	x = _game.battle_party_data[0].last_pos._x
-	y = _game.battle_party_data[0].last_pos._y
-	load_ = false;
+	var _x = _game.battle_party_data[0].last_pos._x
+	var _y = _game.battle_party_data[0].last_pos._y
+	obj_camera.x = _x;
+	obj_camera.y = _y;
+	x = _x
+	y = _y
+	_load = false;
 	
 }
 

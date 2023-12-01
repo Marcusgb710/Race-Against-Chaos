@@ -5,6 +5,7 @@ if(_quests_[quest_index].completed){quest_index += 1}
 
 current_quest = _quests_[quest_index];
 
+
 switch(current_quest.meta.type){
 	
 	case "speech":

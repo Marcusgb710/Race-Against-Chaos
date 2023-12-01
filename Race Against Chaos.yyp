@@ -387,6 +387,7 @@
     {"id":{"name":"spr_EdgarNEONPC","path":"sprites/spr_EdgarNEONPC/spr_EdgarNEONPC.yy",},},
     {"id":{"name":"Jamesoak_Midtown","path":"rooms/Jamesoak_Midtown/Jamesoak_Midtown.yy",},},
     {"id":{"name":"snd_E_B","path":"sounds/snd_E_B/snd_E_B.yy",},},
+    {"id":{"name":"throw away code i might need later","path":"notes/throw away code i might need later/throw away code i might need later.yy",},},
     {"id":{"name":"obj_light","path":"objects/obj_light/obj_light.yy",},},
     {"id":{"name":"Item","path":"scripts/Item/Item.yy",},},
     {"id":{"name":"snd_defend","path":"sounds/snd_defend/snd_defend.yy",},},

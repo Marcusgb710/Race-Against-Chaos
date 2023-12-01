@@ -93,7 +93,7 @@ function save_game(_filenum = 0)
 
 
 
-function load_game(_filenum = 0)
+function load_game____(_filenum = 0)
 {
 	
 	//loading saved data

@@ -1,8 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-game();
-var _data = load();
-show_debug_message(_data)
+//game();
+//var _data = load();
+//show_debug_message(_data)
 
 //print(_data.room)
 //print(_data.last_room_entered)

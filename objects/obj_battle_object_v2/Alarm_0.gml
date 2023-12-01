@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 instance_destroy()
-room_goto(last_room);
+load_game()
 
 
 //audio_stop_all()

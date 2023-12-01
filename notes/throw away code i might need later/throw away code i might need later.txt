@@ -1,0 +1,8 @@
+if(variable_struct_exists(_data, "debug_version")){
+			print(_data.debug_version);
+			print(_game.debug_version);
+		if(_data.debug_version != _game.debug_version){
+			room_goto(_selected_level);
+			return;
+		}
+		}

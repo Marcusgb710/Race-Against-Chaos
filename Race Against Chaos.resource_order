@@ -66,6 +66,7 @@
     {"name":"spr_casinosign","order":25,"path":"sprites/spr_casinosign/spr_casinosign.yy",},
     {"name":"spr_gasstation","order":1,"path":"sprites/spr_gasstation/spr_gasstation.yy",},
     {"name":"spr_ramps","order":23,"path":"sprites/spr_ramps/spr_ramps.yy",},
+    {"name":"throw away code i might need later","order":3,"path":"notes/throw away code i might need later/throw away code i might need later.yy",},
     {"name":"spr_mistyhousetiles","order":22,"path":"sprites/spr_mistyhousetiles/spr_mistyhousetiles.yy",},
     {"name":"spr_maxhousetiles","order":21,"path":"sprites/spr_maxhousetiles/spr_maxhousetiles.yy",},
     {"name":"spr_porttiles","order":18,"path":"sprites/spr_porttiles/spr_porttiles.yy",},

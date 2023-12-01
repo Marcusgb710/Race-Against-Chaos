@@ -1,9 +1,5 @@
-if(load_){
-	x = _game.battle_party_data[0].last_pos._x
-	y = _game.battle_party_data[0].last_pos._y
-	load_ = false;
-	
-}
+
+
 if (control) || Cmove
 {
 if(can_move){
@@ -21,6 +17,7 @@ if(can_move){
 //testing
 if(keyboard_check_pressed(ord("L"))){
 	//print(get_quest_by_id("q1"));
+	
 	//if(!is_undefined(_game.last_room_entered)){show_debug_message(room_get_name(_game.last_room_entered))}
 }
 

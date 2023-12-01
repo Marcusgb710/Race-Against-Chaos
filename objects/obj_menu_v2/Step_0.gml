@@ -57,25 +57,18 @@ if(_up){
 	}
 }
 
-
-
-
-
-
 var _option = page[selected_menu];
 selected_option = _option
 
+#region changing control keys
 if _option.func == menu_element_type.input {
 	if _option._show_overlay && !(keyboard_key == vk_nokey) && !(keyboard_key == pages.controls[4].key){
 		page[selected_menu].select_key = keyboard_key
 	}
 }
-
-
+#endregion
+#region Interact Key
 if(_interact){
-	
-	
-	
 	#region if you are changing a menu option the functionality goes here i.e changing volume, changing input
 	if (selecting) {
 		_option._show_overlay = false
@@ -84,7 +77,8 @@ if(_interact){
 		selection_controller(_option, current_menu)
 		return
 	}
-	#endregion
+	#endregion	
+	#region page navigation
 	if(_option.func == menu_element_type.page_transfer)
 	{
 		var _results = page_navigation(_option, pages); 
@@ -93,57 +87,46 @@ if(_interact){
 		current_menu = _results[2]
 		
 	}
+	#endregion
+	#region EXIT TO GAME
 	else if(_option.name == "EXIT"){
+		#region Set Game Controls
 		global.key_down = pages.controls[3].key;
 		global.key_enter = pages.controls[4].key;
 		global.key_left = pages.controls[1].key;
 		global.key_up = pages.controls[0].key;
 		global.key_right = pages.controls[2].key;
+#endregion
 		
-		game();
-		var _data = load();
-		//show_debug_message(_data)
-
-		//print(_data.room)
-		//print(_data.last_room_entered)
-		if(variable_struct_exists(_data, "debug_version")){
-			print(_data.debug_version);
-			print(_game.debug_version);
-		if(_data.debug_version != _game.debug_version){
-			room_goto(_selected_level);
-			return;
+		#region game start
+		var _selected_level_ = _selected_level;
+		
+		load_game(_selected_level_);//REMOVE _selected_level_ IF YOU WANT TO TRY THE LOAD SYSTEM
+		
+		
+		#endregion
 		}
-		}
-		if(!is_array(_data) && array_length(struct_get_names(_data)) != 0){
-			//_game = _data
-			
-			//if(!is_undefined(_game.room))
-			//{
-			//	_selected_level = _game.room
-				
-			//}
-				
-		}
-		with(obj_player)
-		{
-			//load_ = true;
-		}
-		room_goto(_selected_level);
-		}
+	#endregion
+	#region Change the room that loads when you start the game
 	else if(page == pages.debug && _option.func == menu_element_type.debug){
 		_selected_level = _option._room;
 		}
+	#endregion
+	#region Changing sliders
 	else if(_option.func == menu_element_type.slider || _option.func == menu_element_type.shift || _option.func == menu_element_type.input){
 		
 		selecting = !selecting
 		
 	}
+	#endregion
+	#region Changing Game Input
 	if(_option.func == menu_element_type.input) {
 		_option._show_overlay = true;
 	}
-	
+	#endregion
 	
 	audio_play_sound(snd_confirm, 5, false);
 }
+#endregion
 
 

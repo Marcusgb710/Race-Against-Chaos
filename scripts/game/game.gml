@@ -17,7 +17,7 @@ function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME
 ///DO NOT TOUCH
 
 _game.debug_version = "2.0.1"
-
+_game.load = false;
 ///DO NOT TOUCH
 #endregion
 
