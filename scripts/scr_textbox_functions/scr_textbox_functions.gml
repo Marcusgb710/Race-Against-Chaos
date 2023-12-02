@@ -26,7 +26,7 @@ function scr_set_defaults_for_text(){
 	txtb_spr[page_number] = spr_txtbox;
 	speaker[page_number] = noone;
 	speaker_side[page_number] = 1;
-	snd[page_number] = snd_Def_Voice; 
+	snd[page_number] = snd_vceType; 
 }
 
 ///------text VFX------///
@@ -91,84 +91,84 @@ if argument_count > 1 {
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Misty";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_mist_voice; 
+		snd[page_number] = snd_vceType; 
 		break;
 		
 		case "Cory":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Cory";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_cory_voice; 
+		snd[page_number] = snd_vceType3; 
 		break;
 		
 		case "Barista":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Barista";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType; 
 		break;
 		
 		case "Egg":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Edgar";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType4; 
 		break;
 		
 		case "Girl":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Girl";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType; 
 		break;
 		
 		case "Guy":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Guy";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType3; 
 		break;
 		
 		case "Max":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Max";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType3; 
 		break;
 		
 		case "SG":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Security";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType; 
 		break;
 		
 		case "Book":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Book";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_mist_voice; 
+		snd[page_number] = snd_vceType; 
 		break;
 		
 		case "Jon":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Jon";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_jon_voice; 
+		snd[page_number] = snd_vceType2; 
 		break;
 		
 		case "Kels":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Kelsi";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_kels_voice; 
+		snd[page_number] = snd_vceType4; 
 		break;
 		
 		case "Old":
 		txtb_spr[page_number] = spr_txtbox;
 		speaker[page_number] = "Old Man Walt";
 		speaker_side[page_number] = 1;
-		snd[page_number] = snd_Def_Voice; 
+		snd[page_number] = snd_vceType; 
 		break;
 		
 		}

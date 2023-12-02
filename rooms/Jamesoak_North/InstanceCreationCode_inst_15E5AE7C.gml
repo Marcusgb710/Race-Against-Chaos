@@ -1,0 +1,23 @@
+t_scene_info = [
+[cutscene_change_face, obj_player, UP],
+[cutscene_move_char, obj_player, 1120, 510, false, 1.2],
+[cutscene_wait, 1],
+[cutscene_change_face, obj_player, LEFT],
+[cutscene_move_char, obj_player, 930, 510, false, 1.2],
+[cutscene_instance_create, 1120, 510, "Instances", obj_Edgar],
+[cutscene_change_sprite_index, obj_Edgar, spr_EdgarLMAD],
+[cutscene_stop_sound, mus_Jamesoak],
+[cutscene_create_textbox, "Edgar2.1"],
+[cutscene_play_sound, mus_angry, 1, true],
+[cutscene_change_face, obj_player, RIGHT],
+[cutscene_move_char, obj_Edgar, 998, 510, false, 1.5],
+[cutscene_create_textbox, "Edgar2"],
+//Just for goofs and testing, delete after battle implemented.
+[cutscene_change_sprite_index, obj_Edgar, spr_EdgarL],
+[cutscene_stop_sound, mus_angry],
+[cutscene_create_textbox, "eee"],
+[cutscene_wait, 0.5],
+[cutscene_change_face, obj_Edgar, DOWN],
+[cutscene_move_char, obj_Edgar, 998, 340, false, 2],
+[cutscene_instance_destroy, 998, 340, obj_Edgar],
+];

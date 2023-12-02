@@ -9,7 +9,7 @@ if(can_move){
 	down_key = keyboard_check(global.key_down) 
 	interactkeypressed = keyboard_check_pressed(vk_space);
 	var _m = move_spd
-	if right_key+up_key+left_key+down_key == 2 {_m*=lengthdir_x(1, 45)}
+	if right_key+up_key+left_key+down_key == 2 {_m*=lengthdir_x(1.2, 45)}
 	xspd = (right_key - left_key) * _m;
 	yspd = (down_key - up_key) * _m;
 }

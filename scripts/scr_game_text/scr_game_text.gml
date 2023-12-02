@@ -174,6 +174,14 @@ switch(_text_id){
 		scr_text("* Engarde!", "Egg");
 		
 		break;
+		
+		case "eee":
+		
+		scr_text("* Wait actually its not in the game yet.", "Egg");
+		scr_text("* Oh, right.", "Misty");
+		scr_text("* Welp, see ya.", "Egg");
+		scr_text("* Bye.", "Misty");
+		break;
 
 		#endregion
 	
