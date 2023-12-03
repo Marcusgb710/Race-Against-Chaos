@@ -1,1 +1,1 @@
-items();
+create_shop_items();

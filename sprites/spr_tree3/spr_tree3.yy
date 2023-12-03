@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_tree",
+  "name": "spr_tree3",
   "bbox_bottom": 63,
   "bbox_left": 0,
   "bbox_right": 63,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f27bf59-2ad3-4212-a566-d9b56ea25bc6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13217be5-189e-422f-859e-b147a611cc8e",},
   ],
   "gridX": 1,
   "gridY": 1,
   "height": 64,
-  "HTile": false,
+  "HTile": true,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a133e6dd-c97e-45fc-8e9a-4b9cbd1e880e","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"cf652b2a-293b-4cb5-b428-c5601695e5c5","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": {
     "resourceType": "GMNineSliceData",
@@ -55,7 +55,7 @@
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_tree",
+    "name": "spr_tree3",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -77,7 +77,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3f27bf59-2ad3-4212-a566-d9b56ea25bc6","path":"sprites/spr_tree/spr_tree.yy",},},},"Disabled":false,"id":"f4ec8242-cfa9-4f45-bb45-077ddecb7281","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"13217be5-189e-422f-859e-b147a611cc8e","path":"sprites/spr_tree3/spr_tree3.yy",},},},"Disabled":false,"id":"68b79d88-0e55-4d4e-a0f5-0a9f48226f7b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -92,6 +92,6 @@
     "path": "texturegroups/Default",
   },
   "type": 0,
-  "VTile": false,
+  "VTile": true,
   "width": 64,
 }
