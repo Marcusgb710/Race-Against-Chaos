@@ -6,3 +6,15 @@ if(variable_struct_exists(_data, "debug_version")){
 			return;
 		}
 		}
+		
+		
+		
+		
+		
+		
+			for(var _j=0; _j < array_length(_item_names); _j++){
+			var _item_name_ = _item_names[_j];
+			if(array_contains(_shop_items_names, _item_name_)){
+				array_delete(_item_names, _j, 1);
+			}
+	}

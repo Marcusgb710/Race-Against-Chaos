@@ -91,15 +91,17 @@ function create_textbox_v2(_val=0){
 		for(var _i=0; _i < array_length(_struct_names); _i++)
 		{
 			var _name = _struct_names[_i];
-			if(_name == _temp_val){_found = true; break;}
+			print($"SEARCH NAME: {_name}")
+			if(string_lower(_name) == string_lower(_temp_val)){_found = true; break;}
 		}
 		
-		if(!_found){print($"VALUE ERROR: VALUE DOES NOT EXIST. (maybe a typo or something)"); return;}
-		_textbox_dialog = _game_text[$ _temp_val];
+		if(!_found){print($"VALUE ERROR {_val}: VALUE DOES NOT EXIST. (maybe a typo or something)"); return;}
+		_textbox_dialog = _game_text[$ string_lower(_temp_val)];
 	}
 	if(is_struct(_val)){
 		_textbox_dialog = _val;
 	}
+	
 	if(is_undefined(_textbox_dialog))
 	{
 		var _struct_names = struct_get_names(_game_text);
