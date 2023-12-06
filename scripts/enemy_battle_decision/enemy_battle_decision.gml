@@ -7,6 +7,7 @@ function enemy_battle_decision(_enemy_choices){
 	var _result;
 	randomize()
 	var _r = random(1)
+	print($"Choice: {_r}, Choices: {_enemy_choices}");
 	var _vars = struct_get_names(_enemy_choices)
 	var _struct_length = array_length(_vars);
 	

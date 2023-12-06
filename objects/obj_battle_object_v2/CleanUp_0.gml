@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 delete battle_menu;
+
 var  __party = hero_party(_spells, _items);
 for(var _i = 0; _i < array_length(_party); _i++)
 {

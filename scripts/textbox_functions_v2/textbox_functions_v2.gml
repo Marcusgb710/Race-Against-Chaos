@@ -65,7 +65,7 @@ function create_textbox_v2(_val=0){
 	var _dialog;
 	var _textbox_dialog = undefined;
 	var _game_text = game_text_v2();
-	print(struct_get_names(_game_text))
+	
 	if(is_int32(_val) || is_numeric(_val))
 	{
 		var _temp_val = _val;
@@ -91,7 +91,7 @@ function create_textbox_v2(_val=0){
 		for(var _i=0; _i < array_length(_struct_names); _i++)
 		{
 			var _name = _struct_names[_i];
-			print($"SEARCH NAME: {_name}")
+			
 			if(string_lower(_name) == string_lower(_temp_val)){_found = true; break;}
 		}
 		

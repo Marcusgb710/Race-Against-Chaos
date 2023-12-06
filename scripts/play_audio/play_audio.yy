@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Battle UI Scripts",
-    "path": "folders/Scripts/Battle Scripts/Battle UI Scripts.yy",
+    "path": "folders/Battle System/Battle Scripts/Battle UI Scripts.yy",
   },
 }

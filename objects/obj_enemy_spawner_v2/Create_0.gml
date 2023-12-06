@@ -3,7 +3,11 @@
 
 data = battle_data(spells(game_effects()))
 
-enemy_data = enemies_in_room;
+
+enemy_data = pick_room_enemies(data)
+print(enemy_data);
+//if(is_undefined(enemy_data)){enemy_data = data._weak}
+
 
 detection_radius = 5;
 

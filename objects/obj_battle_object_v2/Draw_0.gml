@@ -304,9 +304,8 @@ var _text_box_height = 40
 var _text_box_y_buffer = 100 + _text_box_height
 var _rect_x = 5
 var _rect_y = 5
-print(drawn_text)
-print(text_to_draw)
-var _gt = [new GameDialog($"* {text_to_draw}", "", snd_Def_Voice)]
+
+var _gt = [new GameDialog($"* {text_to_draw}", "", battle_draw_sound)]
 
 var _battle_text_y = _rect_y
 var _drawn_txt = $"*{drawn_text}"

@@ -22,6 +22,7 @@ function battle_data(_spells){
 				known_spells: [_spells.stun, _spells.sleep],
 				effects: [],
 				sprite: spr_Meeks,
+				win_conditions: [],
 				overworld_sprite: spr_ovmeeks,
 				overworld_fps:12,
 				animation_idx:0,
@@ -40,6 +41,7 @@ function battle_data(_spells){
 				known_spells: [_spells.hurt, _spells.stun],
 				effects:[],
 				sprite: spr_Tinizorpo,
+				win_conditions: [],
 				overworld_sprite: spr_ovtinizorpo,
 				overworld_fps: 8,
 				animation_idx:0,
@@ -55,7 +57,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[],
 					effects: [],
-					sprite: spr_Bfishimp
+					sprite: spr_Bfishimp,
+					win_conditions: [],
 					},
 					{
 					name: "DolphInAShell",
@@ -68,7 +71,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_DolphInaShell
+					sprite: spr_DolphInaShell,
+					win_conditions: [],
 					}
 					]
 		}
@@ -88,7 +92,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun, _spells.sleep],
 					effects: [],
-					sprite: spr_Flora
+					sprite: spr_Flora,
+					win_conditions: [],
 					},
 					{
 					name: "Gun",
@@ -101,7 +106,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_Gun
+					sprite: spr_Gun,
+					win_conditions: [],
 					},
 					{
 					name: "Sharky",
@@ -114,7 +120,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_sharky
+					sprite: spr_sharky,
+					win_conditions: [],
 					},
 					{
 					name: "MoonPlant",
@@ -127,7 +134,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_moonplant
+					sprite: spr_moonplant,
+					win_conditions: [],
 					},
 					
 		],		
@@ -148,7 +156,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_hauntedpants
+					sprite: spr_hauntedpants,
+					win_conditions: [],
 					},
 					{
 					name: "Haunted Suit",
@@ -161,7 +170,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun, _spells.sleep, _spells.drain],
 					effects: [],
-					sprite: spr_HauntedSuit
+					sprite: spr_HauntedSuit,
+					win_conditions: [],
 					},
 					{
 					name: "Crooked Wizard",
@@ -174,7 +184,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun, _spells.sleep, _spells.drain],
 					effects: [],
-					sprite: spr_crookedwizard
+					sprite: spr_crookedwizard,
+					win_conditions: [],
 					},
 		],	
 		}
@@ -194,7 +205,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_moppy
+					sprite: spr_moppy,
+					win_conditions: [],
 					},
 					{
 					name: "Roomba",
@@ -207,7 +219,8 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun, _spells.drain],
 					effects: [],
-					sprite: spr_roomba
+					sprite: spr_roomba,
+					win_conditions: [],
 					},
 					{
 					name: "Washy",
@@ -220,12 +233,12 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun, _spells.drain],
 					effects: [],
-					sprite: spr_washy
+					sprite: spr_washy,
+					win_conditions: [],
 					},
 		],
 		}
 		,_bosses:{
-			music: mus_Edgar_Finch,
 			enemies:[
 					{
 					name: "Edgar",
@@ -238,7 +251,11 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[],
 					effects: [],
-					sprite: spr_btl_WeakEdgar
+					sprite: spr_btl_WeakEdgar,
+					win_conditions: [],
+					music: mus_Edgar_Finch,
+					_room: Edgar,
+					chances:{a:0.7 , d:0.2, p:0.1},
 					},
 					{
 					name: "Edgar NEO",
@@ -251,7 +268,11 @@ function battle_data(_spells){
 					turn: true,
 					known_spells:[_spells.stun],
 					effects: [],
-					sprite: spr_btl_Edgar
+					sprite: spr_btl_Edgar,
+					win_conditions: [check_for_effect],
+					music: mus_Edgar_Means_Business,
+					_room: EdgarNEO,
+					chances:{a:0.7 , d:0.2, p:0.1},
 					},
 		],
 		}

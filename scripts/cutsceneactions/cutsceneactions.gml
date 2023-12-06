@@ -227,7 +227,7 @@ function cutscene_change_image_speed(obj, imgspd){
 function cutscene_create_textbox(str){
 
 text_id = str;
-print(text_id);
+
 if global.dialoguerunning == false{
 	create_textbox_v2(string_lower(text_id))
 	//create_textbox(text_id);

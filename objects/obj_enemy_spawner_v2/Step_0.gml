@@ -43,6 +43,7 @@ for(var _i = 0; _i < array_length(battle_layer); _i++)
 				
 		}
 		last_room = room;
+		print(enemy_data)
 		room_goto(enemy_data._room)
 	}
 		

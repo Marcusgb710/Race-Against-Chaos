@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "animation_check",
+  "name": "battle_helper_scripts",
   "isCompatibility": false,
   "isDnD": false,
   "parent": {

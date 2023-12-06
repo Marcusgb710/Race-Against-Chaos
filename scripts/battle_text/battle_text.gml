@@ -25,7 +25,8 @@ function battle_text(){
 	_battle_text._heal = function(_hp_gained, _target_name){return $"{_target_name} has gained {_hp_gained} hp!"}
 	
 	_battle_text._effect = function(_effect_name, _target_name){return $"{_target_name} is effected by {string_lower(_effect_name)}"}
-//defense
+	
+	_battle_text._no_effect = function(_target_name){return $"{_target_name} refuses to get hurt"}
 	
 	
 	return _battle_text

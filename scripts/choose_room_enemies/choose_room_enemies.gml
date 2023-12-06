@@ -18,6 +18,9 @@ function choose_room_enemies(_enemy_battle_data){
 		case MachEnemy:
 			_data = _enemy_battle_data._machine;
 			break;
+		case Edgar:
+			_data = choose_boss(_enemy_battle_data, "edgar");
+			break;
 			
 	}
 	return _data

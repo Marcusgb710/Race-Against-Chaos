@@ -73,10 +73,14 @@ switch(current_state)
 {
 #region enemy effects 
 	case TURN_STATE.ENEMY_EFFECTS:
-	
-	
 	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
+		if(bossbattle)
+		{
+		
+			return;
+		}
+		
 		var _enemy = enemies[select_effected_enemy];
 		
 		if(efx)
@@ -135,7 +139,13 @@ switch(current_state)
 	case TURN_STATE.PLAYER_EFFECTS:
 	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
-		var _party_member = party[selected_hero];
+		if(bossbattle)
+		{
+		
+			return;
+		}
+		
+		var _party_member = party[select_effected_hero];
 		
 		if(efx)
 		{
@@ -196,7 +206,7 @@ switch(current_state)
 		
 	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
-	
+		
 	text_to_draw = ""
 	drawn_text = ""
 		if(_select)
@@ -229,8 +239,22 @@ switch(current_state)
 					}
 					else
 					{
+					
 					show_enemy_arrow = false;
 					var _enemy = enemies[selected_enemy];
+				
+				
+					if(is_boss(_battle_data, _enemy))
+					{
+					if(!(check_spell_for_effect(_current_option, _effects.stun) || check_for_effect(_enemy, _effects.stun)))
+					{
+					draw_txt = true;
+					text_to_draw = battle_text_._no_effect(_enemy.name);
+					current_state = TURN_STATE.ENEMY_EFFECTS;
+					return;
+					}
+					extra_dmg += 3
+					}
 					var _ebhp = _enemy.current_hp
 					var _ebd = _enemy.current_defense
 					current_enemy_animation = selected_enemy
@@ -327,12 +351,16 @@ switch(current_state)
 
 #region enemies turn
 	case TURN_STATE.ENEMY:
-		
-		
-
 		//if(!enemy_hurt_animation_activation)
 		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 		{
+			
+		if(bossbattle)
+		{
+		
+			return;
+		}
+			
 		text_to_draw = ""
 		drawn_text = ""
 		var _current_turns_enemy = enemies[enemies_turn];
@@ -413,6 +441,11 @@ switch(current_state)
 		//if(!hurt_hero && !enemy_defense_animation_activation)
 		if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 		{
+		if(bossbattle)
+		{
+		
+			return;
+		}
 		text_to_draw = ""
 		drawn_text = ""
 		selected = false;
@@ -426,9 +459,11 @@ switch(current_state)
 		enemies_turn += 1;
 		selected_hero += 1;
 		select_effected_enemy += 1;
+		select_effected_hero +=1;
 		if (selected_hero > party_count-1){selected_hero = 0};
 		if(!party[selected_hero].turn){selected_hero += 1 if (selected_hero > party_count-1){selected_hero = 0};};
 		if (enemies_turn > enemy_amount-1){enemies_turn = 0};
+		if(select_effected_hero > party_count-1){select_effected_hero = 0}
 		if(select_effected_enemy > enemy_amount - 1){select_effected_enemy = 0}
 		
 		can_move = true;

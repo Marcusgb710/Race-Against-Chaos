@@ -66,17 +66,13 @@ name_text_y = name_textbox_y
 text_x = textbox_x + font_size_scaled;
 text_y = textbox_y + 9;
 
-//game_text(current_dialog_block, textbox_w, font_size_scaled)
+
 
 line_break = 1;
 //nathans_way = text_to_be_drawn
 nathans_idx = 1;
 nathans_idx_incrementor = 1;
 
-
-
-
-//longest_string_length
 textbox_sprite = spr_txtbox
 font_color = c_white
 in_battle=false;

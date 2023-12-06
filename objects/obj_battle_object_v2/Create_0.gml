@@ -36,6 +36,7 @@ e = 0
 ee = 0
 
 select_effected_enemy = 0
+select_effected_hero = 0;
 #endregion
 
 #region textbox variables
@@ -50,7 +51,7 @@ text_end_delay_timer = 0
 text_end_delay = 60
 txt_idx = 0
 #endregion
-
+extra_dmg = 0;
 #region battle menu controls and variables
 battle_menu = {
 	main:[
@@ -75,17 +76,19 @@ battle_menu = {
 enemy_damage_text = 0
 battle_menu.main[0].action = function(_target, _caster=undefined){
 	var _carry_over_dmg = 0;
+	var _dmg = 4 + extra_dmg;
 	
 	if(_target.current_defense > 0)
 	{
-		_target.current_defense -= 4;
-		enemy_damage_text = $"s-4"
+		_target.current_defense -= _dmg;
+		enemy_damage_text = $"s-{_dmg}"
 		if(_target.current_defense <= 0){enemy_damage_text = $"-{abs(_target.current_defense)} s-{4-abs(_target.current_defense)}" _target.current_hp -= abs(_target.current_defense) _target.current_defense = 0};
 		
 		return;
 	}
-	_target.current_hp -= 4 
-	enemy_damage_text = $"-4"
+	_target.current_hp -= _dmg 
+	enemy_damage_text = $"-{_dmg}"
+	extra_dmg = 0;
 	}
 battle_menu.main[3].action = function(_target, _caster=undefined){_target.current_defense += 2}
 battle_menu.main[4].action = function(_target, _caster=undefined){can_move = false
@@ -94,6 +97,9 @@ battle_menu.main[4].action = function(_target, _caster=undefined){can_move = fal
 	draw_flee_screen = true;
 	alarm[0] = 240;}
 #endregion
+
+battle_draw_sound = snd_vceType
+
 
 #region animation curve variables
 enemy_arrow_curve = animcurve_get_channel(ac_arrow_animation, "curve1");
@@ -122,11 +128,14 @@ _battle_data = battle_data(_spells);
 chosen_enemies = enemies_in_room
 if(is_undefined(enemies_in_room)){chosen_enemies = choose_room_enemies(_battle_data) last_room = Premenu};
 
+
 enemy_data = create_enemies(chosen_enemies.enemies);
+bossbattle = false;
 
 song = chosen_enemies.music;
 
 
+print(chosen_enemies);
 
 
 _party = create_party(_game.battle_party_data, _spells, _items)

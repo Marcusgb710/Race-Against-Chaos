@@ -211,11 +211,17 @@ pages = {
 			show: true
 		},
 		{
+			name: "Edgar Battle",
+			_room: Edgar,
+			func: menu_element_type.debug,
+			show: true
+		},
+		/*{
 			name: "JAMES WEST",
 			_room: Jamesoak_West,
 			func: menu_element_type.debug,
 			show: true
-		},
+		},*/
 		
 		{
 			name:"BACK",

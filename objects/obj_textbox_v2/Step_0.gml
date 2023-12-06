@@ -81,7 +81,7 @@ if(text_pause_timer >= 1)
 
 if(start_text_pause_timer){
 	text_pause_timer += text_pause_timer_increment	
-	print(text_pause_timer);
+	
 	
 }
 
