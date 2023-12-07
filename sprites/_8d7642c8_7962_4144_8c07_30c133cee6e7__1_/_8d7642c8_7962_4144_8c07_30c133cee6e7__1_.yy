@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"681481fa-0f4b-4ecd-bc98-6933523220da",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7db0b6c3-3596-44a3-b2c4-ccb3ae1444f8",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 44,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"703dd79d-75b9-4364-b813-6c3e1500b8ac","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"797fe27b-b33b-4965-b038-66982955f6e8","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "lostresources",
-    "path": "folders/Sprites/lostresources.yy",
+    "name": "lost van png",
+    "path": "folders/Sprites/lost van png.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"681481fa-0f4b-4ecd-bc98-6933523220da","path":"sprites/_8d7642c8_7962_4144_8c07_30c133cee6e7__1_/_8d7642c8_7962_4144_8c07_30c133cee6e7__1_.yy",},},},"Disabled":false,"id":"675c77c9-d3cc-4ee1-8775-b702a647a3f1","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7db0b6c3-3596-44a3-b2c4-ccb3ae1444f8","path":"sprites/_8d7642c8_7962_4144_8c07_30c133cee6e7__1_/_8d7642c8_7962_4144_8c07_30c133cee6e7__1_.yy",},},},"Disabled":false,"id":"443e5c95-9b66-41a6-a26e-75925e7974b8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

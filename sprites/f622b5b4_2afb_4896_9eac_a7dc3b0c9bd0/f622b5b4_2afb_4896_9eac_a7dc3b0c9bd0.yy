@@ -13,20 +13,20 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d5575bf7-0d01-42c8-90e8-a285ae0190b1",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a634335-4db4-41d7-967a-b1dc3f93da6c",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 44,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"75acd31a-2b1a-4025-a71c-017c2e701236","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5c143921-cf7b-4f77-ba3b-1faf687dd148","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "lostresources",
-    "path": "folders/Sprites/lostresources.yy",
+    "name": "lost van png",
+    "path": "folders/Sprites/lost van png.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d5575bf7-0d01-42c8-90e8-a285ae0190b1","path":"sprites/f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0/f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0.yy",},},},"Disabled":false,"id":"80e781bf-0eea-43bf-9d81-de0cc2f537ec","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0a634335-4db4-41d7-967a-b1dc3f93da6c","path":"sprites/f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0/f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0.yy",},},},"Disabled":false,"id":"e0e96a9f-4136-40cd-94a3-44507efe6493","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
