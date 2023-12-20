@@ -8,10 +8,37 @@ if(can_move){
 	left_key = keyboard_check(global.key_left) 
 	down_key = keyboard_check(global.key_down) 
 	interactkeypressed = keyboard_check_pressed(vk_space);
+	
+	if(gamepad_is_connected(0)) {
+		var _horizontalaxis = gamepad_axis_value(0, gp_axislh)
+		var _verticalaxis = gamepad_axis_value(0, gp_axislv)
+		_verticalaxis+=gamepad_button_check(0, gp_padd)-gamepad_button_check(0, gp_padu)
+		_horizontalaxis+=gamepad_button_check(0, gp_padr)-gamepad_button_check(0, gp_padl)
+		gamepad_set_axis_deadzone(0, 0.3)
+		if(_horizontalaxis > 0) {
+			right_key = true;
+		}
+		if(_horizontalaxis < 0) {
+			left_key = true;
+		}
+		if(_verticalaxis < 0) {
+			up_key = true;	
+		}
+		if(_verticalaxis > 0) {
+			down_key = true;
+		}
+		if(gamepad_button_check_pressed(0, gp_face1)) {
+			interactkeypressed = true;
+		}
+	}
+	
+	
+	
 	var _m = move_spd
 	if right_key+up_key+left_key+down_key == 2 {_m*=lengthdir_x(1.2, 45)}
 	xspd = (right_key - left_key) * _m;
 	yspd = (down_key - up_key) * _m;
+	
 }
 
 //testing

@@ -25,7 +25,15 @@ name_text_y = name_textbox_y + name_textbox_h /2 - font_size_scaled/2
 
 if(dialog_idx >= array_length(current_dialog_block)){dialog_idx = 0}
 
-if(keyboard_check_pressed(global.key_enter)){
+var _interactButton = keyboard_check_pressed(global.key_enter)
+if(gamepad_is_connected(0)) {
+	if(gamepad_button_check_pressed(0, gp_face1)) {
+		_interactButton = true;
+	}
+}
+
+
+if(_interactButton){
 	if(!needs_next){return}
 	if(nathans_idx < string_length(nathans_way))
 	{

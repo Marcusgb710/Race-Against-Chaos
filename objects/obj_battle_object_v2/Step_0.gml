@@ -10,6 +10,40 @@ var _down = keyboard_check_pressed(global.key_down);
 var _left = keyboard_check_pressed(global.key_left);
 var _right = keyboard_check_pressed(global.key_right);
 var _select = keyboard_check_pressed(global.key_enter);
+if(gamepad_is_connected(0)) {
+		var _horizontalaxis = gamepad_axis_value(0, gp_axislh)
+		var _verticalaxis = gamepad_axis_value(0, gp_axislv)
+		_verticalaxis+=gamepad_button_check(0, gp_padd)-gamepad_button_check(0, gp_padu)
+		_horizontalaxis+=gamepad_button_check(0, gp_padr)-gamepad_button_check(0, gp_padl)
+		gamepad_set_axis_deadzone(0, 0.8)
+		if(_horizontalaxis > 0 && rightvariable == 1) {
+			_right = true;
+			rightvariable = 0;
+		}
+		if(_horizontalaxis < 0 && leftvariable == 1) {
+			_left = true;
+			leftvariable = 0;
+		}
+		if(_verticalaxis < 0 && upvariable == 1) {
+			_up = true;	
+			upvariable = 0;
+		}
+		if(_verticalaxis > 0 && downvariable == 1) {
+			_down = true;
+			downvariable = 0;
+		}
+		if(_verticalaxis == 0){
+			upvariable = 1
+			downvariable = 1;
+		}
+		if(_horizontalaxis == 0){
+			leftvariable = 1
+			rightvariable = 1;
+		}
+		if(gamepad_button_check_pressed(0, gp_face1)) {
+			_select = true;
+		}
+	}
 #endregion
 
 #region controls for text drawing on screen
