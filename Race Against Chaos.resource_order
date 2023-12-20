@@ -76,6 +76,7 @@
     {"name":"spr_hoteltiles","order":24,"path":"sprites/spr_hoteltiles/spr_hoteltiles.yy",},
     {"name":"spr_casinosign","order":25,"path":"sprites/spr_casinosign/spr_casinosign.yy",},
     {"name":"spr_gasstation","order":1,"path":"sprites/spr_gasstation/spr_gasstation.yy",},
+    {"name":"CODE ISSUES THAT MIGHT COME BACK","order":4,"path":"notes/CODE ISSUES THAT MIGHT COME BACK/CODE ISSUES THAT MIGHT COME BACK.yy",},
     {"name":"spr_ramps","order":23,"path":"sprites/spr_ramps/spr_ramps.yy",},
     {"name":"throw away code i might need later","order":3,"path":"notes/throw away code i might need later/throw away code i might need later.yy",},
     {"name":"spr_mistyhousetiles","order":22,"path":"sprites/spr_mistyhousetiles/spr_mistyhousetiles.yy",},
