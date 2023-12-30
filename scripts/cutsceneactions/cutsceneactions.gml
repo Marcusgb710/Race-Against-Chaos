@@ -26,7 +26,7 @@ if(timer >= sec * room_speed)
 ///@arg target_rm
 function cutscene_spawn_battle(trm){
 
-	save_game(2);
+	save(_game)
 	var inst = instance_create_depth(0,0,-10000,obj_battransition);
 	inst.target_rm = trm;
 	cutscene_end_action();

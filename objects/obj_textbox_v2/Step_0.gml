@@ -53,6 +53,10 @@ if(_interactButton){
 		instance_destroy()
 		return;
 	}
+	var _battle_var = current_dialog_block[dialog_idx].battle
+	if(!is_undefined(_battle_var)){
+		_battle = _battle_var
+	}
 	var _qid = current_dialog_block[dialog_idx].quest
 	if(!is_undefined(_qid)){
 		var _quest = get_quest_by_id(_qid)

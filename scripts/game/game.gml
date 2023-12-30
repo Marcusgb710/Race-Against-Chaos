@@ -5,8 +5,10 @@ function game(){ // THIS FUNCTION SHOULD BE LOADED BEFORE YOU LOAD INTO THE GAME
 #region initializing variables
 	globalvar _game;
 	globalvar _load;
+	globalvar _battle;
 	_load = false;
 	_game = {};
+	_battle = undefined;
 	var _effects = game_effects();
 	var _spells = spells(_effects);
 	var _items = items();

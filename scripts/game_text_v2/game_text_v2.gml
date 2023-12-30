@@ -76,7 +76,7 @@ function game_text_v2(){
 		new GameDialog("* Wh..What? No, I just..", "Misty", snd_vceType),
 		new GameDialog("* If you won't fight me then I'll just make you. I'll prove I'm better!", "Edgar", snd_vceType4),
 		new GameDialog("* Wait a second! Why can't we just-", "Misty", snd_vceType),
-		new GameDialog("* Engarde!", "Edgar", snd_vceType4),
+		new GameDialog("* Engarde!", "Edgar", snd_vceType4, undefined, Edgar),
 		],
 		
 		//JUST FOR TESTING, DELETE WHEN BATTLE IS IN
