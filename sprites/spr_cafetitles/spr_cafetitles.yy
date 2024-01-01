@@ -2,7 +2,7 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_cafetitles",
-  "bbox_bottom": 127,
+  "bbox_bottom": 111,
   "bbox_left": 0,
   "bbox_right": 63,
   "bbox_top": 0,

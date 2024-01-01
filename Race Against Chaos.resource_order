@@ -98,6 +98,7 @@
     {"name":"spr_button","order":7,"path":"sprites/spr_button/spr_button.yy",},
     {"name":"ADDING DIALOG","order":1,"path":"notes/ADDING DIALOG/ADDING DIALOG.yy",},
     {"name":"obj_gasstation","order":1,"path":"objects/obj_gasstation/obj_gasstation.yy",},
+    {"name":"Cafe","order":3,"path":"rooms/Cafe/Cafe.yy",},
     {"name":"f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0__3_","order":2,"path":"sprites/f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0__3_/f622b5b4_2afb_4896_9eac_a7dc3b0c9bd0__3_.yy",},
     {"name":"spr_cinnabun","order":2,"path":"sprites/spr_cinnabun/spr_cinnabun.yy",},
     {"name":"spr_EdgarLMAD","order":1,"path":"sprites/spr_EdgarLMAD/spr_EdgarLMAD.yy",},

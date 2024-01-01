@@ -464,6 +464,7 @@
     {"id":{"name":"mus_Edgar_Means_Business","path":"sounds/mus_Edgar_Means_Business/mus_Edgar_Means_Business.yy",},},
     {"id":{"name":"add_effect","path":"scripts/add_effect/add_effect.yy",},},
     {"id":{"name":"spr_GonzoboFont","path":"sprites/spr_GonzoboFont/spr_GonzoboFont.yy",},},
+    {"id":{"name":"Cafe","path":"rooms/Cafe/Cafe.yy",},},
     {"id":{"name":"spr_MistyRainDL","path":"sprites/spr_MistyRainDL/spr_MistyRainDL.yy",},},
     {"id":{"name":"obj_trigger2","path":"objects/obj_trigger2/obj_trigger2.yy",},},
     {"id":{"name":"TS_PortVinai","path":"tilesets/TS_PortVinai/TS_PortVinai.yy",},},
@@ -581,6 +582,7 @@
     {"roomId":{"name":"MachEnemy","path":"rooms/MachEnemy/MachEnemy.yy",},},
     {"roomId":{"name":"pbgtest","path":"rooms/pbgtest/pbgtest.yy",},},
     {"roomId":{"name":"puzzletestrm","path":"rooms/puzzletestrm/puzzletestrm.yy",},},
+    {"roomId":{"name":"Cafe","path":"rooms/Cafe/Cafe.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [
