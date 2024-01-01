@@ -58,6 +58,7 @@ txt_idx = 0
 #endregion
 extra_dmg = 0;
 #region battle menu controls and variables
+back_option = new Action("BACK", BATTLE_MENU_STATE.ACTION, undefined);
 battle_menu = {
 	main:[
 		new Action("ATTACK", BATTLE_MENU_STATE.ACTION, false) ,
@@ -76,6 +77,7 @@ battle_menu = {
 		new Action("DEFEND", BATTLE_MENU_STATE.ACTION, true),
 		
 		new Action("FLEE", BATTLE_MENU_STATE.ACTION, true) ,
+		back_option,
 		]
 }
 enemy_damage_text = 0
@@ -101,6 +103,10 @@ battle_menu.main[4].action = function(_target, _caster=undefined){can_move = fal
 	save(_game)
 	draw_flee_screen = true;
 	alarm[0] = 240;}
+last_menu = battle_menu.main;
+back_option.action = function(_target, _caster=undefined){current_menu = last_menu}
+
+
 #endregion
 
 battle_draw_sound = snd_vceType
@@ -199,6 +205,33 @@ function bezier(_p0, _p1, _p2, _t){
 	var _py = _p0[1]*sqr((1-_t))+2*(1-_t)*_t*_p1[1] + _p2[1]*sqr(_t)
 	return [_px, _py];
 }
-
+function changeBattleMenu(_page){
+	if(_page.type == BATTLE_MENU_STATE.TRANSFER && !selected)
+	{
+			selected_option = 0;
+			last_menu = current_menu;
+			switch(_page.goto)
+			{
+				case BATTLE_MENU_PAGE.PSI:
+						current_menu = party[selected_hero].known_spells
+					break;
+				
+				case BATTLE_MENU_PAGE.INVENTORY:
+						current_menu = party[selected_hero].inventory
+						// if inventory is empty the fill the inventory with EMPTY slots
+						if(array_length(current_menu) <= 0){
+							for(var _i = 0; _i < 4; _i++)
+							{
+									array_push(current_menu, {name: "EMPTY"})
+							}
+						}
+					break;
+			}
+	}
+	if(!array_contains(current_menu, back_option)){
+		array_push(current_menu, back_option);
+	}
+	
+}
 current_state = TURN_STATE.PLAYER;
 

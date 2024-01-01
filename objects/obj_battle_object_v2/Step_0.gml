@@ -305,10 +305,13 @@ switch(current_state)
 					}
 					
 				
-				var _menu_data = change_battle_menu(_current_option, current_menu, battle_menu, selected_hero, party, selected_option, selecting);
-				current_menu = _menu_data[0];
-				selected_option = _menu_data[1];
+				//var _menu_data = change_battle_menu(_current_option, current_menu, battle_menu, selected_hero, party, selected_option, selecting);
+				//current_menu = _menu_data[0];
+				//selected_option = _menu_data[1];
+				changeBattleMenu(_current_option);
+				
 				if(_current_option.type == BATTLE_MENU_STATE.ACTION && !selected){
+					if(_current_option.name == "BACK"){_current_option.action(undefined); return}
 					if(_current_option.name == "FLEE")
 					{
 						_current_option.action(undefined);	
@@ -321,7 +324,7 @@ switch(current_state)
 					friendly = true 
 					show_hero_selection_curve = true
 					}
-					else
+					else if(!_current_option.friendly && !is_undefined(_current_option.friendly))
 					{
 						show_enemy_arrow = true;
 					}
