@@ -107,7 +107,7 @@
   "isEcma": false,
   "LibraryEmitters": [],
   "MetaData": {
-    "IDEVersion": "2023.11.1.129",
+    "IDEVersion": "2023.11.0.121",
   },
   "resources": [
     {"id":{"name":"obj_pawnshop","path":"objects/obj_pawnshop/obj_pawnshop.yy",},},
@@ -505,7 +505,7 @@
     {"id":{"name":"spr_cafetitles","path":"sprites/spr_cafetitles/spr_cafetitles.yy",},},
     {"id":{"name":"snd_psyche","path":"sounds/snd_psyche/snd_psyche.yy",},},
     {"id":{"name":"obj_parkfence","path":"objects/obj_parkfence/obj_parkfence.yy",},},
-    {"id":{"name":"spr_tree","path":"sprites/spr_tree/spr_tree.yy",},},
+    {"id":{"name":"spr_trees","path":"sprites/spr_trees/spr_trees.yy",},},
     {"id":{"name":"spr_EdgarU","path":"sprites/spr_EdgarU/spr_EdgarU.yy",},},
     {"id":{"name":"spells","path":"scripts/spells/spells.yy",},},
     {"id":{"name":"obj_splashemitter","path":"objects/obj_splashemitter/obj_splashemitter.yy",},},
@@ -516,6 +516,7 @@
     {"id":{"name":"spr_MistyD","path":"sprites/spr_MistyD/spr_MistyD.yy",},},
     {"id":{"name":"snd_AHWHAT","path":"sounds/snd_AHWHAT/snd_AHWHAT.yy",},},
     {"id":{"name":"spr_MistyChillin","path":"sprites/spr_MistyChillin/spr_MistyChillin.yy",},},
+    {"id":{"name":"TS_Trees","path":"tilesets/TS_Trees/TS_Trees.yy",},},
     {"id":{"name":"mus_Vinai","path":"sounds/mus_Vinai/mus_Vinai.yy",},},
     {"id":{"name":"obj_BOSShero","path":"objects/obj_BOSShero/obj_BOSShero.yy",},},
     {"id":{"name":"spr_battletrans","path":"sprites/spr_battletrans/spr_battletrans.yy",},},
