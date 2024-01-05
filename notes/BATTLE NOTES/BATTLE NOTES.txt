@@ -1,3 +1,5 @@
+NEW- You can't walk away from a bossfight. FLEEing isn't an option.
+
 - Defending increases 5 pp to the defender. This system makes both
 defending a more valuable option while also giving the player a chance
 at strategy for certain fights.
