@@ -26,6 +26,7 @@ function _len(_index_based_obj){
 	if(is_struct(_index_based_obj)){
 		return variable_struct_names_count(_index_based_obj)
 	}
+	
 }
 
 

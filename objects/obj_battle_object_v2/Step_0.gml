@@ -3,6 +3,8 @@
 if(instance_exists(obj_quest)){
 obj_quest.show = false;
 }
+
+
 #region set controls for the battle controls
 play_audio(song);
 var _up = keyboard_check_pressed(global.key_up);
@@ -109,11 +111,7 @@ switch(current_state)
 	case TURN_STATE.ENEMY_EFFECTS:
 	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
-		if(bossbattle)
-		{
 		
-			return;
-		}
 		
 		var _enemy = enemies[select_effected_enemy];
 		
@@ -237,6 +235,7 @@ switch(current_state)
 #region players turn
 	case TURN_STATE.PLAYER:
 	
+	
 		
 	if(animation_check(do_after_animation, hurt_hero, enemy_hurt_animation_activation, enemy_defense_animation_activation, draw_txt))
 	{
@@ -259,12 +258,14 @@ switch(current_state)
 						
 						
 						var _before_hero_hp = _hero.current_hp
-						var _before_hero_defense = _hero.current_defense					
+						var _before_hero_defense = _hero.current_defense
+						print("HERO: ", _hero);
+						print("current option", _current_option);
 						_current_option.action(_hero, _hero)
 						
 						picked_hero = selected_hero;
 						if(_current_option.name == "DEFEND"){hero_damage_text = _hero.current_defense - _before_hero_defense defend_hero = true hurt_hero = true draw_txt = true text_to_draw = battle_text_._defense(hero_damage_text, _hero.name)}
-						else{hero_damage_text = _hero.current_hp - _before_hero_hp heal_hero = true hurt_hero = true draw_txt = true text_to_draw = battle_text_._heal(hero_damage_text, _hero.name)}
+						else{hero_damage_text = _hero.current_hp - _before_hero_hp print("HDT: ", hero_damage_text) heal_hero = true hurt_hero = true draw_txt = true text_to_draw = battle_text_._heal(hero_damage_text, _hero.name) print("heal")}
 						
 						selected_hero = selecting_hero;
 						
@@ -480,7 +481,7 @@ switch(current_state)
 		{
 		if(bossbattle)
 		{
-		
+			
 			return;
 		}
 		text_to_draw = ""

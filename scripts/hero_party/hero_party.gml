@@ -7,7 +7,7 @@ function hero_party(_spells, _items){
 	[
 		{
 			name: "Misty",
-			max_hp: 104,
+			max_hp: 140,
 			current_hp: 140,
 			max_pp: 25,
 			current_pp: 25,

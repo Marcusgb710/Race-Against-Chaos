@@ -3,6 +3,7 @@
     {"name":"Battle Scripts","order":4,"path":"folders/Battle System/Battle Scripts.yy",},
     {"name":"UI","order":1,"path":"folders/Battle System/UI.yy",},
     {"name":"VFX","order":2,"path":"folders/Battle System/VFX.yy",},
+    {"name":"Area Tiles","order":62,"path":"folders/Sprites/Area Tiles.yy",},
     {"name":"Buildings","order":59,"path":"folders/Sprites/Buildings.yy",},
     {"name":"Enemies","order":60,"path":"folders/Sprites/Enemies.yy",},
     {"name":"Machine","order":1,"path":"folders/Sprites/Enemies/Machine.yy",},
@@ -13,7 +14,6 @@
     {"name":"Strong","order":5,"path":"folders/Sprites/Enemies/Strong.yy",},
     {"name":"Weak","order":6,"path":"folders/Sprites/Enemies/Weak.yy",},
     {"name":"lost van png","order":61,"path":"folders/Sprites/lost van png.yy",},
-    {"name":"Area Tiles","order":62,"path":"folders/Sprites/Area Tiles.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"spr_houseblack","order":58,"path":"sprites/spr_houseblack/spr_houseblack.yy",},

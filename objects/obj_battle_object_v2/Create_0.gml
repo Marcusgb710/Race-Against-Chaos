@@ -233,5 +233,28 @@ function changeBattleMenu(_page){
 	}
 	
 }
+
+
+for(var _i = 0; _i < _len(_battle_data._bosses.enemies); _i++){
+	for(var _j = 0; _j<_len(enemies); _j++){
+		var _enemy = enemies[_j];
+		var _enemy_d =_battle_data._bosses.enemies[_i];
+		if(_enemy.name == _enemy_d.name){
+			for(var _i = 0; _i < array_length(battle_menu.main); _i ++){
+				var men_op = battle_menu.main[_i];
+				print("PENIS", men_op);
+				if(men_op.name == "FLEE")
+				{
+					array_delete(battle_menu.main, _i, 1);
+					current_menu = battle_menu.main;
+				}
+	}
+			return
+		}
+	}
+	
+	
+}
+
 current_state = TURN_STATE.PLAYER;
 

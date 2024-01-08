@@ -30,7 +30,7 @@ _game.gold = 500;
 	_game.battle_party_data = [
 		{
 			name: "Misty",
-			max_hp: 104,
+			max_hp: 140,
 			current_hp: 140,
 			max_pp: 25,
 			current_pp: 25,
