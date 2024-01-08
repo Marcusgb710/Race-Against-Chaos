@@ -13,7 +13,7 @@
   "duration": 64.0,
   "parent": {
     "name": "Character Themes",
-    "path": "folders/Music/Character Themes.yy",
+    "path": "folders/Music System/Music/Character Themes.yy",
   },
   "preload": false,
   "sampleRate": 44100,

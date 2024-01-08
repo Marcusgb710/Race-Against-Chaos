@@ -13,7 +13,7 @@
   "duration": 67.761635,
   "parent": {
     "name": "Secret Bosses",
-    "path": "folders/Music/Secret Bosses.yy",
+    "path": "folders/Music System/Music/Secret Bosses.yy",
   },
   "preload": false,
   "sampleRate": 44100,

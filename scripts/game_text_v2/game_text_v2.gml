@@ -61,7 +61,7 @@ function game_text_v2(){
 		new GameDialog("* No! That'll take forever to get out!", "Misty", snd_vceType),
 		new GameDialog("* Well if you don't want that, then I suggest you fight me.", "Edgar", snd_vceType4),
 		new GameDialog("* ...You know what, I'll just cut through North Jamesoak.", "Misty", snd_vceType),
-		new GameDialog("* Hmph.", "Egg", snd_vceType4),
+		new GameDialog("* Hmph.", "Egg", snd_vceType4, "q4"),
 		],
 		#endregion
 		

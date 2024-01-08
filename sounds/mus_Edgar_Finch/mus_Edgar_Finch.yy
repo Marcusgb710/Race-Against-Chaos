@@ -13,11 +13,11 @@
   "duration": 82.75592,
   "parent": {
     "name": "Bosses",
-    "path": "folders/Music/Bosses.yy",
+    "path": "folders/Music System/Music/Bosses.yy",
   },
   "preload": false,
   "sampleRate": 44100,
   "soundFile": "mus_Edgar_Finch.ogg",
-  "type": 0,
+  "type": 1,
   "volume": 1.0,
 }

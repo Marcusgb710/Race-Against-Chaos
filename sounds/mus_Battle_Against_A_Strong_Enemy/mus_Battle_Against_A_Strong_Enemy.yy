@@ -13,7 +13,7 @@
   "duration": 60.842087,
   "parent": {
     "name": "Enemies",
-    "path": "folders/Music/Enemies.yy",
+    "path": "folders/Music System/Music/Enemies.yy",
   },
   "preload": false,
   "sampleRate": 44100,

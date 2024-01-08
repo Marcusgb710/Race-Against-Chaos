@@ -13,7 +13,7 @@
   "duration": 55.994923,
   "parent": {
     "name": "Misc",
-    "path": "folders/Music/Misc.yy",
+    "path": "folders/Music System/Music/Misc.yy",
   },
   "preload": false,
   "sampleRate": 44100,

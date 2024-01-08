@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "mus_Kels_Theme",
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "ag_sfx",
+    "path": "audiogroups/ag_sfx",
   },
   "bitDepth": 1,
   "bitRate": 128,
@@ -13,7 +13,7 @@
   "duration": 67.99963,
   "parent": {
     "name": "Character Themes",
-    "path": "folders/Music/Character Themes.yy",
+    "path": "folders/Music System/Music/Character Themes.yy",
   },
   "preload": false,
   "sampleRate": 44100,
