@@ -61,7 +61,7 @@ function game_text_v2(){
 		new GameDialog("* No! That'll take forever to get out!", "Misty", snd_vceType),
 		new GameDialog("* Well if you don't want that, then I suggest you fight me.", "Edgar", snd_vceType4),
 		new GameDialog("* ...You know what, I'll just cut through North Jamesoak.", "Misty", snd_vceType),
-		new GameDialog("* Hmph.", "Egg", snd_vceType4, "q4"),
+		new GameDialog("* Hmph.", "Egg", snd_vceType4,  "q3"),
 		],
 		#endregion
 		
@@ -108,11 +108,18 @@ function game_text_v2(){
 		new GameDialog("* No problem.", "Max", snd_vceType3),
 		],
 		
+		#region CORY FIRST DIALOGUE
 		
+		sleepycory:[
+		new GameDialog("* Cory?", "Misty", snd_vceType),
+		new GameDialog("* ..Are you awake?", "Misty", snd_vceType),
+		new GameDialog("* ...zzzz....", "Cory", snd_vceType3),
+		new GameDialog("* ....cofffffeeeee....", "Cory", snd_vceType3),
+		new GameDialog("* ..Well, Partly.", "Misty", snd_vceType),
+		new GameDialog("* I'll be back.", "Misty", snd_vceType),
+		],
 
-		//new GameDialog("* Hmph.", "Edgar", snd_egg_voice),
-		//]
-
+		#endregion
 	}
 	return _dialog
 }

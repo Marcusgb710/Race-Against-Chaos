@@ -20,13 +20,13 @@ function battle_text(){
 		return $"{_target.name} has lost {_hp_lost} hp!"
 		}
 	
-	_battle_text._defense = function(_defense_gained, _target_name){return $"{_target_name}'s defense has gone up by {_defense_gained}"}
+	_battle_text._defense = function(_defense_gained, _target_name){return $"{_target_name} gains composure. {_defense_gained} defense gained!"}
 	
-	_battle_text._heal = function(_hp_gained, _target_name){return $"{_target_name} has gained {_hp_gained} hp!"}
+	_battle_text._heal = function(_hp_gained, _target_name){return $"{_target_name} gains {_hp_gained} hp!"}
 	
-	_battle_text._effect = function(_effect_name, _target_name){return $"{_target_name} is effected by {string_lower(_effect_name)}"}
+	_battle_text._effect = function(_effect_name, _target_name){return $"{_target_name} is effected by {string_lower(_effect_name)}."}
 	
-	_battle_text._no_effect = function(_target_name){return $"{_target_name} refuses to get hurt"}
+	_battle_text._no_effect = function(_target_name){return $"{_target_name} dodges your swing!"}
 	
 	
 	return _battle_text

@@ -133,6 +133,16 @@ _game.gold = 500;
 			completed: false,
 			id: "q4",
 			meta:{
+			type: "room",
+			room: GasSt,
+			leaving: false,
+			}
+		},
+		{
+			name: "Talk to Cory",
+			completed: false,
+			id: "q5",
+			meta:{
 			type: "speech",
 			done: false,
 			}

@@ -185,7 +185,7 @@ switch(_text_id){
 
 		#endregion
 	
-	case "Sleepy Cory Quest":
+	case "Sleepy Cory":
 	
 		if global.friendquest1 == true
 		{
