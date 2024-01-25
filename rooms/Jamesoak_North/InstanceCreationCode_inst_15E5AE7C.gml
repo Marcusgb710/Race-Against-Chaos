@@ -12,12 +12,4 @@ t_scene_info = [
 [cutscene_change_face, obj_player, RIGHT],
 [cutscene_move_char, obj_Edgar, 998, 510, false, 1.5],
 [cutscene_create_textbox, "Edgar2"],
-//Just for goofs and testing, delete after battle implemented.
-[cutscene_change_sprite_index, obj_Edgar, spr_EdgarL],
-[cutscene_stop_sound, mus_angry],
-[cutscene_create_textbox, "eee"],
-[cutscene_wait, 0.5],
-[cutscene_change_face, obj_Edgar, DOWN],
-[cutscene_move_char, obj_Edgar, 998, 340, false, 2],
-[cutscene_instance_destroy, 998, 340, obj_Edgar],
 ];

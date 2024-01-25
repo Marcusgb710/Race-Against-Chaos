@@ -123,9 +123,8 @@ _game.gold = 500;
 			completed: false,
 			id: "q3",
 			meta:{
-				type: "room",
-				room: Premenu,
-				leaving: false,
+			type: "speech",
+			done: false,
 			}
 		},
 		{
@@ -142,6 +141,15 @@ _game.gold = 500;
 			name: "Talk to Cory",
 			completed: false,
 			id: "q5",
+			meta:{
+			type: "speech",
+			done: false,
+			}
+		},
+		{
+			name: "Fetch some Coffee",
+			completed: false,
+			id: "q6",
 			meta:{
 			type: "speech",
 			done: false,

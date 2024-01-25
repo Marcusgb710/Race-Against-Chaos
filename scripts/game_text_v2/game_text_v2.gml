@@ -116,7 +116,7 @@ function game_text_v2(){
 		new GameDialog("* ...zzzz....", "Cory", snd_vceType3),
 		new GameDialog("* ....cofffffeeeee....", "Cory", snd_vceType3),
 		new GameDialog("* ..Well, Partly.", "Misty", snd_vceType),
-		new GameDialog("* I'll be back.", "Misty", snd_vceType),
+		new GameDialog("* I'll be back.", "Misty", snd_vceType, "q5"),
 		],
 
 		#endregion
