@@ -22,6 +22,7 @@
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d61fe5b3-e293-4e78-8163-b81d4de64650","blendMode":0,"displayName":"Layer 1","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6f3f2fdc-e957-418f-bd67-2ebd45567b82","blendMode":0,"displayName":"Layer 2","isLocked":false,"opacity":50.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 9,
