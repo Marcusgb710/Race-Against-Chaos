@@ -14,7 +14,7 @@
   "For3D": false,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"64d2d6c0-6c32-47f1-8433-0c955556c573",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ae4b75b9-6d5c-4b2b-ad6a-38167694d8f3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55e11de7-2539-4c66-8655-d7018ec529f7",},
   ],
   "gridX": 0,
   "gridY": 0,
@@ -57,7 +57,7 @@
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
             {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"64d2d6c0-6c32-47f1-8433-0c955556c573","path":"sprites/spr_BaristaNPC/spr_BaristaNPC.yy",},},},"Disabled":false,"id":"38d11420-bea1-496e-a27d-03bfea5bb4b0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ae4b75b9-6d5c-4b2b-ad6a-38167694d8f3","path":"sprites/spr_BaristaNPC/spr_BaristaNPC.yy",},},},"Disabled":false,"id":"f1f74132-4df0-419e-8ba9-52ed180212dc","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"55e11de7-2539-4c66-8655-d7018ec529f7","path":"sprites/spr_BaristaNPC/spr_BaristaNPC.yy",},},},"Disabled":false,"id":"536a57a9-bfea-4d5f-914c-dbd2acf9002f","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
