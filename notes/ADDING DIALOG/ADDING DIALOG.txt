@@ -1,9 +1,0 @@
-new GameDialog(_dialog, _speaker, _speaker_sound = snd_Def_Voice, _quest = undefined)
-
-
-	_dialog| string : The string of text you want displayed in the games textbox.
-	_speaker| string: A string with the name of the person whos dialog is currently in the games texbox.
-	_speaker_sound|(OPTIONAL) Asset.GMSound: A Game Maker Asset to match the current dialog in the games textbox. [WILL DEFAULT TO snd_Def_voice IF NO PARAMETER IS PUT IN].
-	_quest | (req:_speaker sound- OPTIONAL) string: The string id of the quest that is going to be completed once the dialog is completed [WILL DEFAULT TO undefined IF NO PARAMETER IS PUT IN].
-	
-Game dialog live in Dialog System/game_text_v2.

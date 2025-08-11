@@ -1,1 +1,2 @@
-# Race-Against-Chaos
+# Race-Against-Bitches
+THIS GAME FUCKING SUCKS LOLOOLOLOLOLOLO
